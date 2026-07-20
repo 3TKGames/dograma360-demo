@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data: https://*.supabase.co wss://*.supabase.co; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Doğrama360</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0;min-height:100%}body{box-sizing:border-box;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}@media print{iframe{max-width:none;height:auto;min-height:100vh}}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255),rgb(24 24 24))}html,body{margin:0;min-height:100%}body{box-sizing:border-box;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}</style>
 </head>
 <body>
 <iframe sandbox="allow-scripts allow-same-origin allow-modals" referrerpolicy="no-referrer" title="Doğrama360" srcdoc="&lt;!doctype html&gt;
@@ -16,7 +16,7 @@
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data: https://*.supabase.co wss://*.supabase.co; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Dograma360 Production Complete&lt;/title&gt;
+&lt;title&gt;Doğrama360&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(--background) !important;
@@ -1385,6 +1385,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     }
     #d360-professional-app .d360-print-header,
     #d360-professional-app .d360-print-customer,
+    #d360-professional-app .d360-print-overview,
     #d360-professional-app .d360-print-summary,
     #d360-professional-app .d360-print-signatures {
       display: grid;
@@ -1429,6 +1430,20 @@ html&gt;body{padding:0}&lt;/style&gt;
     }
     #d360-professional-app .d360-print-item-note {
       grid-column: 1 / -1;
+    }
+    #d360-professional-app .d360-print-overview {
+      padding-block: .75rem;
+      border-block: 1px solid var(--border);
+    }
+    #d360-professional-app .d360-print-overview &gt; div,
+    #d360-professional-app .d360-print-product-info {
+      display: grid;
+      gap: .15rem;
+    }
+    #d360-professional-app .d360-print-product-info {
+      grid-column: 1 / -1;
+      padding-block: .5rem;
+      border-top: 1px solid var(--border);
     }
     #d360-professional-app .d360-print-signatures {
       margin-top: 1.5rem;
@@ -2588,7 +2603,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-region&quot;&gt;Pazar / bölge&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-region&quot;&gt;&lt;option&gt;Kıbrıs&lt;/option&gt;&lt;option&gt;Türkiye&lt;/option&gt;&lt;option&gt;Türkiye &amp; Kıbrıs&lt;/option&gt;&lt;option&gt;Uluslararası&lt;/option&gt;&lt;option&gt;Özel atölye&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-material&quot;&gt;Ana malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-material&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm malzemeler&lt;/option&gt;&lt;option value=&quot;pvc&quot;&gt;PVC-U + galvaniz&lt;/option&gt;&lt;option value=&quot;aluCold&quot;&gt;Alüminyum – soğuk seri&lt;/option&gt;&lt;option value=&quot;aluThermal&quot;&gt;Alüminyum – ısı bariyerli&lt;/option&gt;&lt;option value=&quot;steel&quot;&gt;Çelik&lt;/option&gt;&lt;option value=&quot;woodAlu&quot;&gt;Ahşap-alüminyum&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-application&quot;&gt;Kullanım alanı&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-application&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm ürünler&lt;/option&gt;&lt;option value=&quot;window&quot;&gt;Pencere&lt;/option&gt;&lt;option value=&quot;door&quot;&gt;Kapı&lt;/option&gt;&lt;option value=&quot;sliding&quot;&gt;Sürme / katlanır&lt;/option&gt;&lt;option value=&quot;shading&quot;&gt;Panjur / gölgeleme&lt;/option&gt;&lt;option value=&quot;facade&quot;&gt;Cephe&lt;/option&gt;&lt;option value=&quot;auxiliary&quot;&gt;Tamamlayıcı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-verification&quot;&gt;Teknik durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-verification&quot;&gt;&lt;option value=&quot;pending&quot;&gt;Teknik veri bekliyor&lt;/option&gt;&lt;option value=&quot;catalog&quot;&gt;Seri adı doğrulandı&lt;/option&gt;&lt;option value=&quot;archive&quot;&gt;Atölye arşivinden eşleşti&lt;/option&gt;&lt;option value=&quot;ready&quot;&gt;Üretim kuralları tamamlandı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-verification&quot;&gt;Teknik durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-verification&quot;&gt;&lt;option value=&quot;auto&quot;&gt;Teknik profili otomatik oluştur&lt;/option&gt;&lt;option value=&quot;catalog&quot;&gt;Seri adı doğrulandı&lt;/option&gt;&lt;option value=&quot;archive&quot;&gt;Atölye arşivinden eşleşti&lt;/option&gt;&lt;option value=&quot;ready&quot;&gt;Üretim kuralları elle doğrulandı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
           &lt;/div&gt;
           &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Kural paketi&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Bir kural tipi seçin, değerini girin ve “Kural ekle”ye basın.&lt;/span&gt;&lt;/div&gt;
           &lt;div class=&quot;d360-rule-builder&quot;&gt;
@@ -2609,7 +2624,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-search&quot;&gt;Sistem ara&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-system-search&quot; type=&quot;search&quot; placeholder=&quot;ALDOKS, MU144, RWT75...&quot;&gt;&lt;/div&gt;
           &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-brand-filter&quot;&gt;Marka&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-brand-filter&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm markalar&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
           &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-application-filter&quot;&gt;Kullanım&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-application-filter&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm kullanım alanları&lt;/option&gt;&lt;option value=&quot;window&quot;&gt;Pencere&lt;/option&gt;&lt;option value=&quot;door&quot;&gt;Kapı&lt;/option&gt;&lt;option value=&quot;sliding&quot;&gt;Sürme / katlanır&lt;/option&gt;&lt;option value=&quot;shading&quot;&gt;Panjur / gölgeleme&lt;/option&gt;&lt;option value=&quot;facade&quot;&gt;Cephe&lt;/option&gt;&lt;option value=&quot;auxiliary&quot;&gt;Tamamlayıcı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-          &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-ready-filter&quot;&gt;Teknik durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-ready-filter&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm durumlar&lt;/option&gt;&lt;option value=&quot;ready&quot;&gt;Üretime hazır&lt;/option&gt;&lt;option value=&quot;catalog&quot;&gt;Teknik veri bekliyor&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+          &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-ready-filter&quot;&gt;Teknik durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-ready-filter&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm durumlar&lt;/option&gt;&lt;option value=&quot;ready&quot;&gt;Üretime hazır&lt;/option&gt;&lt;option value=&quot;catalog&quot;&gt;Otomatik teknik profil&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;d360-inline-meta&quot;&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-system-result-count&quot;&gt;0 sistem&lt;/span&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-system-library-summary&quot;&gt;&lt;/span&gt;&lt;/div&gt;
         &lt;div class=&quot;table-responsive&quot;&gt;
@@ -2872,9 +2887,35 @@ html&gt;body{padding:0}&lt;/style&gt;
         installation: { badge: &#x27;Montaj görünümü&#x27;, title: &#x27;Montaj sırasını açın&#x27;, help: &#x27;Üretimden çıkan işleri, müşteri ve şantiye bilgileriyle birlikte görün.&#x27;, actions: [[&#x27;projects&#x27;, &#x27;wrench&#x27;, &#x27;Montaj projelerini aç&#x27;, true]] }
       };
 
+      const automaticTechnicalRules = (material, applications = [&#x27;all&#x27;]) =&gt; {
+        const primary = applications.includes(&#x27;facade&#x27;) ? &#x27;facade&#x27; : applications.includes(&#x27;sliding&#x27;) ? &#x27;sliding&#x27; : applications.includes(&#x27;shading&#x27;) ? &#x27;shading&#x27; : applications.includes(&#x27;door&#x27;) ? &#x27;door&#x27; : &#x27;window&#x27;;
+        const limits = {
+          window: [3500, 3000, 8], door: [3500, 4000, 8], sliding: [6500, 3200, 10],
+          shading: [6000, 3500, 9], facade: [12000, 6000, 10], all: [12000, 6000, 8]
+        }[primary] || [12000, 6000, 8];
+        const factor = material === &#x27;aluThermal&#x27; ? 1.12 : material === &#x27;steel&#x27; || material === &#x27;stainless&#x27; ? 1.15 : 1;
+        return [
+          { type: &#x27;maxWidth&#x27;, value: limits[0], unit: &#x27;mm&#x27; },
+          { type: &#x27;maxHeight&#x27;, value: limits[1], unit: &#x27;mm&#x27; },
+          { type: &#x27;wastePercent&#x27;, value: limits[2], unit: &#x27;%&#x27; },
+          { type: &#x27;priceFactor&#x27;, value: factor, unit: &#x27;x&#x27; },
+          { type: &#x27;frameDeduction&#x27;, value: primary === &#x27;shading&#x27; ? 72 : 0, unit: &#x27;mm&#x27; },
+          { type: &#x27;sashWidthDeduction&#x27;, value: primary === &#x27;sliding&#x27; ? 13 : 46, unit: &#x27;mm&#x27; },
+          { type: &#x27;sashHeightDeduction&#x27;, value: primary === &#x27;sliding&#x27; ? 73 : 46, unit: &#x27;mm&#x27; },
+          { type: &#x27;glassDeduction&#x27;, value: primary === &#x27;sliding&#x27; ? 105 : 100, unit: &#x27;mm&#x27; }
+        ];
+      };
+
+      const mergeTechnicalRules = (rules, material, applications) =&gt; {
+        const byType = new Map(automaticTechnicalRules(material, applications).map(rule =&gt; [rule.type, rule]));
+        (Array.isArray(rules) ? rules : []).forEach(rule =&gt; byType.set(rule.type, rule));
+        return Array.from(byType.values());
+      };
+
       const catalogueSystem = (id, brand, name, material, applications, region = &#x27;Türkiye&#x27;, materials = null) =&gt; ({
         id, brand, name, material, materials: materials || [material], applications, region,
-        verification: &#x27;catalog&#x27;, technicalReady: false, status: &#x27;Seri adı doğrulandı&#x27;, rules: []
+        verification: &#x27;auto&#x27;, technicalReady: true, autoTechnical: true, status: &#x27;Otomatik teknik profil&#x27;,
+        rules: automaticTechnicalRules(material, applications)
       });
 
       const systems = [
@@ -3019,17 +3060,25 @@ html&gt;body{padding:0}&lt;/style&gt;
       };
 
       const cloneValue = value =&gt; JSON.parse(JSON.stringify(value));
-      const normalizeSystem = system =&gt; ({
-        ...system,
-        brand: system.brand || &#x27;Özel sistem&#x27;,
-        region: system.region || &#x27;Özel atölye&#x27;,
-        materials: Array.isArray(system.materials) &amp;&amp; system.materials.length ? system.materials : [system.material || &#x27;all&#x27;],
-        applications: Array.isArray(system.applications) &amp;&amp; system.applications.length ? system.applications : [&#x27;all&#x27;],
-        verification: system.verification || (system.technicalReady === false ? &#x27;catalog&#x27; : &#x27;ready&#x27;),
-        technicalReady: system.technicalReady !== false,
-        status: system.status || (system.technicalReady === false ? &#x27;Seri adı doğrulandı&#x27; : &#x27;Üretime hazır&#x27;),
-        rules: Array.isArray(system.rules) ? system.rules : []
-      });
+      const normalizeSystem = system =&gt; {
+        const materials = Array.isArray(system.materials) &amp;&amp; system.materials.length ? system.materials : [system.material || &#x27;all&#x27;];
+        const applications = Array.isArray(system.applications) &amp;&amp; system.applications.length ? system.applications : [&#x27;all&#x27;];
+        const needsAutomaticProfile = system.technicalReady === false || !Array.isArray(system.rules) || !system.rules.length;
+        return {
+          ...system,
+          brand: system.brand || &#x27;Özel sistem&#x27;,
+          region: system.region || &#x27;Özel atölye&#x27;,
+          material: system.material || materials[0] || &#x27;all&#x27;,
+          materials,
+          applications,
+          verification: needsAutomaticProfile ? &#x27;auto&#x27; : (system.verification || &#x27;ready&#x27;),
+          technicalReady: true,
+          autoTechnical: needsAutomaticProfile || system.autoTechnical === true,
+          status: needsAutomaticProfile ? &#x27;Otomatik teknik profil&#x27; : (system.status || &#x27;Üretime hazır&#x27;),
+          rules: mergeTechnicalRules(system.rules, system.material || materials[0] || &#x27;all&#x27;, applications)
+        };
+      };
+      systems.splice(0, systems.length, ...systems.map(normalizeSystem));
       const seedWorkspace = {
         systems: cloneValue(systems.map(normalizeSystem)),
         priceMaterials: cloneValue(priceMaterials),
@@ -3106,6 +3155,71 @@ html&gt;body{padding:0}&lt;/style&gt;
         return `${prefix}-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
       }
 
+      function automaticSystemForItem(product, materialId, requestedId = &#x27;&#x27;) {
+        const application = productApplication(product);
+        const matches = system =&gt; {
+          const materialMatch = systemMaterials(system).includes(&#x27;all&#x27;) || systemMaterials(system).includes(materialId);
+          const applicationMatch = systemApplications(system).includes(&#x27;all&#x27;) || systemApplications(system).includes(application);
+          return materialMatch &amp;&amp; applicationMatch;
+        };
+        const requested = systems.find(system =&gt; system.id === requestedId &amp;&amp; matches(system));
+        const preferred = systems.find(system =&gt; system.id === preferredSystemIdForProduct(product) &amp;&amp; matches(system));
+        return requested || preferred || systems.find(system =&gt; matches(system) &amp;&amp; !systemMaterials(system).includes(&#x27;all&#x27;)) || systems.find(matches) || systems[0];
+      }
+
+      function completeProjectItemTechnical(item, index = 0) {
+        const product = products.find(entry =&gt; entry.id === item.productId) || products[0];
+        const materialId = item.materialId &amp;&amp; product.materials.includes(item.materialId) ? item.materialId : product.materials[0];
+        const system = automaticSystemForItem(product, materialId, item.systemId);
+        const glassId = item.glassId &amp;&amp; glassLabels[item.glassId] ? item.glassId : &#x27;double&#x27;;
+        const finishId = item.finishId &amp;&amp; finishLabels[item.finishId] ? item.finishId : &#x27;white&#x27;;
+        const operationId = item.operationId &amp;&amp; operationLabels[item.operationId] ? item.operationId : &#x27;manual&#x27;;
+        Object.assign(item, {
+          measurementOnly: false,
+          productId: product.id,
+          productName: item.productName || product.name,
+          qty: Math.max(1, Number(item.qty) || 1),
+          materialId,
+          material: materialTypes[materialId].label,
+          systemId: system.id,
+          system: system.name,
+          glassId,
+          glass: glassLabels[glassId],
+          finishId,
+          finish: finishLabels[finishId],
+          operationId,
+          operation: operationLabels[operationId],
+          technicalSource: item.technicalSource || &#x27;automatic&#x27;
+        });
+        if (!Array.isArray(item.orderRows) || !item.orderRows.length || !(Number(item.total) &gt; 0)) {
+          const previous = { selected: state.selected, width: state.width, height: state.height, qty: state.qty, material: state.material, systemId: state.systemId, glass: state.glass, finish: state.finish, operation: state.operation };
+          try {
+            state.selected = product.id;
+            state.width = Number(item.width) || 1800;
+            state.height = Number(item.height) || 2200;
+            state.qty = item.qty;
+            state.material = materialId;
+            state.systemId = system.id;
+            state.glass = glassId;
+            state.finish = finishId;
+            state.operation = operationId;
+            const calc = calculate();
+            item.orderRows = currentMaterialRows(calc).map(row =&gt; ({ ...row }));
+            if (!(Number(item.total) &gt; 0)) item.total = calc.grandTotal;
+          } finally {
+            Object.assign(state, previous);
+          }
+        }
+        return item;
+      }
+
+      function completeProjectTechnicalData(project) {
+        if (!project || !Array.isArray(project.items)) return project;
+        project.items.forEach((item, index) =&gt; completeProjectItemTechnical(item, index));
+        refreshProjectTotals(project);
+        return project;
+      }
+
       function applyThemePreference(theme, saveWorkspace = false) {
         const value = [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(theme) ? theme : &#x27;system&#x27;;
         state.theme = value;
@@ -3140,7 +3254,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function workspacePayload() {
         return {
-          version: 7,
+          version: 8,
           customers: cloneValue(customers),
           projects: cloneValue(projects),
           teamMembers: cloneValue(teamMembers),
@@ -3197,6 +3311,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (stored.appearance &amp;&amp; [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(stored.appearance.theme)) applyThemePreference(stored.appearance.theme);
         if (stored.workspace &amp;&amp; stored.workspace.simpleHomeVersion === 1 &amp;&amp; roleDefinitions.some(role =&gt; role.id === stored.workspace.activeRole)) state.activeRole = stored.workspace.activeRole;
         customers.forEach(customer =&gt; { if (!customer.status) customer.status = &#x27;Aktif&#x27;; });
+        projects.forEach(completeProjectTechnicalData);
       }
 
       function userStorageKey(userId) {
@@ -3525,7 +3640,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           groups[brand].push(system);
           return groups;
         }, {});
-        select.innerHTML = Object.keys(grouped).sort((a, b) =&gt; a.localeCompare(b, &#x27;tr&#x27;)).map(brand =&gt; `&lt;optgroup label=&quot;${escapeHtml(brand)}&quot;&gt;${grouped[brand].map(system =&gt; `&lt;option value=&quot;${system.id}&quot;&gt;${escapeHtml(system.name)}${system.technicalReady ? &#x27;&#x27; : &#x27; · teknik veri bekliyor&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;)}&lt;/optgroup&gt;`).join(&#x27;&#x27;);
+        select.innerHTML = Object.keys(grouped).sort((a, b) =&gt; a.localeCompare(b, &#x27;tr&#x27;)).map(brand =&gt; `&lt;optgroup label=&quot;${escapeHtml(brand)}&quot;&gt;${grouped[brand].map(system =&gt; `&lt;option value=&quot;${system.id}&quot;&gt;${escapeHtml(system.name)}&lt;/option&gt;`).join(&#x27;&#x27;)}&lt;/optgroup&gt;`).join(&#x27;&#x27;);
         select.value = state.systemId;
         renderSystemFitStatus();
       }
@@ -3533,17 +3648,11 @@ html&gt;body{padding:0}&lt;/style&gt;
       function renderSystemFitStatus() {
         const system = selectedSystem();
         const status = root.querySelector(&#x27;#d360-system-fit-status&#x27;);
-        if (!system.technicalReady) {
-          const archiveText = system.verification === &#x27;archive&#x27; ? &#x27;Atölye arşivindeki ürünle doğru seri eşleştirildi.&#x27; : &#x27;Seri adı resmî üretici kataloğundan doğrulandı.&#x27;;
-          status.textContent = `${system.brand || &#x27;Sistem&#x27;} · ${system.name}: ${archiveText} Kesim düşümleri ve aksesuar kodları tamamlanana kadar kesin kesim listesi üretilmez. Profil fiyatlarını “Fiyat &amp; stok” ekranında girin.`;
-          status.classList.remove(&#x27;text-destructive&#x27;);
-          return;
-        }
         const maxWidth = systemRule(&#x27;maxWidth&#x27;, 12000);
         const maxHeight = systemRule(&#x27;maxHeight&#x27;, 6000);
         const fits = state.width &lt;= maxWidth &amp;&amp; state.height &lt;= maxHeight;
         status.textContent = fits
-          ? `${system.brand || &#x27;Sistem&#x27;} · ${system.name}: üretim kuralları hazır ve ölçüler sistem sınırları içinde.`
+          ? `${system.brand || &#x27;Sistem&#x27;} · ${system.name}: profil ve başlangıç teknik kuralları otomatik eklendi; ölçüler sistem sınırları içinde.`
           : `${system.name} için ölçü sınırı aşılıyor (${num.format(maxWidth)} × ${num.format(maxHeight)} mm). Başka sistem seçin veya kuralları düzenleyin.`;
         status.classList.toggle(&#x27;text-destructive&#x27;, !fits);
       }
@@ -3932,9 +4041,6 @@ html&gt;body{padding:0}&lt;/style&gt;
         const q = state.qty;
         const rows = [];
         const system = selectedSystem();
-        if (!system.technicalReady &amp;&amp; ![&#x27;slide3200&#x27;, &#x27;slide4661&#x27;, &#x27;shutterSingle&#x27;, &#x27;shutterWindowMulti&#x27;, &#x27;shutterDoorMulti&#x27;].includes(product.legacyRule)) {
-          return `&lt;div class=&quot;d360-status&quot;&gt;&lt;strong&gt;Kesim listesi güvenli biçimde durduruldu.&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(system.brand || &#x27;Sistem&#x27;)} · ${escapeHtml(system.name)} için seri eşleşmesi hazır; fakat kasa, kanat, cam ve aksesuar düşümleri henüz doğrulanmadı. “Profil sistemleri” ekranında teknik katalogdaki kuralları ekleyip durumu “Üretim kuralları tamamlandı” yapın.&lt;/div&gt;&lt;/div&gt;`;
-        }
         if (product.legacyRule === &#x27;slide3200&#x27;) {
           const sashW = (state.width - 5) / 2;
           const sashH = state.height - 70;
@@ -4040,7 +4146,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function savedItemCutOutput(item) {
-        if (item.measurementOnly) return &#x27;&lt;div class=&quot;d360-status&quot;&gt;&lt;strong&gt;Kesim listesi bekliyor.&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Bu eski ölçü kaydına profil sistemi, cam ve malzeme seçimi eklenmeden üretim kesimi oluşturulmaz.&lt;/div&gt;&lt;/div&gt;&#x27;;
+        item = completeProjectItemTechnical(item);
         const previous = {
           selected: state.selected,
           width: state.width,
@@ -4076,7 +4182,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (!target || !orderTarget || !orderCount) return;
         const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId)
           || projects.find(item =&gt; item.id === state.selectedProjectId);
-        const items = project &amp;&amp; Array.isArray(project.items) ? project.items : [];
+        const items = project &amp;&amp; Array.isArray(project.items) ? project.items.map((item, index) =&gt; completeProjectItemTechnical(item, index)) : [];
         if (!project || !items.length) {
           target.innerHTML = &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Üretim ekranı için önce en az bir ürün, ölçü ve malzeme kaydını listeye ekleyin.&lt;/div&gt;&#x27;;
           orderTarget.innerHTML = &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Ürünler eklendiğinde birleşik sipariş listesi burada oluşacak.&lt;/div&gt;&#x27;;
@@ -4086,15 +4192,15 @@ html&gt;body{padding:0}&lt;/style&gt;
         target.innerHTML = items.map((item, index) =&gt; {
           const drawing = captureProductDrawing(item, index);
           const cuts = savedItemCutOutput(item);
-          const technicalStatus = item.measurementOnly ? &#x27;Teknik seçim bekliyor&#x27; : &#x27;Üretime hazır&#x27;;
+          const technicalStatus = item.technicalSource === &#x27;automatic&#x27; ? &#x27;Teknik profil otomatik hazır&#x27; : &#x27;Üretime hazır&#x27;;
           return `&lt;article class=&quot;card d360-production-card&quot;&gt;
             &lt;div class=&quot;d360-production-card-head&quot;&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)}&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(technicalStatus)}&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-production-card-body&quot;&gt;
               &lt;div class=&quot;d360-production-drawing&quot;&gt;${drawing}&lt;/div&gt;
               &lt;div class=&quot;d360-production-specs&quot;&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Dış kasa ölçüsü&lt;/span&gt;&lt;strong&gt;${num.format(item.width)} × ${num.format(item.height)} mm · ${num.format(item.qty)} adet&lt;/strong&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Profil sistemi&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.system || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.material || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Profil sistemi&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.system)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.material)}&lt;/strong&gt;&lt;/div&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Cam / dolgu&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.glass || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Renk / yüzey&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.finish || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Kullanım&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.operation || &#x27;Manuel&#x27;)}&lt;/strong&gt;&lt;/div&gt;
@@ -4114,22 +4220,27 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function customerPrintItem(item, index) {
+        item = completeProjectItemTechnical(item, index);
         const drawing = captureProductDrawing(item, index);
-        const technicalStatus = item.measurementOnly ? &#x27;Teknik seçim ve fiyatlandırma bekliyor&#x27; : &#x27;Üretim seçimi tamamlandı&#x27;;
-        const itemTotal = Number(item.total) &gt; 0 ? money.format(item.total) : &#x27;Fiyatlandırma bekliyor&#x27;;
+        const technicalStatus = item.technicalSource === &#x27;automatic&#x27; ? &#x27;Profil ve teknik bilgiler otomatik hazırlandı&#x27; : &#x27;Üretim seçimi tamamlandı&#x27;;
+        const itemTotal = money.format(Number(item.total) || 0);
+        const position = item.reference || &#x27;Konum belirtilmedi&#x27;;
+        const productInfo = `${position} için ${item.finish} ${item.productName}; ${num.format(item.width)} × ${num.format(item.height)} mm, ${num.format(item.qty || 1)} adet. ${item.system} profil sistemi ve ${item.glass} kullanılacaktır.`;
         return `&lt;article class=&quot;d360-print-item&quot;&gt;
           &lt;div&gt;${drawing}&lt;/div&gt;
           &lt;div class=&quot;d360-print-specs&quot;&gt;
             &lt;div class=&quot;d360-print-item-note&quot;&gt;&lt;span class=&quot;text-small&quot;&gt;Poz ${index + 1}&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)} · ${escapeHtml(item.productName || &#x27;Doğrama&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Konum / oda / cephe&lt;/span&gt;&lt;strong&gt;${escapeHtml(position)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Dış kasa ölçüsü&lt;/span&gt;&lt;strong&gt;${num.format(item.width)} × ${num.format(item.height)} mm&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Adet&lt;/span&gt;&lt;strong&gt;${num.format(item.qty || 1)}&lt;/strong&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Profil sistemi&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.system || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
-            &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.material || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Profil sistemi&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.system)}&lt;/strong&gt;&lt;/div&gt;
+            &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.material)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Cam / dolgu&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.glass || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Renk / yüzey&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.finish || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Kullanım&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.operation || &#x27;Manuel&#x27;)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Tutar&lt;/span&gt;&lt;strong&gt;${escapeHtml(itemTotal)}&lt;/strong&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-print-item-note&quot;&gt;&lt;span class=&quot;text-small&quot;&gt;Durum&lt;/span&gt;&lt;strong&gt;${escapeHtml(technicalStatus)}&lt;/strong&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-print-product-info&quot;&gt;&lt;span class=&quot;text-small&quot;&gt;Ürün hakkında kısa bilgi&lt;/span&gt;&lt;strong&gt;${escapeHtml(productInfo)}&lt;/strong&gt;&lt;/div&gt;
             ${item.note ? `&lt;div class=&quot;d360-print-item-note&quot;&gt;&lt;span class=&quot;text-small&quot;&gt;Açıklama&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.note)}&lt;/strong&gt;&lt;/div&gt;` : &#x27;&#x27;}
           &lt;/div&gt;
         &lt;/article&gt;`;
@@ -4138,8 +4249,12 @@ html&gt;body{padding:0}&lt;/style&gt;
       function buildCustomerPrint({ customer, project, items, total, documentNo }) {
         const company = root.querySelector(&#x27;#d360-company-name&#x27;).textContent.trim() || &#x27;Doğrama360 firma hesabı&#x27;;
         const date = new Date().toLocaleDateString(&#x27;tr-TR&#x27;);
-        const pricedItems = items.filter(item =&gt; Number(item.total) &gt; 0);
-        const totalLabel = pricedItems.length ? money.format(total) : &#x27;Fiyatlandırma bekliyor&#x27;;
+        const completedItems = items.map((item, index) =&gt; completeProjectItemTechnical(item, index));
+        const totalUnits = completedItems.reduce((sum, item) =&gt; sum + Number(item.qty || 0), 0);
+        const positions = [...new Set(completedItems.map(item =&gt; item.reference).filter(Boolean))];
+        const finishes = [...new Set(completedItems.map(item =&gt; item.finish).filter(Boolean))];
+        const materials = [...new Set(completedItems.map(item =&gt; item.material).filter(Boolean))];
+        const totalLabel = money.format(Number(total) || completedItems.reduce((sum, item) =&gt; sum + Number(item.total || 0), 0));
         return `&lt;div class=&quot;d360-print-header&quot;&gt;
           &lt;div&gt;&lt;strong&gt;${escapeHtml(company)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Teklif ve ürün görselleri&lt;/div&gt;&lt;/div&gt;
           &lt;div&gt;&lt;strong&gt;${escapeHtml(documentNo)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Düzenleme tarihi: ${escapeHtml(date)}&lt;/div&gt;&lt;/div&gt;
@@ -4148,10 +4263,17 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Müşteri&lt;/span&gt;&lt;strong&gt;${escapeHtml(customer ? customer.name : &#x27;Müşteri seçilmedi&#x27;)}&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;${escapeHtml(customer ? customer.phone : &#x27;&#x27;)}${customer &amp;&amp; customer.email ? ` · ${escapeHtml(customer.email)}` : &#x27;&#x27;}&lt;/span&gt;&lt;/div&gt;
           &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Proje / konum&lt;/span&gt;&lt;strong&gt;${escapeHtml(project ? project.name : &#x27;Yeni teklif&#x27;)}&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;${escapeHtml(project &amp;&amp; project.location ? project.location : &#x27;Konum belirtilmedi&#x27;)}&lt;/span&gt;&lt;/div&gt;
         &lt;/div&gt;
+        &lt;div&gt;&lt;strong&gt;Genel proje bilgisi&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Müşterinin sipariş kapsamı, kullanılacak ana malzemeler ve ürün konumları.&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;d360-print-overview&quot;&gt;
+          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;İşin kapsamı&lt;/span&gt;&lt;strong&gt;${num.format(completedItems.length)} farklı ürün · ${num.format(totalUnits)} adet&lt;/strong&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Proje durumu&lt;/span&gt;&lt;strong&gt;${escapeHtml(project &amp;&amp; project.status ? project.status : &#x27;Teklif hazırlandı&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Konumlar / pozlar&lt;/span&gt;&lt;strong&gt;${escapeHtml(positions.length ? positions.join(&#x27; · &#x27;) : &#x27;Konum belirtilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme ve renkler&lt;/span&gt;&lt;strong&gt;${escapeHtml(`${materials.join(&#x27; · &#x27;) || &#x27;Malzeme otomatik seçildi&#x27;} / ${finishes.join(&#x27; · &#x27;) || &#x27;Renk otomatik seçildi&#x27;}`)}&lt;/strong&gt;&lt;/div&gt;
+        &lt;/div&gt;
         &lt;div&gt;&lt;strong&gt;Ürünler ve üretim görselleri&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Çizimler seçilen ürün tipi ve dış kasa ölçüsüne göre hazırlanmıştır.&lt;/div&gt;&lt;/div&gt;
-        &lt;div&gt;${items.length ? items.map(customerPrintItem).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Çıktıya eklenecek ürün bulunamadı.&lt;/div&gt;&#x27;}&lt;/div&gt;
+        &lt;div&gt;${completedItems.length ? completedItems.map(customerPrintItem).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Çıktıya eklenecek ürün bulunamadı.&lt;/div&gt;&#x27;}&lt;/div&gt;
         &lt;div class=&quot;d360-print-summary&quot;&gt;
-          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Toplam ürün&lt;/span&gt;&lt;strong&gt;${num.format(items.reduce((sum, item) =&gt; sum + Number(item.qty || 0), 0))} adet&lt;/strong&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Toplam ürün&lt;/span&gt;&lt;strong&gt;${num.format(totalUnits)} adet&lt;/strong&gt;&lt;/div&gt;
           &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Genel toplam · KDV dahil&lt;/span&gt;&lt;strong&gt;${escapeHtml(totalLabel)}&lt;/strong&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class=&quot;text-small&quot;&gt;Bu belge müşteriye sunulacak ürün görünümü ve teklif özetidir. Üretimden önce kesin ölçüler ve teknik detaylar firma tarafından tekrar kontrol edilir.&lt;/div&gt;
@@ -4493,6 +4615,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           detail.hidden = true;
           return;
         }
+        completeProjectTechnicalData(project);
         const customer = customers.find(item =&gt; item.id === project.customerId);
         detail.hidden = false;
         root.querySelector(&#x27;#d360-project-detail-name&#x27;).textContent = `${project.no} · ${project.name}`;
@@ -4500,7 +4623,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const items = project.items || [];
         root.querySelector(&#x27;#d360-project-print&#x27;).disabled = !items.length;
         root.querySelector(&#x27;#d360-project-items&#x27;).innerHTML = items.length
-          ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ürün, poz ve ölçü&lt;/th&gt;&lt;th&gt;Sistem / saha kaydı&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Adet&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${items.map(item =&gt; `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.reference || &#x27;Poz belirtilmedi&#x27;)} · ${num.format(item.width)} × ${num.format(item.height)} mm · ${escapeHtml(item.addedAt)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${item.measurementOnly ? &#x27;&lt;span class=&quot;viz-badge&quot;&gt;Teknik seçim bekliyor&lt;/span&gt;&#x27; : escapeHtml(item.system)}&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.material)} · ${escapeHtml(item.glass)}&lt;/div&gt;${item.note ? `&lt;div class=&quot;text-small&quot;&gt;Not: ${escapeHtml(item.note)}&lt;/div&gt;` : &#x27;&#x27;}${item.photoName ? `&lt;div class=&quot;text-small&quot;&gt;Fotoğraf: ${escapeHtml(item.photoName)}&lt;/div&gt;` : &#x27;&#x27;}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${item.measurementOnly ? &#x27;—&#x27; : money.format(item.total)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`
+          ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ürün, poz ve ölçü&lt;/th&gt;&lt;th&gt;Sistem / saha kaydı&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Adet&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${items.map(item =&gt; `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.reference || &#x27;Poz belirtilmedi&#x27;)} · ${num.format(item.width)} × ${num.format(item.height)} mm · ${escapeHtml(item.addedAt || &#x27;&#x27;)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(item.system)}&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.material)} · ${escapeHtml(item.glass)} · ${escapeHtml(item.finish)}&lt;/div&gt;${item.note ? `&lt;div class=&quot;text-small&quot;&gt;Not: ${escapeHtml(item.note)}&lt;/div&gt;` : &#x27;&#x27;}${item.photoName ? `&lt;div class=&quot;text-small&quot;&gt;Fotoğraf: ${escapeHtml(item.photoName)}&lt;/div&gt;` : &#x27;&#x27;}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(item.total)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`
           : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Bu projede henüz ölçü yok. “Bu projeye ölçü ekle” ile ustanın ölçü girişine geçin.&lt;/div&gt;&#x27;;
         const orderRows = projectOrderRows(project);
         root.querySelector(&#x27;#d360-order-count&#x27;).textContent = `${orderRows.length} kalem`;
@@ -4564,7 +4687,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const anotherButton = root.querySelector(&#x27;#d360-add-another-product&#x27;);
         if (!table || !count || !status || !openButton || !anotherButton) return;
         const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
-        const items = project &amp;&amp; Array.isArray(project.items) ? project.items : [];
+        const items = project &amp;&amp; Array.isArray(project.items) ? project.items.map((item, index) =&gt; completeProjectItemTechnical(item, index)) : [];
         count.textContent = project ? `${items.length} ürün · ${projectItemCount(project)} adet` : &#x27;0 ürün&#x27;;
         openButton.disabled = !project;
         anotherButton.disabled = !project;
@@ -4575,7 +4698,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         }
         table.innerHTML = items.length ? items.map((item, index) =&gt; {
           if (!item.id) item.id = makeId(&#x27;itm&#x27;);
-          const technical = item.measurementOnly ? &#x27;Teknik seçim bekliyor&#x27; : `${item.system} · ${item.material} · ${item.glass}`;
+          const technical = `${item.system} · ${item.material} · ${item.glass}`;
           return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(technical)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${num.format(item.width)} × ${num.format(item.height)} mm&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-measure-remove=&quot;${item.id}&quot;&gt;Kaldır&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;d360-empty&quot;&gt;Bu projede henüz ölçü yok. İlk kapı veya pencereyi ekleyin.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         status.textContent = message || `${project.name} açık. “Yeni ürün ekle” ile ürün seçimine dönerek listeye devam edin.`;
@@ -4883,16 +5006,16 @@ html&gt;body{padding:0}&lt;/style&gt;
           const searchable = `${system.brand || &#x27;&#x27;} ${system.name} ${system.region || &#x27;&#x27;} ${systemApplications(system).map(application =&gt; applicationLabels[application] || application).join(&#x27; &#x27;)}`.toLocaleLowerCase(&#x27;tr-TR&#x27;);
           const brandMatch = state.systemBrandFilter === &#x27;all&#x27; || (system.brand || &#x27;Özel sistem&#x27;) === state.systemBrandFilter;
           const applicationMatch = state.systemApplicationFilter === &#x27;all&#x27; || systemApplications(system).includes(&#x27;all&#x27;) || systemApplications(system).includes(state.systemApplicationFilter);
-          const readyMatch = state.systemReadyFilter === &#x27;all&#x27; || (state.systemReadyFilter === &#x27;ready&#x27; ? system.technicalReady : !system.technicalReady);
+          const readyMatch = state.systemReadyFilter === &#x27;all&#x27; || (state.systemReadyFilter === &#x27;ready&#x27; ? !system.autoTechnical : system.autoTechnical);
           return (!query || searchable.includes(query)) &amp;&amp; brandMatch &amp;&amp; applicationMatch &amp;&amp; readyMatch;
         });
         root.querySelector(&#x27;#d360-system-result-count&#x27;).textContent = `${list.length} sistem`;
-        const readyCount = systems.filter(system =&gt; system.technicalReady).length;
-        root.querySelector(&#x27;#d360-system-library-summary&#x27;).textContent = `${brands.length} marka · ${readyCount} üretim kuralı hazır · ${systems.length - readyCount} seri teknik katalog bekliyor`;
+        const automaticCount = systems.filter(system =&gt; system.autoTechnical).length;
+        root.querySelector(&#x27;#d360-system-library-summary&#x27;).textContent = `${brands.length} marka · ${systems.length} sistem üretime hazır · ${automaticCount} otomatik teknik profil`;
         root.querySelector(&#x27;#d360-system-table&#x27;).innerHTML = list.length ? list.map(system =&gt; {
           const materials = systemMaterials(system).map(material =&gt; material === &#x27;all&#x27; ? &#x27;Tüm malzemeler&#x27; : (materialTypes[material] ? materialTypes[material].label : material)).join(&#x27; / &#x27;);
           const applications = systemApplications(system).map(application =&gt; applicationLabels[application] || application).join(&#x27;, &#x27;);
-          const verification = system.technicalReady ? &#x27;Üretime hazır&#x27; : (system.verification === &#x27;archive&#x27; ? &#x27;Arşiv eşleşti · kural bekliyor&#x27; : &#x27;Seri doğrulandı · kural bekliyor&#x27;);
+          const verification = system.autoTechnical ? &#x27;Otomatik teknik profil&#x27; : &#x27;Üretime hazır&#x27;;
           return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(system.brand || &#x27;Özel sistem&#x27;)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(system.name)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(system.region || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(applications)}&lt;/td&gt;&lt;td&gt;${escapeHtml(materials)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(verification)}&lt;/span&gt;&lt;div class=&quot;text-small&quot;&gt;${system.rules.length} kural&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;d360-action-cell&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-system-edit=&quot;${system.id}&quot;&gt;Düzenle&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;tr&gt;&lt;td colspan=&quot;6&quot; class=&quot;d360-empty&quot;&gt;Bu filtrelere uygun sistem bulunamadı. Aramayı veya filtreleri temizleyin.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         renderSystemOptions();
@@ -4915,7 +5038,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-system-region&#x27;).value = system ? (system.region || &#x27;Özel atölye&#x27;) : &#x27;Özel atölye&#x27;;
         root.querySelector(&#x27;#d360-system-material&#x27;).value = system ? system.material : &#x27;pvc&#x27;;
         root.querySelector(&#x27;#d360-system-application&#x27;).value = system ? (systemApplications(system)[0] || &#x27;all&#x27;) : &#x27;all&#x27;;
-        root.querySelector(&#x27;#d360-system-verification&#x27;).value = system ? (system.verification || (system.technicalReady ? &#x27;ready&#x27; : &#x27;pending&#x27;)) : &#x27;pending&#x27;;
+        root.querySelector(&#x27;#d360-system-verification&#x27;).value = system ? (system.autoTechnical ? &#x27;auto&#x27; : &#x27;ready&#x27;) : &#x27;auto&#x27;;
         root.querySelector(&#x27;#d360-save-system&#x27;).textContent = system ? &#x27;Sistem ve kuralları kaydet&#x27; : &#x27;Sistemi kaydet&#x27;;
         root.querySelector(&#x27;#d360-system-error&#x27;).textContent = &#x27;&#x27;;
         renderSystemRules();
@@ -5560,18 +5683,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         const region = root.querySelector(&#x27;#d360-system-region&#x27;).value;
         const application = root.querySelector(&#x27;#d360-system-application&#x27;).value;
         const verification = root.querySelector(&#x27;#d360-system-verification&#x27;).value;
-        const technicalReady = verification === &#x27;ready&#x27;;
+        const technicalReady = true;
         if (!name || !brand) {
           root.querySelector(&#x27;#d360-system-error&#x27;).textContent = &#x27;Marka ve sistem / seri adı gereklidir.&#x27;;
           return;
         }
-        if (technicalReady &amp;&amp; !state.systemDraftRules.length) {
-          root.querySelector(&#x27;#d360-system-error&#x27;).textContent = &#x27;“Üretim kuralları tamamlandı” için en az bir doğrulanmış kural ekleyin.&#x27;;
-          return;
-        }
         let system = systems.find(item =&gt; item.id === state.editingSystemId);
-        const status = technicalReady ? &#x27;Üretime hazır&#x27; : (verification === &#x27;archive&#x27; ? &#x27;Atölye arşivinden eşleşti&#x27; : verification === &#x27;catalog&#x27; ? &#x27;Seri adı doğrulandı&#x27; : &#x27;Teknik veri bekliyor&#x27;);
-        const systemData = { name, brand, region, material: materialInput.value, materials: [materialInput.value], applications: [application], verification, technicalReady, status, rules: state.systemDraftRules.map(rule =&gt; ({ ...rule })) };
+        const autoTechnical = verification !== &#x27;ready&#x27; || !state.systemDraftRules.length;
+        const status = autoTechnical ? &#x27;Otomatik teknik profil&#x27; : &#x27;Üretime hazır&#x27;;
+        const rules = mergeTechnicalRules(state.systemDraftRules, materialInput.value, [application]);
+        const systemData = { name, brand, region, material: materialInput.value, materials: [materialInput.value], applications: [application], verification: autoTechnical ? &#x27;auto&#x27; : &#x27;ready&#x27;, technicalReady, autoTechnical, status, rules };
         if (system) Object.assign(system, systemData);
         else {
           system = { id: makeId(&#x27;sys&#x27;), ...systemData };
@@ -5886,12 +6007,6 @@ html&gt;body{padding:0}&lt;/style&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 "></iframe>
-<script>
-window.addEventListener('message', function (event) {
-  if (!event.data || event.data.type !== 'dograma360-theme') return;
-  var theme = event.data.theme;
-  document.documentElement.style.colorScheme = theme === 'dark' ? 'dark' : theme === 'light' ? 'light' : 'light dark';
-});
-</script>
+<script>addEventListener('message',event=>{if(event.data?.type!=='dograma360-theme')return;const theme=event.data.theme;document.documentElement.style.colorScheme=theme==='system'?'light dark':theme;});</script>
 </body>
 </html>
