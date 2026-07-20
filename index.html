@@ -16,7 +16,7 @@
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data: https://*.supabase.co wss://*.supabase.co; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Dograma360 Product Measure&lt;/title&gt;
+&lt;title&gt;Dograma360 Production Complete&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(--background) !important;
@@ -2042,6 +2042,54 @@ html&gt;body{padding:0}&lt;/style&gt;
       #d360-professional-app .d360-home-project { grid-template-columns: minmax(0, 1fr) auto; }
       #d360-professional-app .d360-home-project &gt; .viz-badge { display: none; }
     }
+    #d360-professional-app .d360-production-list {
+      display: grid;
+      gap: 1rem;
+    }
+    #d360-professional-app .d360-production-card {
+      display: grid;
+      gap: 1rem;
+      padding: 1rem;
+    }
+    #d360-professional-app .d360-production-card-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: .75rem;
+    }
+    #d360-professional-app .d360-production-card-body {
+      display: grid;
+      grid-template-columns: minmax(16rem, .72fr) minmax(0, 1.28fr);
+      gap: 1rem;
+      align-items: start;
+    }
+    #d360-professional-app .d360-production-drawing {
+      min-height: 15rem;
+      display: grid;
+      place-items: center;
+    }
+    #d360-professional-app .d360-production-drawing .customer-print-drawing {
+      width: 100%;
+      height: auto;
+      max-height: 22rem;
+    }
+    #d360-professional-app .d360-production-specs {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .55rem;
+    }
+    #d360-professional-app .d360-production-specs &gt; div {
+      display: grid;
+      gap: .15rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    #d360-professional-app .d360-production-cuts { grid-column: 1 / -1; }
+    @media (max-width: 800px) {
+      #d360-professional-app .d360-production-card-body { grid-template-columns: 1fr; }
+      #d360-professional-app .d360-production-specs { grid-template-columns: 1fr; }
+    }
     @media print {
       :root {
         color-scheme: light;
@@ -2225,7 +2273,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;strong&gt;Ürün ve ölçü listesi&lt;/strong&gt;
             &lt;div class=&quot;text-small text-muted&quot;&gt;&lt;span id=&quot;d360-product-count&quot;&gt;0&lt;/span&gt; ürün şablonu · Ürünü seçin, ölçüsünü ekleyin ve sıradaki ürüne geçin&lt;/div&gt;
           &lt;/div&gt;
-          &lt;span class=&quot;viz-badge&quot; id=&quot;d360-wizard-counter&quot;&gt;Adım 1 / 4&lt;/span&gt;
+          &lt;span class=&quot;viz-badge&quot; id=&quot;d360-wizard-counter&quot;&gt;Adım 1 / 3&lt;/span&gt;
         &lt;/div&gt;
 
         &lt;div class=&quot;d360-guide-line&quot; aria-live=&quot;polite&quot;&gt;
@@ -2234,10 +2282,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;/div&gt;
 
         &lt;nav class=&quot;d360-wizard-steps&quot; aria-label=&quot;Ürün oluşturma adımları&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-wizard-step=&quot;1&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;d360-step-number&quot;&gt;1&lt;/span&gt;Ürün &amp; ölçü&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;3&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;2&lt;/span&gt;Malzeme&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;4&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;3&lt;/span&gt;Üretim&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;5&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;4&lt;/span&gt;Teklif&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-wizard-step=&quot;1&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;d360-step-number&quot;&gt;1&lt;/span&gt;Ürün, ölçü &amp; malzeme&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;4&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;2&lt;/span&gt;Üretim&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;5&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;3&lt;/span&gt;Teklif&lt;/button&gt;
         &lt;/nav&gt;
 
         &lt;div class=&quot;d360-wizard&quot;&gt;
@@ -2259,7 +2306,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;2&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Seçtiğiniz ürünün ölçüsünü ekleyin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Kaydettikten sonra “Yeni ürün ekle” ile ürün listesine geri dönün.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Ürün, ölçü ve malzemeyi birlikte ekleyin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her satır üretime hazır kaydedilir. Sonra “Yeni ürün ekle” ile sıradaki ürüne geçin.&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili ürün&lt;/div&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;div class=&quot;text-small&quot; data-selected-meta&gt;—&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Başka ürün seç&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-form-panel&quot;&gt;
               &lt;div class=&quot;d360-field-grid&quot;&gt;
@@ -2272,6 +2319,22 @@ html&gt;body{padding:0}&lt;/style&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Genişlik&lt;/span&gt;&lt;strong id=&quot;d360-width-summary&quot;&gt;1.800 mm&lt;/strong&gt;&lt;/div&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Yükseklik&lt;/span&gt;&lt;strong id=&quot;d360-height-summary&quot;&gt;2.200 mm&lt;/strong&gt;&lt;/div&gt;
                 &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Adet&lt;/span&gt;&lt;strong id=&quot;d360-qty-summary&quot;&gt;1&lt;/strong&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;card d360-form-panel&quot;&gt;
+                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Bu ürünün malzemesi&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Profil, cam, renk ve kullanım seçimi bu ürün satırıyla birlikte saklanır.&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-field-grid&quot;&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-material&quot;&gt;Malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-material&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-profile-system&quot;&gt;Profil sistemi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-profile-system&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-glass&quot;&gt;Cam / dolgu&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-glass&quot;&gt;&lt;option value=&quot;double&quot;&gt;4+16+4 ısıcam&lt;/option&gt;&lt;option value=&quot;lowe&quot;&gt;Low-E ısıcam&lt;/option&gt;&lt;option value=&quot;triple&quot;&gt;Üçlü ısıcam&lt;/option&gt;&lt;option value=&quot;tempered&quot;&gt;Temperli cam&lt;/option&gt;&lt;option value=&quot;laminated&quot;&gt;Lamine güvenlik camı&lt;/option&gt;&lt;option value=&quot;acoustic&quot;&gt;Akustik cam&lt;/option&gt;&lt;option value=&quot;fire&quot;&gt;Yangına dayanımlı cam&lt;/option&gt;&lt;option value=&quot;panel&quot;&gt;Sandviç panel&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-finish&quot;&gt;Renk / yüzey&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-finish&quot;&gt;&lt;option value=&quot;white&quot;&gt;Beyaz&lt;/option&gt;&lt;option value=&quot;anthracite&quot;&gt;Antrasit&lt;/option&gt;&lt;option value=&quot;black&quot;&gt;Siyah&lt;/option&gt;&lt;option value=&quot;bronze&quot;&gt;Bronz&lt;/option&gt;&lt;option value=&quot;wood&quot;&gt;Ahşap desen&lt;/option&gt;&lt;option value=&quot;ral&quot;&gt;Özel RAL&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-operation&quot;&gt;Kumanda / kullanım&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-operation&quot;&gt;&lt;option value=&quot;manual&quot;&gt;Manuel&lt;/option&gt;&lt;option value=&quot;motor&quot;&gt;Motorlu&lt;/option&gt;&lt;option value=&quot;smart&quot;&gt;Akıllı ev uyumlu motor&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-system-fit-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-choice-summary&quot; aria-live=&quot;polite&quot;&gt;
+                  &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ürün&lt;/span&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;/div&gt;
+                  &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ölçü&lt;/span&gt;&lt;strong id=&quot;d360-dimension-summary&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;
+                  &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Sistem&lt;/span&gt;&lt;strong id=&quot;d360-material-summary&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;
+                &lt;/div&gt;
               &lt;/div&gt;
               &lt;div class=&quot;card d360-form-panel&quot;&gt;
                 &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Bu ölçü kime ve hangi projeye ait?&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Önce müşteriyi seçin. Mevcut projeyi seçebilir veya aynı anda yeni proje oluşturabilirsiniz.&lt;/span&gt;&lt;/div&gt;
@@ -2295,9 +2358,9 @@ html&gt;body{padding:0}&lt;/style&gt;
                 &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-measure-field-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;Fotoğraf isteğe bağlıdır; poz ve not proje ekibinin tamamı tarafından görülebilir.&lt;/div&gt;
               &lt;/div&gt;
               &lt;div class=&quot;card d360-form-panel&quot;&gt;
-                &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Bu proje için ürün ve ölçü listesi&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Her ürünü ayrı satır olarak ekleyin. Müşteri ve proje seçimi sabit kalır.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-measure-list-count&quot;&gt;0 ürün&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Bu proje için üretime hazır ürün listesi&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Ürün, ölçü ve malzeme her satırda birlikte saklanır. Müşteri ve proje seçimi sabit kalır.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-measure-list-count&quot;&gt;0 ürün&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-step-actions&quot;&gt;
-                  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-add-quick-measure&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürünü ve ölçüyü listeye ekle&lt;/button&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-add-quick-measure&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürün, ölçü ve malzemeyi ekle&lt;/button&gt;
                   &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-add-another-product&quot; disabled&gt;&lt;i data-lucide=&quot;plus-circle&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Yeni ürün ekle&lt;/button&gt;
                   &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; id=&quot;d360-open-measure-project&quot; disabled&gt;&lt;i data-lucide=&quot;folder-open&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Listeyi bitir&lt;/button&gt;
                 &lt;/div&gt;
@@ -2306,45 +2369,23 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;/div&gt;
               &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-measure-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürünlere dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;3&quot;&gt;Seçili ürünün malzemesine geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
-          &lt;/section&gt;
-
-          &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;3&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;3. Malzeme ve kullanım şeklini seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Sistem için uygun malzemeler otomatik süzülür. Cam, yüzey ve kumanda seçimini tamamlayın.&lt;/span&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-form-panel&quot;&gt;
-              &lt;div class=&quot;d360-field-grid&quot;&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-material&quot;&gt;Malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-material&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-profile-system&quot;&gt;Profil sistemi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-profile-system&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-glass&quot;&gt;Cam / dolgu&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-glass&quot;&gt;&lt;option value=&quot;double&quot;&gt;4+16+4 ısıcam&lt;/option&gt;&lt;option value=&quot;lowe&quot;&gt;Low-E ısıcam&lt;/option&gt;&lt;option value=&quot;triple&quot;&gt;Üçlü ısıcam&lt;/option&gt;&lt;option value=&quot;tempered&quot;&gt;Temperli cam&lt;/option&gt;&lt;option value=&quot;laminated&quot;&gt;Lamine güvenlik camı&lt;/option&gt;&lt;option value=&quot;acoustic&quot;&gt;Akustik cam&lt;/option&gt;&lt;option value=&quot;fire&quot;&gt;Yangına dayanımlı cam&lt;/option&gt;&lt;option value=&quot;panel&quot;&gt;Sandviç panel&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-finish&quot;&gt;Renk / yüzey&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-finish&quot;&gt;&lt;option value=&quot;white&quot;&gt;Beyaz&lt;/option&gt;&lt;option value=&quot;anthracite&quot;&gt;Antrasit&lt;/option&gt;&lt;option value=&quot;black&quot;&gt;Siyah&lt;/option&gt;&lt;option value=&quot;bronze&quot;&gt;Bronz&lt;/option&gt;&lt;option value=&quot;wood&quot;&gt;Ahşap desen&lt;/option&gt;&lt;option value=&quot;ral&quot;&gt;Özel RAL&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-operation&quot;&gt;Kumanda / kullanım&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-operation&quot;&gt;&lt;option value=&quot;manual&quot;&gt;Manuel&lt;/option&gt;&lt;option value=&quot;motor&quot;&gt;Motorlu&lt;/option&gt;&lt;option value=&quot;smart&quot;&gt;Akıllı ev uyumlu motor&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Bu seçim&lt;/th&gt;&lt;th&gt;Neyi değiştirir?&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Malzeme&lt;/td&gt;&lt;td&gt;Ürünün ana taşıyıcısını ve temel maliyetini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Profil sistemi&lt;/td&gt;&lt;td&gt;Kesim paylarını, ölçü sınırlarını, fireyi ve fiyat çarpanını&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Cam / dolgu&lt;/td&gt;&lt;td&gt;Isı, güvenlik, ses ve dolgu maliyetini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Renk / yüzey&lt;/td&gt;&lt;td&gt;Kaplama işlemini ve yüzey fiyat farkını&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-              &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-system-fit-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
-              &lt;div class=&quot;d360-choice-summary&quot; aria-live=&quot;polite&quot;&gt;
-                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ürün&lt;/span&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ölçü&lt;/span&gt;&lt;strong id=&quot;d360-dimension-summary&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;
-                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Seçilen sistem&lt;/span&gt;&lt;strong id=&quot;d360-material-summary&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;2&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Geri&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;4&quot;&gt;Çizim ve kesimi gör&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürünlere dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;4&quot;&gt;Tüm ürünlerin üretimini gör&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;4&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;4. Ürünü ve üretim çıktılarını kontrol edin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Teknik çizimi inceleyin; malzeme listesi ve kesim ölçüleri arasında geçiş yapın.&lt;/span&gt;&lt;/div&gt;
-            &lt;div class=&quot;card d360-stage&quot;&gt;&lt;svg id=&quot;d360-product-svg&quot; class=&quot;d360-product-svg&quot; viewBox=&quot;0 0 560 370&quot; role=&quot;img&quot; aria-labelledby=&quot;d360-svg-title d360-svg-desc&quot;&gt;&lt;title id=&quot;d360-svg-title&quot;&gt;Ürün önizlemesi&lt;/title&gt;&lt;desc id=&quot;d360-svg-desc&quot;&gt;Seçilen ürün ve ölçülere göre teknik önizleme.&lt;/desc&gt;&lt;/svg&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-output-tabs&quot; role=&quot;group&quot; aria-label=&quot;Üretim çıktısı&quot;&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-output=&quot;materials&quot; aria-pressed=&quot;true&quot;&gt;&lt;i data-lucide=&quot;package&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Malzeme listesi&lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-output=&quot;cuts&quot; aria-pressed=&quot;false&quot;&gt;&lt;i data-lucide=&quot;scissors&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Kesim ölçüleri&lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-output=&quot;offer&quot; aria-pressed=&quot;false&quot;&gt;&lt;i data-lucide=&quot;receipt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Fiyat dökümü&lt;/button&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;2. Projedeki bütün üretim kayıtları&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her ürünün çizimi, ölçüsü, sistemi, malzemesi, kesim listesi ve aksesuarları birlikte gösterilir.&lt;/span&gt;&lt;/div&gt;
+            &lt;div id=&quot;d360-production-all&quot; class=&quot;d360-production-list&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-section&quot;&gt;
+              &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Projenin birleşik sipariş listesi&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Bütün ürünlerdeki aynı profil, cam, aksesuar ve sarf kalemleri otomatik toplanır.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-production-order-count&quot;&gt;0 kalem&lt;/span&gt;&lt;/div&gt;
+              &lt;div id=&quot;d360-production-order-list&quot;&gt;&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;d360-config-output&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-note text-small&quot;&gt;Kontrol tamamlandığında “Teklife geç” düğmesine basın. Sistem seçimini değiştirmek isterseniz geri dönebilirsiniz.&lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;3&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Geri&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;5&quot;&gt;Teklife geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div hidden aria-hidden=&quot;true&quot;&gt;&lt;svg id=&quot;d360-product-svg&quot; class=&quot;d360-product-svg&quot; viewBox=&quot;0 0 560 370&quot; role=&quot;img&quot; aria-labelledby=&quot;d360-svg-title d360-svg-desc&quot;&gt;&lt;title id=&quot;d360-svg-title&quot;&gt;Ürün önizlemesi&lt;/title&gt;&lt;desc id=&quot;d360-svg-desc&quot;&gt;Seçilen ürün ve ölçülere göre teknik önizleme.&lt;/desc&gt;&lt;/svg&gt;&lt;div id=&quot;d360-config-output&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-note text-small&quot;&gt;Üretime gönderilmeden önce her ürünün ölçüsünü ve profil sistemini kontrol edin.&lt;/div&gt;
+            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;2&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürün listesine dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;5&quot;&gt;Proje teklifine geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;5&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;5. Fiyatı kontrol edin ve ölçüyü kaydedin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Ürün, ölçü, kesim ve fiyat seçtiğiniz müşteri projesine tek kayıt olarak eklenecektir.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;3. Fiyatı ve proje kaydını kontrol edin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Projeye eklediğiniz bütün ürünler üretim ve sipariş listelerinde saklanır.&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;viz-grid d360-kpi-grid&quot; aria-label=&quot;Hesap özeti&quot;&gt;
               &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span&gt;Tek ürün&lt;/span&gt;&lt;strong class=&quot;viz-stat-value&quot; id=&quot;d360-unit-total&quot;&gt;—&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;KDV dahil&lt;/span&gt;&lt;/div&gt;
               &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span&gt;Bu ölçü kaydı&lt;/span&gt;&lt;strong class=&quot;viz-stat-value&quot; id=&quot;d360-grand-total&quot;&gt;—&lt;/strong&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-qty-label&quot;&gt;1 adet&lt;/span&gt;&lt;/div&gt;
@@ -2353,7 +2394,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;div id=&quot;d360-offer-output&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-context-alert&quot;&gt;&lt;i data-lucide=&quot;sliders-horizontal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot;&gt;Kâr, KDV veya para birimini değiştirmek ister misiniz?&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-page=&quot;materials&quot; data-pricing-return=&quot;product&quot;&gt;Fiyat ayarlarına git&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-action-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;4&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Geri&lt;/button&gt;&lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-prepare-offer&quot;&gt;&lt;i data-lucide=&quot;printer&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri çıktısını hazırla&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-add-project&quot;&gt;&lt;i data-lucide=&quot;save&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ölçüyü projeye kaydet&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;4&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Üretime dön&lt;/button&gt;&lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-prepare-offer&quot;&gt;&lt;i data-lucide=&quot;printer&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Tüm proje çıktısını hazırla&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-add-project&quot;&gt;&lt;i data-lucide=&quot;folder-open&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Projeyi aç&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;/section&gt;
         &lt;/div&gt;
       &lt;/section&gt;
@@ -3990,11 +4031,86 @@ html&gt;body{padding:0}&lt;/style&gt;
             .replaceAll(&#x27;d360-svg-desc&#x27;, `d360-print-${index}-svg-desc`)
             .replaceAll(&#x27;d360-profile-gradient&#x27;, `d360-print-${index}-profile-gradient`)
             .replaceAll(&#x27;d360-glass-gradient&#x27;, `d360-print-${index}-glass-gradient`)
-            .replaceAll(&#x27;d360-arrow&#x27;, `d360-print-${index}-arrow`);
+            .replaceAll(&#x27;d360-arrow&#x27;, `d360-print-${index}-arrow`)
+            .replaceAll(&#x27;d360-mesh&#x27;, `d360-print-${index}-mesh`);
         } finally {
           Object.assign(state, previous);
           renderProductSvg();
         }
+      }
+
+      function savedItemCutOutput(item) {
+        if (item.measurementOnly) return &#x27;&lt;div class=&quot;d360-status&quot;&gt;&lt;strong&gt;Kesim listesi bekliyor.&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Bu eski ölçü kaydına profil sistemi, cam ve malzeme seçimi eklenmeden üretim kesimi oluşturulmaz.&lt;/div&gt;&lt;/div&gt;&#x27;;
+        const previous = {
+          selected: state.selected,
+          width: state.width,
+          height: state.height,
+          qty: state.qty,
+          material: state.material,
+          systemId: state.systemId,
+          glass: state.glass,
+          finish: state.finish,
+          operation: state.operation
+        };
+        const product = products.find(entry =&gt; entry.id === item.productId) || selectedProduct();
+        try {
+          state.selected = product.id;
+          state.width = Number(item.width) || previous.width;
+          state.height = Number(item.height) || previous.height;
+          state.qty = Number(item.qty) || 1;
+          state.material = item.materialId &amp;&amp; product.materials.includes(item.materialId) ? item.materialId : product.materials[0];
+          state.systemId = systems.some(system =&gt; system.id === item.systemId) ? item.systemId : previous.systemId;
+          state.glass = item.glassId &amp;&amp; glassLabels[item.glassId] ? item.glassId : &#x27;double&#x27;;
+          state.finish = item.finishId &amp;&amp; finishLabels[item.finishId] ? item.finishId : &#x27;white&#x27;;
+          state.operation = item.operationId &amp;&amp; operationLabels[item.operationId] ? item.operationId : &#x27;manual&#x27;;
+          return cutOutput(calculate());
+        } finally {
+          Object.assign(state, previous);
+        }
+      }
+
+      function renderAllProduction() {
+        const target = root.querySelector(&#x27;#d360-production-all&#x27;);
+        const orderTarget = root.querySelector(&#x27;#d360-production-order-list&#x27;);
+        const orderCount = root.querySelector(&#x27;#d360-production-order-count&#x27;);
+        if (!target || !orderTarget || !orderCount) return;
+        const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId)
+          || projects.find(item =&gt; item.id === state.selectedProjectId);
+        const items = project &amp;&amp; Array.isArray(project.items) ? project.items : [];
+        if (!project || !items.length) {
+          target.innerHTML = &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Üretim ekranı için önce en az bir ürün, ölçü ve malzeme kaydını listeye ekleyin.&lt;/div&gt;&#x27;;
+          orderTarget.innerHTML = &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Ürünler eklendiğinde birleşik sipariş listesi burada oluşacak.&lt;/div&gt;&#x27;;
+          orderCount.textContent = &#x27;0 kalem&#x27;;
+          return;
+        }
+        target.innerHTML = items.map((item, index) =&gt; {
+          const drawing = captureProductDrawing(item, index);
+          const cuts = savedItemCutOutput(item);
+          const technicalStatus = item.measurementOnly ? &#x27;Teknik seçim bekliyor&#x27; : &#x27;Üretime hazır&#x27;;
+          return `&lt;article class=&quot;card d360-production-card&quot;&gt;
+            &lt;div class=&quot;d360-production-card-head&quot;&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)}&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(technicalStatus)}&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-production-card-body&quot;&gt;
+              &lt;div class=&quot;d360-production-drawing&quot;&gt;${drawing}&lt;/div&gt;
+              &lt;div class=&quot;d360-production-specs&quot;&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Dış kasa ölçüsü&lt;/span&gt;&lt;strong&gt;${num.format(item.width)} × ${num.format(item.height)} mm · ${num.format(item.qty)} adet&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Profil sistemi&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.system || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Malzeme&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.material || &#x27;Teknik seçim bekliyor&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Cam / dolgu&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.glass || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Renk / yüzey&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.finish || &#x27;Henüz seçilmedi&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Kullanım&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.operation || &#x27;Manuel&#x27;)}&lt;/strong&gt;&lt;/div&gt;
+                ${item.note ? `&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Usta notu&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.note)}&lt;/strong&gt;&lt;/div&gt;` : &#x27;&#x27;}
+                ${item.photoName ? `&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Saha fotoğrafı&lt;/span&gt;&lt;strong&gt;${escapeHtml(item.photoName)}&lt;/strong&gt;&lt;/div&gt;` : &#x27;&#x27;}
+              &lt;/div&gt;
+              &lt;div class=&quot;d360-production-cuts&quot;&gt;&lt;div class=&quot;d360-heading&quot;&gt;&lt;strong&gt;Kesim ölçüleri&lt;/strong&gt;&lt;span class=&quot;viz-badge&quot;&gt;${index + 1} / ${items.length}&lt;/span&gt;&lt;/div&gt;${cuts}&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/article&gt;`;
+        }).join(&#x27;&#x27;);
+        const orderRows = projectOrderRows(project);
+        orderCount.textContent = `${orderRows.length} kalem`;
+        orderTarget.innerHTML = orderRows.length
+          ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Kod&lt;/th&gt;&lt;th&gt;Profil, cam, aksesuar ve sarf&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Toplam ihtiyaç&lt;/th&gt;&lt;th&gt;Birim&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Alış tutarı&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${orderRows.map(row =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(row.code)}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(row.name)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;strong&gt;${num.format(row.qty)}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(row.unit)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(rowPurchaseTotal(row))}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;th colspan=&quot;4&quot;&gt;Tahmini malzeme sipariş toplamı&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;${money.format(orderRows.reduce((sum, row) =&gt; sum + rowPurchaseTotal(row), 0))}&lt;/th&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;&lt;/div&gt;`
+          : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Teknik seçimi tamamlanmış ürün bulunamadı.&lt;/div&gt;&#x27;;
+        ensureIcons();
       }
 
       function customerPrintItem(item, index) {
@@ -4071,7 +4187,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         };
         const now = new Date();
         const dateCode = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, &#x27;0&#x27;)}${String(now.getDate()).padStart(2, &#x27;0&#x27;)}`;
-        root.querySelector(&#x27;#d360-print-document&#x27;).innerHTML = buildCustomerPrint({ customer, project, items: [currentItem], total: calc.grandTotal, documentNo: `TKL-${dateCode}` });
+        const projectItems = Array.isArray(project.items) &amp;&amp; project.items.length ? project.items : [currentItem];
+        const projectTotal = Array.isArray(project.items) &amp;&amp; project.items.length ? Number(project.total || projectItemTotal(project)) : calc.grandTotal;
+        root.querySelector(&#x27;#d360-print-document&#x27;).innerHTML = buildCustomerPrint({ customer, project, items: projectItems, total: projectTotal, documentNo: `TKL-${dateCode}` });
         state.printReturnPage = &#x27;catalog&#x27;;
         showPage(&#x27;print&#x27;);
       }
@@ -4457,7 +4575,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         }
         table.innerHTML = items.length ? items.map((item, index) =&gt; {
           if (!item.id) item.id = makeId(&#x27;itm&#x27;);
-          return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.reference || `Ölçü ${index + 1}`)}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(item.productName)}${item.measurementOnly ? &#x27;&lt;div class=&quot;text-small&quot;&gt;Teknik seçim bekliyor&lt;/div&gt;&#x27; : &#x27;&lt;div class=&quot;text-small&quot;&gt;Fiyatlandırıldı&lt;/div&gt;&#x27;}&lt;/td&gt;&lt;td&gt;${num.format(item.width)} × ${num.format(item.height)} mm&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-measure-remove=&quot;${item.id}&quot;&gt;Kaldır&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`;
+          const technical = item.measurementOnly ? &#x27;Teknik seçim bekliyor&#x27; : `${item.system} · ${item.material} · ${item.glass}`;
+          return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(technical)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${num.format(item.width)} × ${num.format(item.height)} mm&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-measure-remove=&quot;${item.id}&quot;&gt;Kaldır&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;d360-empty&quot;&gt;Bu projede henüz ölçü yok. İlk kapı veya pencereyi ekleyin.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         status.textContent = message || `${project.name} açık. “Yeni ürün ekle” ile ürün seçimine dönerek listeye devam edin.`;
       }
@@ -4480,37 +4599,45 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function addQuickMeasurement() {
         if (!validateMeasurements()) return;
+        const fitsSystem = state.width &lt;= systemRule(&#x27;maxWidth&#x27;, 12000) &amp;&amp; state.height &lt;= systemRule(&#x27;maxHeight&#x27;, 6000);
+        renderSystemFitStatus();
+        if (!fitsSystem) {
+          root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;Bu ölçü seçilen profil sisteminin üretim sınırlarını aşıyor. Profil sistemini veya ölçüyü kontrol edin.&#x27;;
+          return;
+        }
         const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
         const project = resolveMeasurementProject();
         if (!customer || !project) {
           root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;Proje oluşturulamadı. Müşteri ve proje bilgilerini kontrol edin.&#x27;;
           return;
         }
+        const calc = calculate();
+        const orderRows = currentMaterialRows(calc);
         const fieldPhoto = root.querySelector(&#x27;#d360-measure-photo&#x27;).files &amp;&amp; root.querySelector(&#x27;#d360-measure-photo&#x27;).files[0];
         project.items = Array.isArray(project.items) ? project.items : [];
         project.items.push({
           id: makeId(&#x27;itm&#x27;),
-          measurementOnly: true,
+          measurementOnly: false,
           productId: state.selected,
           productName: selectedProduct().name,
           width: state.width,
           height: state.height,
           qty: state.qty,
-          material: &#x27;Teknik seçim bekliyor&#x27;,
-          materialId: &#x27;&#x27;,
-          system: &#x27;Teknik seçim bekliyor&#x27;,
-          systemId: &#x27;&#x27;,
-          glass: &#x27;Henüz seçilmedi&#x27;,
-          glassId: &#x27;&#x27;,
-          finish: &#x27;Henüz seçilmedi&#x27;,
-          finishId: &#x27;&#x27;,
-          operation: &#x27;Henüz seçilmedi&#x27;,
-          operationId: &#x27;&#x27;,
+          material: materialTypes[state.material].label,
+          materialId: state.material,
+          system: selectedSystem().name,
+          systemId: state.systemId,
+          glass: glassLabels[state.glass],
+          glassId: state.glass,
+          finish: finishLabels[state.finish],
+          finishId: state.finish,
+          operation: operationLabels[state.operation],
+          operationId: state.operation,
           reference: root.querySelector(&#x27;#d360-measure-reference&#x27;).value.trim(),
           note: root.querySelector(&#x27;#d360-measure-note&#x27;).value.trim(),
           photoName: fieldPhoto ? fieldPhoto.name : &#x27;&#x27;,
-          orderRows: [],
-          total: 0,
+          orderRows,
+          total: calc.grandTotal,
           addedAt: new Date().toLocaleDateString(&#x27;tr-TR&#x27;)
         });
         project.status = &#x27;Ölçü alındı&#x27;;
@@ -4808,10 +4935,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       };
       const wizardCopy = {
         1: { title: &#x27;Ölçüsünü alacağınız ürünü seçin&#x27;, help: &#x27;Ürüne dokunduğunuzda ölçü girişi otomatik açılacak.&#x27; },
-        2: { title: &#x27;Ürünün ölçüsünü listeye ekleyin&#x27;, help: &#x27;Ölçü, müşteri ve proje bilgisini girin; sonra yeni ürün için ürün seçimine dönün.&#x27; },
-        3: { title: &#x27;Teknik seçimleri tamamlayın&#x27;, help: &#x27;Malzeme, cam/dolgu, renk ve kumanda biçimini seçin.&#x27; },
-        4: { title: &#x27;Üretim çıktısını kontrol edin&#x27;, help: &#x27;Çizim, malzeme listesi ve kesim ölçülerini tek tek doğrulayın.&#x27; },
-        5: { title: &#x27;Fiyat ve ölçü kaydı hazır&#x27;, help: &#x27;Toplamı kontrol edin; kayıt seçtiğiniz müşterinin proje hesabına eklenecek.&#x27; }
+        2: { title: &#x27;Ürün, ölçü ve malzemeyi listeye ekleyin&#x27;, help: &#x27;Profil, cam, renk ve kullanım seçimi her ürünle birlikte kaydedilir.&#x27; },
+        3: { title: &#x27;Ürün kaydını tamamlayın&#x27;, help: &#x27;Ürün ve teknik seçimler aynı proje satırında saklanır.&#x27; },
+        4: { title: &#x27;Projedeki bütün üretim kayıtlarını kontrol edin&#x27;, help: &#x27;Tüm çizimler, ölçüler, kesimler ve birleşik sipariş listesi birlikte gösterilir.&#x27; },
+        5: { title: &#x27;Proje teklifi hazır&#x27;, help: &#x27;Toplamı kontrol edin; bütün ürünler seçtiğiniz müşterinin proje hesabında saklanır.&#x27; }
       };
 
       function validateMeasurements() {
@@ -4837,24 +4964,32 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelectorAll(&#x27;[data-step-panel]&#x27;).forEach(panel =&gt; { panel.hidden = Number(panel.dataset.stepPanel) !== target; });
         root.querySelectorAll(&#x27;[data-wizard-step]&#x27;).forEach(button =&gt; {
           const buttonStep = Number(button.dataset.wizardStep);
-          const active = target &lt;= 2 ? buttonStep === 1 : buttonStep === target;
+          const active = target &lt;= 3 ? buttonStep === 1 : buttonStep === target;
           button.disabled = buttonStep &gt; state.maxStep;
           button.classList.toggle(&#x27;btn-primary&#x27;, active);
           button.classList.toggle(&#x27;btn-ghost&#x27;, !active);
           if (active) button.setAttribute(&#x27;aria-current&#x27;, &#x27;step&#x27;);
           else button.removeAttribute(&#x27;aria-current&#x27;);
         });
-        root.querySelector(&#x27;#d360-wizard-counter&#x27;).textContent = `Adım ${target &lt;= 2 ? 1 : target - 1} / 4`;
+        root.querySelector(&#x27;#d360-wizard-counter&#x27;).textContent = `Adım ${target &lt;= 3 ? 1 : target - 2} / 3`;
         root.querySelector(&#x27;#d360-wizard-title&#x27;).textContent = wizardCopy[target].title;
         root.querySelector(&#x27;#d360-wizard-help&#x27;).textContent = wizardCopy[target].help;
         renderChoiceSummary();
         if (target &gt;= 4) renderConfigurator();
+        if (target === 4) renderAllProduction();
         ensureIcons();
       }
 
       function advanceWizard(target) {
         if (target === 3 &amp;&amp; !validateMeasurements()) return;
         if (target === 4) {
+          const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+          if (!project || !Array.isArray(project.items) || !project.items.length) {
+            root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;Üretimi görmek için önce en az bir ürünü ölçüsü ve malzemesiyle listeye ekleyin.&#x27;;
+            state.maxStep = Math.max(state.maxStep, 2);
+            showWizardStep(2);
+            return;
+          }
           const fits = state.width &lt;= systemRule(&#x27;maxWidth&#x27;, 12000) &amp;&amp; state.height &lt;= systemRule(&#x27;maxHeight&#x27;, 6000);
           renderSystemFitStatus();
           if (!fits) return;
@@ -5160,6 +5295,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         returnToProductAfterPricing();
       });
       root.querySelector(&#x27;#d360-add-project&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        const savedProject = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+        if (savedProject &amp;&amp; Array.isArray(savedProject.items) &amp;&amp; savedProject.items.length) {
+          state.selectedProjectId = savedProject.id;
+          showPage(&#x27;projects&#x27;);
+          renderProjectDetail();
+          return;
+        }
         if (!validateMeasurements()) {
           state.maxStep = Math.max(state.maxStep, 2);
           showWizardStep(2);
