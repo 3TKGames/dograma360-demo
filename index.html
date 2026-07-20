@@ -3174,10 +3174,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         const glassId = item.glassId &amp;&amp; glassLabels[item.glassId] ? item.glassId : &#x27;double&#x27;;
         const finishId = item.finishId &amp;&amp; finishLabels[item.finishId] ? item.finishId : &#x27;white&#x27;;
         const operationId = item.operationId &amp;&amp; operationLabels[item.operationId] ? item.operationId : &#x27;manual&#x27;;
+        const wasIncomplete = item.measurementOnly === true || !item.systemId || !item.materialId;
         Object.assign(item, {
           measurementOnly: false,
           productId: product.id,
           productName: item.productName || product.name,
+          width: Number(item.width) || 1800,
+          height: Number(item.height) || 2200,
           qty: Math.max(1, Number(item.qty) || 1),
           materialId,
           material: materialTypes[materialId].label,
@@ -3189,7 +3192,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           finish: finishLabels[finishId],
           operationId,
           operation: operationLabels[operationId],
-          technicalSource: item.technicalSource || &#x27;automatic&#x27;
+          technicalSource: item.technicalSource || (wasIncomplete ? &#x27;automatic&#x27; : &#x27;selected&#x27;)
         });
         if (!Array.isArray(item.orderRows) || !item.orderRows.length || !(Number(item.total) &gt; 0)) {
           const previous = { selected: state.selected, width: state.width, height: state.height, qty: state.qty, material: state.material, systemId: state.systemId, glass: state.glass, finish: state.finish, operation: state.operation };
