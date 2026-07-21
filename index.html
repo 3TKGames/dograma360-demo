@@ -1378,6 +1378,53 @@ html&gt;body{padding:0}&lt;/style&gt;
       padding-top: .7rem;
       border-top: 1px solid var(--border);
     }
+    #d360-professional-app .d360-setup-screen {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: clamp(1rem, 5vw, 3.5rem);
+    }
+    #d360-professional-app .d360-setup-card {
+      display: grid;
+      gap: 1.15rem;
+      width: min(48rem, 100%);
+      padding: clamp(1rem, 4vw, 2rem);
+    }
+    #d360-professional-app .d360-setup-heading,
+    #d360-professional-app .d360-preference-copy {
+      display: grid;
+      gap: .35rem;
+    }
+    #d360-professional-app .d360-setup-heading h1,
+    #d360-professional-app .d360-setup-heading p { margin: 0; }
+    #d360-professional-app .d360-material-check-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .7rem 1.2rem;
+    }
+    #d360-professional-app .d360-material-check {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: .55rem;
+      align-items: start;
+    }
+    #d360-professional-app .d360-material-check input {
+      inline-size: 1.2rem;
+      block-size: 1.2rem;
+      margin-top: .08rem;
+      accent-color: var(--primary);
+    }
+    #d360-professional-app .d360-preference-panel {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    #d360-professional-app .d360-preference-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      align-items: center;
+    }
     #d360-professional-app .d360-quick-start {
       display: grid;
       grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
@@ -2184,6 +2231,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       #d360-professional-app .d360-topbar-title .text-small { display: none; }
       #d360-professional-app .d360-upgrade-button { padding-inline: .7rem; }
       #d360-professional-app .d360-account-menu &gt; summary &gt; span:not(.d360-avatar) { display: none; }
+      #d360-professional-app .d360-material-check-grid { grid-template-columns: 1fr; }
       #d360-professional-app .d360-page { padding-inline: .85rem; }
       #d360-professional-app .d360-home-hero { padding-top: .35rem; }
       #d360-professional-app .d360-home-hero h1 { font-size: 2.15rem; }
@@ -2385,6 +2433,26 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/div&gt;
   &lt;/section&gt;
 
+  &lt;section class=&quot;d360-setup-screen&quot; id=&quot;d360-setup-screen&quot; aria-label=&quot;İlk çalışma alanı kurulumu&quot; hidden&gt;
+    &lt;div class=&quot;card d360-setup-card&quot;&gt;
+      &lt;div class=&quot;d360-auth-brand&quot;&gt;&lt;span class=&quot;d360-brand-mark&quot;&gt;&lt;i data-lucide=&quot;sliders-horizontal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;strong&gt;Doğrama360&lt;/strong&gt;&lt;span class=&quot;viz-badge&quot;&gt;İlk kurulum&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;d360-setup-heading&quot;&gt;
+        &lt;h1&gt;Programı yaptığınız işe göre hazırlayalım&lt;/h1&gt;
+        &lt;p class=&quot;text-muted&quot;&gt;Kullandığınız malzemeleri seçin. Ürün, proje ve sistem listelerinde yalnızca bu seçenekleri göreceksiniz.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;fieldset class=&quot;d360-field&quot;&gt;
+        &lt;legend&gt;&lt;strong&gt;Hangi malzemelerle çalışıyorsunuz?&lt;/strong&gt;&lt;/legend&gt;
+        &lt;div class=&quot;d360-material-check-grid&quot; id=&quot;d360-setup-materials&quot;&gt;&lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;label class=&quot;form-label&quot; for=&quot;d360-setup-currency&quot;&gt;Ana para birimi
+        &lt;select class=&quot;form-select&quot; id=&quot;d360-setup-currency&quot;&gt;&lt;option value=&quot;TRY&quot;&gt;Türk lirası (TRY)&lt;/option&gt;&lt;option value=&quot;EUR&quot;&gt;Euro (EUR)&lt;/option&gt;&lt;option value=&quot;USD&quot;&gt;Amerikan doları (USD)&lt;/option&gt;&lt;option value=&quot;GBP&quot;&gt;İngiliz sterlini (GBP)&lt;/option&gt;&lt;/select&gt;
+        &lt;span class=&quot;text-small text-muted&quot;&gt;Teklifler bu para birimiyle hazırlanır; güncel kur internetten otomatik alınır.&lt;/span&gt;
+      &lt;/label&gt;
+      &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-setup-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
+      &lt;button type=&quot;button&quot; class=&quot;btn btn-primary btn-block&quot; id=&quot;d360-save-setup&quot;&gt;&lt;i data-lucide=&quot;check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Seçimleri kaydet ve programa başla&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
   &lt;div class=&quot;d360-shell&quot; id=&quot;d360-app-shell&quot; hidden&gt;
     &lt;aside class=&quot;d360-sidebar&quot; aria-label=&quot;Ana menü&quot;&gt;
       &lt;div class=&quot;d360-rail&quot;&gt;
@@ -2403,7 +2471,7 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;materials&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;package&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Fiyat ve stok&lt;/span&gt;&lt;/button&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;library&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;library-big&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Malzeme kütüphanesi&lt;/span&gt;&lt;/button&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;team&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;users-round&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Ekip ve yetki&lt;/span&gt;&lt;/button&gt;
-              &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;settings&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;settings&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Profil sistemleri&lt;/span&gt;&lt;/button&gt;
+              &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;settings&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;settings&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Ayarlar&lt;/span&gt;&lt;/button&gt;
             &lt;/div&gt;
           &lt;/details&gt;
         &lt;/nav&gt;
@@ -2838,6 +2906,18 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;/section&gt;
 
       &lt;section class=&quot;d360-page&quot; data-page-view=&quot;settings&quot; hidden&gt;
+        &lt;div class=&quot;card d360-preference-panel&quot; id=&quot;d360-preference-settings&quot;&gt;
+          &lt;div class=&quot;d360-heading&quot;&gt;&lt;div class=&quot;d360-preference-copy&quot;&gt;&lt;strong&gt;Çalışma alanı tercihleri&lt;/strong&gt;&lt;span class=&quot;text-small text-muted&quot;&gt;Yeni ürün ve projelerde görmek istediğiniz malzemeleri ve ana para birimini yönetin.&lt;/span&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-settings-material-count&quot;&gt;0 malzeme&lt;/span&gt;&lt;/div&gt;
+          &lt;fieldset class=&quot;d360-field&quot;&gt;
+            &lt;legend&gt;&lt;strong&gt;Kullandığınız malzemeler&lt;/strong&gt;&lt;/legend&gt;
+            &lt;div class=&quot;d360-material-check-grid&quot; id=&quot;d360-settings-materials&quot;&gt;&lt;/div&gt;
+          &lt;/fieldset&gt;
+          &lt;label class=&quot;form-label&quot; for=&quot;d360-settings-currency&quot;&gt;Ana para birimi
+            &lt;select class=&quot;form-select&quot; id=&quot;d360-settings-currency&quot;&gt;&lt;option value=&quot;TRY&quot;&gt;Türk lirası (TRY)&lt;/option&gt;&lt;option value=&quot;EUR&quot;&gt;Euro (EUR)&lt;/option&gt;&lt;option value=&quot;USD&quot;&gt;Amerikan doları (USD)&lt;/option&gt;&lt;option value=&quot;GBP&quot;&gt;İngiliz sterlini (GBP)&lt;/option&gt;&lt;/select&gt;
+          &lt;/label&gt;
+          &lt;div class=&quot;d360-preference-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-preferences&quot;&gt;&lt;i data-lucide=&quot;save&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Tercihleri kaydet&lt;/button&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-preferences-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-preferences-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
         &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Profil sistemleri ve kurallar&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Marka/seri bazlı üretim kütüphanesi&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-new-system&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Sistem ekle&lt;/button&gt;&lt;/div&gt;
         &lt;div class=&quot;d360-guide-sequence&quot; aria-label=&quot;Sistem kuralı yönetim yolu&quot;&gt;
           &lt;div class=&quot;d360-guide-step&quot;&gt;&lt;span&gt;1&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Sistemi aç&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Yeni oluştur veya “Düzenle”ye bas&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
@@ -2900,6 +2980,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const root = document.getElementById(&#x27;d360-professional-app&#x27;);
       if (!root) return;
       const authScreen = root.querySelector(&#x27;#d360-auth-screen&#x27;);
+      const setupScreen = root.querySelector(&#x27;#d360-setup-screen&#x27;);
       const appShell = root.querySelector(&#x27;#d360-app-shell&#x27;);
       const authStatus = root.querySelector(&#x27;#d360-auth-status&#x27;);
       const config = globalThis.DOGRAMA360_CONFIG || {};
@@ -3371,6 +3452,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         measureCustomerSearch: &#x27;&#x27;,
         projectDefaultMaterial: &#x27;pvc&#x27;,
         libraryMaterial: &#x27;pvc&#x27;,
+        enabledMaterials: Object.keys(materialTypes),
+        materialSetupComplete: false,
         selectedProjectId: null,
         materialFilter: &#x27;all&#x27;,
         currency: &#x27;TRY&#x27;,
@@ -3425,7 +3508,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         systems: cloneValue(systems.map(normalizeSystem)),
         priceMaterials: cloneValue(priceMaterials),
         pricing: { currency: &#x27;TRY&#x27;, exchangeRate: 1, rateMode: &#x27;auto&#x27;, exchangeRates: { TRY: 1 }, exchangeRateDate: &#x27;&#x27;, exchangeRateFetchedAt: &#x27;&#x27;, exchangeRateSource: &#x27;ECB&#x27;, profitRate: 25, vatRate: 20 },
-        workspace: { membershipPlan: &#x27;free&#x27;, simpleHomeVersion: 1 }
+        workspace: { membershipPlan: &#x27;free&#x27;, enabledMaterials: Object.keys(materialTypes), materialSetupComplete: false, simpleHomeVersion: 1 }
       };
 
       const categoryLabels = Object.fromEntries(categories.map(item =&gt; [item.id, item.label]));
@@ -3437,8 +3520,41 @@ html&gt;body{padding:0}&lt;/style&gt;
       const money = { format(value) { return new Intl.NumberFormat(&#x27;tr-TR&#x27;, { style: &#x27;currency&#x27;, currency: state.currency, maximumFractionDigits: 0 }).format(value / Math.max(.0001, state.exchangeRate)); } };
       const num = new Intl.NumberFormat(&#x27;tr-TR&#x27;, { maximumFractionDigits: 2 });
 
+      function enabledMaterialIds() {
+        const valid = Array.isArray(state.enabledMaterials) ? state.enabledMaterials.filter(materialId =&gt; materialTypes[materialId]) : [];
+        return valid.length ? [...new Set(valid)] : [&#x27;pvc&#x27;];
+      }
+
+      function isMaterialEnabled(materialId) {
+        return enabledMaterialIds().includes(materialId);
+      }
+
+      function enabledMaterialEntries() {
+        const allowed = new Set(enabledMaterialIds());
+        return Object.entries(materialTypes).filter(([materialId]) =&gt; allowed.has(materialId));
+      }
+
+      function enabledMaterialsForProduct(product) {
+        return product.materials.filter(isMaterialEnabled);
+      }
+
+      function normalizeWorkspaceMaterialState() {
+        state.enabledMaterials = enabledMaterialIds();
+        const firstMaterial = state.enabledMaterials[0];
+        if (!isMaterialEnabled(state.material)) state.material = firstMaterial;
+        if (!isMaterialEnabled(state.projectDefaultMaterial)) state.projectDefaultMaterial = firstMaterial;
+        if (!isMaterialEnabled(state.libraryMaterial)) state.libraryMaterial = firstMaterial;
+        const current = products.find(product =&gt; product.id === state.selected);
+        if (!current || !enabledMaterialsForProduct(current).length) {
+          const replacement = products.find(product =&gt; enabledMaterialsForProduct(product).length);
+          if (replacement) state.selected = replacement.id;
+        }
+        const selected = products.find(product =&gt; product.id === state.selected);
+        if (selected &amp;&amp; !selected.materials.includes(state.material)) state.material = enabledMaterialsForProduct(selected)[0] || firstMaterial;
+      }
+
       function selectedProduct() {
-        return products.find(product =&gt; product.id === state.selected) || products[0];
+        return products.find(product =&gt; product.id === state.selected) || products.find(product =&gt; enabledMaterialsForProduct(product).length) || products[0];
       }
 
       function activeMeasurementProject() {
@@ -3447,11 +3563,11 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function activeProjectMaterial() {
         const project = activeMeasurementProject();
-        return project &amp;&amp; materialTypes[project.defaultMaterialId] ? project.defaultMaterialId : state.projectDefaultMaterial;
+        return project &amp;&amp; isMaterialEnabled(project.defaultMaterialId) ? project.defaultMaterialId : state.projectDefaultMaterial;
       }
 
       function setCurrentMaterial(materialId, resetProductIfNeeded = true) {
-        if (!materialTypes[materialId]) return;
+        if (!materialTypes[materialId] || !isMaterialEnabled(materialId)) return;
         state.material = materialId;
         if (resetProductIfNeeded &amp;&amp; !selectedProduct().materials.includes(materialId)) {
           const replacement = products.find(product =&gt; product.materials.includes(materialId) &amp;&amp; (state.category === &#x27;all&#x27; || product.category === state.category)) || products.find(product =&gt; product.materials.includes(materialId));
@@ -3617,7 +3733,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function workspacePayload() {
         return {
-          version: 11,
+          version: 12,
           customers: cloneValue(customers),
           projects: cloneValue(projects),
           teamMembers: cloneValue(teamMembers),
@@ -3626,7 +3742,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           priceMaterials: cloneValue(priceMaterials),
           pricing: { currency: state.currency, exchangeRate: state.exchangeRate, rateMode: state.rateMode, exchangeRates: cloneValue(state.exchangeRates), exchangeRateDate: state.exchangeRateDate, exchangeRateFetchedAt: state.exchangeRateFetchedAt, exchangeRateSource: state.exchangeRateSource, profitRate: state.profitRate, vatRate: state.vatRate },
           appearance: { theme: state.theme },
-          workspace: { membershipPlan: state.membershipPlan, simpleHomeVersion: 1 },
+          workspace: { membershipPlan: state.membershipPlan, enabledMaterials: cloneValue(state.enabledMaterials), materialSetupComplete: state.materialSetupComplete, simpleHomeVersion: 1 },
           updatedAt: new Date().toISOString()
         };
       }
@@ -3648,6 +3764,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.vatRate = seedWorkspace.pricing.vatRate;
         state.activeRole = &#x27;owner&#x27;;
         state.membershipPlan = seedWorkspace.workspace.membershipPlan;
+        state.enabledMaterials = cloneValue(seedWorkspace.workspace.enabledMaterials);
+        state.materialSetupComplete = false;
         state.selectedProjectId = null;
         state.selectedCustomerId = null;
         state.measureCustomerId = &#x27;&#x27;;
@@ -3691,11 +3809,17 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (stored.appearance &amp;&amp; [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(stored.appearance.theme)) applyThemePreference(stored.appearance.theme);
         if (stored.workspace &amp;&amp; membershipPlans[stored.workspace.membershipPlan]) state.membershipPlan = stored.workspace.membershipPlan;
         else if (Number(stored.version) &gt; 0) state.membershipPlan = &#x27;company&#x27;;
+        if (stored.workspace &amp;&amp; Array.isArray(stored.workspace.enabledMaterials)) {
+          const savedMaterials = stored.workspace.enabledMaterials.filter(materialId =&gt; materialTypes[materialId]);
+          if (savedMaterials.length) state.enabledMaterials = [...new Set(savedMaterials)];
+        }
+        state.materialSetupComplete = stored.workspace &amp;&amp; stored.workspace.materialSetupComplete === true;
         customers.forEach(customer =&gt; { if (!customer.status) customer.status = &#x27;Aktif&#x27;; });
         projects.forEach(project =&gt; {
           if (!materialTypes[project.defaultMaterialId]) project.defaultMaterialId = (project.items &amp;&amp; project.items[0] &amp;&amp; project.items[0].materialId) || &#x27;pvc&#x27;;
           completeProjectTechnicalData(project);
         });
+        normalizeWorkspaceMaterialState();
       }
 
       function userStorageKey(userId) {
@@ -3842,10 +3966,65 @@ html&gt;body{padding:0}&lt;/style&gt;
           : &#x27;Devam etmek için Üyelik Sözleşmesi ile Aydınlatma Metni’ni onaylayın.&#x27;;
       }
 
+      function materialPreferenceMarkup(scope) {
+        const selected = new Set(enabledMaterialIds());
+        return Object.entries(materialTypes).map(([materialId, material]) =&gt; {
+          const inputId = `d360-${scope}-material-${materialId}`;
+          return `&lt;div class=&quot;d360-material-check&quot;&gt;&lt;input id=&quot;${inputId}&quot; type=&quot;checkbox&quot; value=&quot;${materialId}&quot; data-material-preference=&quot;${scope}&quot;${selected.has(materialId) ? &#x27; checked&#x27; : &#x27;&#x27;}&gt;&lt;label for=&quot;${inputId}&quot;&gt;${escapeHtml(material.label)}&lt;/label&gt;&lt;/div&gt;`;
+        }).join(&#x27;&#x27;);
+      }
+
+      function renderWorkspacePreferences() {
+        root.querySelector(&#x27;#d360-setup-materials&#x27;).innerHTML = materialPreferenceMarkup(&#x27;setup&#x27;);
+        root.querySelector(&#x27;#d360-settings-materials&#x27;).innerHTML = materialPreferenceMarkup(&#x27;settings&#x27;);
+        root.querySelector(&#x27;#d360-setup-currency&#x27;).value = state.currency;
+        root.querySelector(&#x27;#d360-settings-currency&#x27;).value = state.currency;
+        root.querySelector(&#x27;#d360-settings-material-count&#x27;).textContent = `${enabledMaterialIds().length} malzeme`;
+        ensureIcons();
+      }
+
+      function applyPreferredCurrency(currency) {
+        state.currency = [&#x27;TRY&#x27;, &#x27;EUR&#x27;, &#x27;USD&#x27;, &#x27;GBP&#x27;].includes(currency) ? currency : &#x27;TRY&#x27;;
+        state.rateMode = &#x27;auto&#x27;;
+        state.exchangeRate = state.currency === &#x27;TRY&#x27; ? 1 : (validExchangeRate(state.exchangeRates[state.currency]) ? Number(state.exchangeRates[state.currency]) : 1);
+        root.querySelector(&#x27;#d360-currency&#x27;).value = state.currency;
+        root.querySelector(&#x27;#d360-rate-mode&#x27;).value = &#x27;auto&#x27;;
+        root.querySelector(&#x27;#d360-exchange-rate&#x27;).value = state.exchangeRate;
+      }
+
+      function saveWorkspacePreferences(scope) {
+        const inputs = [...root.querySelectorAll(`[data-material-preference=&quot;${scope}&quot;]`)];
+        const selectedMaterials = inputs.filter(input =&gt; input.checked).map(input =&gt; input.value).filter(materialId =&gt; materialTypes[materialId]);
+        const error = root.querySelector(scope === &#x27;setup&#x27; ? &#x27;#d360-setup-error&#x27; : &#x27;#d360-preferences-error&#x27;);
+        if (!selectedMaterials.length) {
+          error.textContent = &#x27;Devam etmek için en az bir malzeme seçin.&#x27;;
+          return false;
+        }
+        error.textContent = &#x27;&#x27;;
+        state.enabledMaterials = [...new Set(selectedMaterials)];
+        state.materialSetupComplete = true;
+        applyPreferredCurrency(root.querySelector(scope === &#x27;setup&#x27; ? &#x27;#d360-setup-currency&#x27; : &#x27;#d360-settings-currency&#x27;).value);
+        normalizeWorkspaceMaterialState();
+        renderWorkspacePreferences();
+        refreshWorkspaceViews();
+        persistData(true);
+        return true;
+      }
+
+      function showWorkspaceSetupIfNeeded() {
+        renderWorkspacePreferences();
+        const needsSetup = !state.materialSetupComplete;
+        authScreen.hidden = true;
+        setupScreen.hidden = !needsSetup;
+        appShell.hidden = needsSetup;
+        if (needsSetup) root.querySelector(&#x27;#d360-setup-error&#x27;).textContent = &#x27;&#x27;;
+        ensureIcons();
+      }
+
       async function activateSession(session) {
         const user = session &amp;&amp; session.user;
         if (!user || authState.loadingUserId === user.id) return;
-        if (authState.user &amp;&amp; authState.user.id === user.id &amp;&amp; !appShell.hidden) return;
+        if (authState.user &amp;&amp; authState.user.id === user.id &amp;&amp; (!appShell.hidden || !setupScreen.hidden)) return;
         authState.loadingUserId = user.id;
         authState.session = session;
         authState.user = user;
@@ -3858,6 +4037,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         await restoreWorkspaceForUser(user.id);
         state.activeRole = fixedRoleForUser(user);
         refreshWorkspaceViews();
+        showWorkspaceSetupIfNeeded();
         void fetchLatestExchangeRates(false);
         authState.loadingUserId = null;
       }
@@ -3867,6 +4047,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         authState.user = null;
         authState.demo = false;
         appShell.hidden = true;
+        setupScreen.hidden = true;
         authScreen.hidden = false;
         showAuthMode(&#x27;signin&#x27;);
         ensureIcons();
@@ -3882,6 +4063,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (cached.data) applyWorkspace(cached.data);
         state.activeRole = &#x27;owner&#x27;;
         refreshWorkspaceViews();
+        showWorkspaceSetupIfNeeded();
         void fetchLatestExchangeRates(false);
         setSyncStatus(&#x27;Yalnızca bu tarayıcıya kaydediliyor&#x27;);
       }
@@ -4014,8 +4196,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         const select = root.querySelector(&#x27;#d360-measure-model&#x27;);
         if (!select) return;
         select.innerHTML = categories.filter(category =&gt; category.id !== &#x27;all&#x27;).map(category =&gt; {
-          const list = products.filter(product =&gt; product.category === category.id);
-          return `&lt;optgroup label=&quot;${escapeHtml(category.label)}&quot;&gt;${list.map(product =&gt; `&lt;option value=&quot;${product.id}&quot;&gt;${escapeHtml(product.name)}&lt;/option&gt;`).join(&#x27;&#x27;)}&lt;/optgroup&gt;`;
+          const list = products.filter(product =&gt; product.category === category.id &amp;&amp; product.materials.includes(state.material) &amp;&amp; enabledMaterialsForProduct(product).length);
+          return list.length ? `&lt;optgroup label=&quot;${escapeHtml(category.label)}&quot;&gt;${list.map(product =&gt; `&lt;option value=&quot;${product.id}&quot;&gt;${escapeHtml(product.name)}&lt;/option&gt;`).join(&#x27;&#x27;)}&lt;/optgroup&gt;` : &#x27;&#x27;;
         }).join(&#x27;&#x27;);
         select.value = state.selected;
       }
@@ -4034,13 +4216,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         const list = filteredProducts();
         const materialSelect = root.querySelector(&#x27;#d360-catalog-material&#x27;);
         if (materialSelect) {
-          materialSelect.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}${id === activeProjectMaterial() ? &#x27; · proje ana malzemesi&#x27; : &#x27;&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;);
+          materialSelect.innerHTML = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}${id === activeProjectMaterial() ? &#x27; · proje ana malzemesi&#x27; : &#x27;&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;);
           materialSelect.value = state.material;
         }
         root.querySelector(&#x27;#d360-result-count&#x27;).textContent = `${list.length} ürün`;
         root.querySelector(&#x27;#d360-product-grid&#x27;).innerHTML = list.length ? list.map(product =&gt; {
           const active = product.id === state.selected;
-          const materials = product.materials.map(id =&gt; materialTypes[id].label).join(&#x27;, &#x27;);
+          const materials = enabledMaterialsForProduct(product).map(id =&gt; materialTypes[id].label).join(&#x27;, &#x27;);
           return `&lt;button type=&quot;button&quot; class=&quot;btn viz-tile d360-cat-${product.category}${active ? &#x27; is-selected&#x27; : &#x27;&#x27;}&quot; data-product-id=&quot;${product.id}&quot; aria-pressed=&quot;${active}&quot; aria-label=&quot;${product.name}; ${categoryLabels[product.category]}; ${materials}&quot;&gt;&lt;span class=&quot;d360-cat-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;${product.name}&lt;/button&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Aramanıza uygun ürün bulunamadı.&lt;/div&gt;&#x27;;
         ensureIcons();
@@ -4048,9 +4230,10 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function renderMaterialOptions() {
         const product = selectedProduct();
-        if (!product.materials.includes(state.material)) state.material = product.materials[0];
+        const availableMaterials = enabledMaterialsForProduct(product);
+        if (!availableMaterials.includes(state.material)) state.material = availableMaterials[0] || enabledMaterialIds()[0];
         const select = root.querySelector(&#x27;#d360-material&#x27;);
-        select.innerHTML = product.materials.map(id =&gt; `&lt;option value=&quot;${id}&quot;&gt;${materialTypes[id].label}&lt;/option&gt;`).join(&#x27;&#x27;);
+        select.innerHTML = availableMaterials.map(id =&gt; `&lt;option value=&quot;${id}&quot;&gt;${materialTypes[id].label}&lt;/option&gt;`).join(&#x27;&#x27;);
         select.value = state.material;
         const projectMaterial = activeProjectMaterial();
         const scope = root.querySelector(&#x27;#d360-material-scope-status&#x27;);
@@ -4099,7 +4282,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       function renderSelected() {
         const product = selectedProduct();
         root.querySelector(&#x27;#d360-selected-name&#x27;).textContent = product.name;
-        const materialList = product.materials.map(id =&gt; materialTypes[id].label).join(&#x27; · &#x27;);
+        const materialList = enabledMaterialsForProduct(product).map(id =&gt; materialTypes[id].label).join(&#x27; · &#x27;);
         const archiveNote = product.legacy ? &#x27; · Atölye arşivi · Eski fiyatlar kullanılmıyor&#x27; : &#x27;&#x27;;
         root.querySelector(&#x27;#d360-selected-meta&#x27;).textContent = `${categoryLabels[product.category]} · ${materialList}${archiveNote}`;
         root.querySelectorAll(&#x27;[data-selected-name]&#x27;).forEach(element =&gt; { element.textContent = product.name; });
@@ -4806,8 +4989,24 @@ html&gt;body{padding:0}&lt;/style&gt;
         renderCalculation();
       }
 
+      function priceItemMatchesEnabledMaterials(item) {
+        const code = String(item.code || &#x27;&#x27;).toUpperCase();
+        const scopedPrefixes = [
+          [[&#x27;PVC&#x27;, &#x27;GALV&#x27;, &#x27;PAN-PVC&#x27;], [&#x27;pvc&#x27;]],
+          [[&#x27;ALU&#x27;, &#x27;POLYAMID&#x27;, &#x27;PAN-ALU&#x27;], [&#x27;aluCold&#x27;, &#x27;aluThermal&#x27;]],
+          [[&#x27;AHSP&#x27;, &#x27;WA-&#x27;], [&#x27;wood&#x27;, &#x27;woodAlu&#x27;]],
+          [[&#x27;CELIK&#x27;, &#x27;ST-TB&#x27;], [&#x27;steel&#x27;, &#x27;steelThermal&#x27;]],
+          [[&#x27;PASLANMAZ&#x27;, &#x27;INOX&#x27;], [&#x27;stainless&#x27;]],
+          [[&#x27;FRP&#x27;], [&#x27;fiberglass&#x27;]],
+          [[&#x27;GRP&#x27;], [&#x27;grpDoor&#x27;]],
+          [[&#x27;ACP&#x27;, &#x27;HPL&#x27;, &#x27;COMP&#x27;, &#x27;VHB&#x27;], [&#x27;composite&#x27;]]
+        ];
+        const match = scopedPrefixes.find(([prefixes]) =&gt; prefixes.some(prefix =&gt; code.startsWith(prefix)));
+        return !match || match[1].some(isMaterialEnabled);
+      }
+
       function renderMaterialTable() {
-        const list = priceMaterials.filter(item =&gt; state.materialFilter === &#x27;all&#x27; || item.group === state.materialFilter);
+        const list = priceMaterials.filter(item =&gt; priceItemMatchesEnabledMaterials(item) &amp;&amp; (state.materialFilter === &#x27;all&#x27; || item.group === state.materialFilter));
         root.querySelector(&#x27;#d360-material-table&#x27;).innerHTML = list.map(item =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${item.code}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;${item.name}&lt;/td&gt;&lt;td&gt;${item.unit}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;label class=&quot;sr-only&quot; for=&quot;price-${item.code}&quot;&gt;${item.name} alış fiyatı&lt;/label&gt;&lt;input class=&quot;form-control d360-table-input&quot; id=&quot;price-${item.code}&quot; data-price-code=&quot;${item.code}&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;0.01&quot; value=&quot;${item.price}&quot;&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.stock)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);
       }
 
@@ -5044,7 +5243,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         return &#x27;Şirket planı en fazla 3 girişe izin verir: 1 şirket sahibi ve 2 çalışan.&#x27;;
       }
 
-      function createProject({ customerId, name, location, status = &#x27;Ölçü alındı&#x27;, estimatedTotal = 0, defaultMaterialId = &#x27;pvc&#x27; }) {
+      function createProject({ customerId, name, location, status = &#x27;Ölçü alındı&#x27;, estimatedTotal = 0, defaultMaterialId = &#x27;&#x27; }) {
         const customer = customers.find(item =&gt; item.id === customerId);
         if (!customer || !canCreateProjectRecord()) return null;
         const project = {
@@ -5054,7 +5253,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           customer: customer.name,
           name,
           location,
-          defaultMaterialId: materialTypes[defaultMaterialId] ? defaultMaterialId : &#x27;pvc&#x27;,
+          defaultMaterialId: isMaterialEnabled(defaultMaterialId) ? defaultMaterialId : enabledMaterialIds()[0],
           status,
           estimatedTotal: Number(estimatedTotal) || 0,
           products: 0,
@@ -5384,7 +5583,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const assignmentActions = root.querySelector(&#x27;#d360-assignment-actions&#x27;);
         const customerProgress = root.querySelector(&#x27;#d360-customer-progress&#x27;);
         const projectProgress = root.querySelector(&#x27;#d360-project-progress&#x27;);
-        materialSelect.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        materialSelect.innerHTML = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
         const search = state.measureCustomerSearch.trim().toLocaleLowerCase(&#x27;tr-TR&#x27;);
         const visibleCustomers = customers.filter(customer =&gt; !search || `${customer.name} ${customer.phone || &#x27;&#x27;}`.toLocaleLowerCase(&#x27;tr-TR&#x27;).includes(search));
         customerSelect.innerHTML = visibleCustomers.length
@@ -5747,8 +5946,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-project-form-title&#x27;).textContent = `${customer.name} için proje ekle`;
         root.querySelector(&#x27;#d360-project-name&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-project-location&#x27;).value = &#x27;&#x27;;
-        root.querySelector(&#x27;#d360-project-material&#x27;).innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
-        root.querySelector(&#x27;#d360-project-material&#x27;).value = &#x27;pvc&#x27;;
+        root.querySelector(&#x27;#d360-project-material&#x27;).innerHTML = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#d360-project-material&#x27;).value = state.projectDefaultMaterial;
         root.querySelector(&#x27;#d360-project-status&#x27;).value = &#x27;Teklif hazırlanıyor&#x27;;
         root.querySelector(&#x27;#d360-project-total&#x27;).value = &#x27;0&#x27;;
         toggleForm(&#x27;#d360-customer-form&#x27;, false);
@@ -5765,7 +5964,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-standalone-project-customer&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-name&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-location&#x27;).value = &#x27;&#x27;;
-        root.querySelector(&#x27;#d360-standalone-project-material&#x27;).innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#d360-standalone-project-material&#x27;).innerHTML = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
         root.querySelector(&#x27;#d360-standalone-project-material&#x27;).value = state.projectDefaultMaterial;
         root.querySelector(&#x27;#d360-standalone-project-status&#x27;).value = &#x27;Ölçü bekliyor&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-error&#x27;).textContent = customers.length ? &#x27;&#x27; : &#x27;Önce Müşteriler bölümünden müşteri ekleyin.&#x27;;
@@ -5781,7 +5980,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.assignmentProjectMode = projectExists ? &#x27;existing&#x27; : &#x27;choice&#x27;;
         state.measureCustomerSearch = &#x27;&#x27;;
         const project = projects.find(item =&gt; item.id === projectId);
-        state.projectDefaultMaterial = project &amp;&amp; materialTypes[project.defaultMaterialId] ? project.defaultMaterialId : &#x27;pvc&#x27;;
+        state.projectDefaultMaterial = project &amp;&amp; isMaterialEnabled(project.defaultMaterialId) ? project.defaultMaterialId : enabledMaterialIds()[0];
         setCurrentMaterial(state.projectDefaultMaterial);
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
@@ -5807,8 +6006,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.assignmentCustomerMode = &#x27;choice&#x27;;
         state.assignmentProjectMode = &#x27;choice&#x27;;
         state.measureCustomerSearch = &#x27;&#x27;;
-        state.projectDefaultMaterial = &#x27;pvc&#x27;;
-        setCurrentMaterial(&#x27;pvc&#x27;);
+        state.projectDefaultMaterial = enabledMaterialIds()[0];
+        setCurrentMaterial(state.projectDefaultMaterial);
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
         state.step = 1;
@@ -5913,13 +6112,15 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function renderSystems() {
-        const brands = [...new Set(systems.map(system =&gt; system.brand || &#x27;Özel sistem&#x27;))].sort((a, b) =&gt; a.localeCompare(b, &#x27;tr&#x27;));
+        const enabledSet = new Set(enabledMaterialIds());
+        const materialScopedSystems = systems.filter(system =&gt; systemMaterials(system).includes(&#x27;all&#x27;) || systemMaterials(system).some(materialId =&gt; enabledSet.has(materialId)));
+        const brands = [...new Set(materialScopedSystems.map(system =&gt; system.brand || &#x27;Özel sistem&#x27;))].sort((a, b) =&gt; a.localeCompare(b, &#x27;tr&#x27;));
         const brandFilter = root.querySelector(&#x27;#d360-system-brand-filter&#x27;);
         brandFilter.innerHTML = &#x27;&lt;option value=&quot;all&quot;&gt;Tüm markalar&lt;/option&gt;&#x27; + brands.map(brand =&gt; `&lt;option value=&quot;${escapeHtml(brand)}&quot;&gt;${escapeHtml(brand)}&lt;/option&gt;`).join(&#x27;&#x27;);
         brandFilter.value = brands.includes(state.systemBrandFilter) ? state.systemBrandFilter : &#x27;all&#x27;;
         state.systemBrandFilter = brandFilter.value;
         const query = state.systemSearch.trim().toLocaleLowerCase(&#x27;tr-TR&#x27;);
-        const list = systems.filter(system =&gt; {
+        const list = materialScopedSystems.filter(system =&gt; {
           const searchable = `${system.brand || &#x27;&#x27;} ${system.name} ${system.region || &#x27;&#x27;} ${systemApplications(system).map(application =&gt; applicationLabels[application] || application).join(&#x27; &#x27;)}`.toLocaleLowerCase(&#x27;tr-TR&#x27;);
           const brandMatch = state.systemBrandFilter === &#x27;all&#x27; || (system.brand || &#x27;Özel sistem&#x27;) === state.systemBrandFilter;
           const applicationMatch = state.systemApplicationFilter === &#x27;all&#x27; || systemApplications(system).includes(&#x27;all&#x27;) || systemApplications(system).includes(state.systemApplicationFilter);
@@ -5927,8 +6128,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           return (!query || searchable.includes(query)) &amp;&amp; brandMatch &amp;&amp; applicationMatch &amp;&amp; readyMatch;
         });
         root.querySelector(&#x27;#d360-system-result-count&#x27;).textContent = `${list.length} sistem`;
-        const automaticCount = systems.filter(system =&gt; system.autoTechnical).length;
-        root.querySelector(&#x27;#d360-system-library-summary&#x27;).textContent = `${brands.length} marka · ${systems.length} sistem üretime hazır · ${automaticCount} otomatik teknik profil`;
+        const automaticCount = materialScopedSystems.filter(system =&gt; system.autoTechnical).length;
+        root.querySelector(&#x27;#d360-system-library-summary&#x27;).textContent = `${brands.length} marka · ${materialScopedSystems.length} seçili malzemeye uygun sistem · ${automaticCount} otomatik teknik profil`;
         root.querySelector(&#x27;#d360-system-table&#x27;).innerHTML = list.length ? list.map(system =&gt; {
           const materials = systemMaterials(system).map(material =&gt; material === &#x27;all&#x27; ? &#x27;Tüm malzemeler&#x27; : (materialTypes[material] ? materialTypes[material].label : material)).join(&#x27; / &#x27;);
           const applications = systemApplications(system).map(application =&gt; applicationLabels[application] || application).join(&#x27;, &#x27;);
@@ -5953,7 +6154,12 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-system-name&#x27;).value = system ? system.name : &#x27;&#x27;;
         root.querySelector(&#x27;#d360-system-brand&#x27;).value = system ? (system.brand || &#x27;&#x27;) : &#x27;&#x27;;
         root.querySelector(&#x27;#d360-system-region&#x27;).value = system ? (system.region || &#x27;Özel atölye&#x27;) : &#x27;Özel atölye&#x27;;
-        root.querySelector(&#x27;#d360-system-material&#x27;).value = system ? system.material : &#x27;pvc&#x27;;
+        const systemMaterialSelect = root.querySelector(&#x27;#d360-system-material&#x27;);
+        const selectedMaterial = system ? system.material : enabledMaterialIds()[0];
+        const materialOptions = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        const retainedOption = selectedMaterial !== &#x27;all&#x27; &amp;&amp; !isMaterialEnabled(selectedMaterial) &amp;&amp; materialTypes[selectedMaterial] ? `&lt;option value=&quot;${selectedMaterial}&quot;&gt;${escapeHtml(materialTypes[selectedMaterial].label)} · mevcut kayıt&lt;/option&gt;` : &#x27;&#x27;;
+        systemMaterialSelect.innerHTML = `&lt;option value=&quot;all&quot;&gt;Tüm seçili malzemeler&lt;/option&gt;${materialOptions}${retainedOption}`;
+        systemMaterialSelect.value = selectedMaterial;
         root.querySelector(&#x27;#d360-system-application&#x27;).value = system ? (systemApplications(system)[0] || &#x27;all&#x27;) : &#x27;all&#x27;;
         root.querySelector(&#x27;#d360-system-verification&#x27;).value = system ? (system.autoTechnical ? &#x27;auto&#x27; : &#x27;ready&#x27;) : &#x27;auto&#x27;;
         root.querySelector(&#x27;#d360-save-system&#x27;).textContent = system ? &#x27;Sistem ve kuralları kaydet&#x27; : &#x27;Sistemi kaydet&#x27;;
@@ -5964,12 +6170,12 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function renderMaterialLibrary() {
         const select = root.querySelector(&#x27;#d360-library-material&#x27;);
-        select.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
-        if (!materialLibrary[state.libraryMaterial]) state.libraryMaterial = &#x27;pvc&#x27;;
+        select.innerHTML = enabledMaterialEntries().map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        if (!materialLibrary[state.libraryMaterial] || !isMaterialEnabled(state.libraryMaterial)) state.libraryMaterial = enabledMaterialIds()[0];
         select.value = state.libraryMaterial;
         const info = materialLibrary[state.libraryMaterial];
         const compatible = products.filter(product =&gt; product.materials.includes(state.libraryMaterial));
-        root.querySelector(&#x27;#d360-library-count&#x27;).textContent = `${Object.keys(materialLibrary).length} aile`;
+        root.querySelector(&#x27;#d360-library-count&#x27;).textContent = `${enabledMaterialIds().length} aile`;
         root.querySelector(&#x27;#d360-library-title&#x27;).textContent = materialTypes[state.libraryMaterial].label;
         root.querySelector(&#x27;#d360-library-summary&#x27;).textContent = info.summary;
         root.querySelector(&#x27;#d360-library-region&#x27;).textContent = info.region;
@@ -5986,7 +6192,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         ensureIcons();
       }
 
-      const pageTitles = { dashboard: &#x27;Başlangıç&#x27;, catalog: &#x27;Yeni ölçü ve ürün&#x27;, projects: &#x27;Projeler&#x27;, materials: &#x27;Fiyat ve stok yönetimi&#x27;, library: &#x27;Malzeme kütüphanesi&#x27;, customers: &#x27;Müşteriler&#x27;, team: &#x27;Ekip ve yetki yönetimi&#x27;, settings: &#x27;Profil sistemleri&#x27;, print: &#x27;Müşteri çıktısı&#x27; };
+      const pageTitles = { dashboard: &#x27;Başlangıç&#x27;, catalog: &#x27;Yeni ölçü ve ürün&#x27;, projects: &#x27;Projeler&#x27;, materials: &#x27;Fiyat ve stok yönetimi&#x27;, library: &#x27;Malzeme kütüphanesi&#x27;, customers: &#x27;Müşteriler&#x27;, team: &#x27;Ekip ve yetki yönetimi&#x27;, settings: &#x27;Ayarlar&#x27;, print: &#x27;Müşteri çıktısı&#x27; };
       const pageContexts = {
         dashboard: { title: &#x27;Bugün ne yapmak istiyorsunuz?&#x27;, copy: &#x27;Tek bir iş seçin; program sonraki adımı size gösterecek.&#x27;, guide: &#x27;En kolay başlangıç&#x27;, steps: [&#x27;Müşteriyi bulun&#x27;, &#x27;Projeyi seçin&#x27;, &#x27;Ölçüyü kaydedin&#x27;], action: &#x27;Ölçü almaya başla&#x27;, icon: &#x27;ruler&#x27; },
         catalog: { title: &#x27;Ölçü ve ürün kaydı&#x27;, copy: &#x27;Önce müşteri ile projeyi seçin; ardından bütün ürünleri aynı proje listesine ekleyin.&#x27;, guide: &#x27;Doğru kayıt sırası&#x27;, steps: [&#x27;Müşteri ve projeyi belirleyin&#x27;, &#x27;Ürün, ölçü ve malzemeyi ekleyin&#x27;, &#x27;Üretim ve teklifi kontrol edin&#x27;], action: &#x27;Yeni ölçüye dön&#x27;, icon: &#x27;rotate-ccw&#x27; },
@@ -5995,7 +6201,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         materials: { title: &#x27;Fiyat ve stok&#x27;, copy: &#x27;Kâr, KDV ve malzeme fiyatını bir kez güncelleyin; yeni teklifler otomatik hesaplansın.&#x27;, guide: &#x27;Fiyat güncelleme&#x27;, steps: [&#x27;Para birimini seçin&#x27;, &#x27;Fiyatları girin veya CSV yükleyin&#x27;, &#x27;Kaydet tuşuna basın&#x27;], action: &#x27;Hesap ayarlarını aç&#x27;, icon: &#x27;sliders-horizontal&#x27; },
         library: { title: &#x27;Malzeme kütüphanesi&#x27;, copy: &#x27;Her malzemenin yapılabilir ürünlerini ve tipik sipariş bileşenlerini tek yerde görün.&#x27;, guide: &#x27;Doğru seçim&#x27;, steps: [&#x27;Malzeme ailesini seçin&#x27;, &#x27;Uyumlu ürünleri görün&#x27;, &#x27;Marka-seri kuralını doğrulayın&#x27;], action: &#x27;Bu malzemeyle ölçü al&#x27;, icon: &#x27;layers-3&#x27; },
         team: { title: &#x27;Ekip ve yetki&#x27;, copy: &#x27;Her çalışan yalnızca kendi işine ait ekranları görür; aynı müşteri kaydında birlikte çalışır.&#x27;, guide: &#x27;Ekip kurulumu&#x27;, steps: [&#x27;Çalışanı ekleyin&#x27;, &#x27;Rolünü seçin&#x27;, &#x27;Davet durumunu takip edin&#x27;], action: &#x27;Yeni kullanıcı ekle&#x27;, icon: &#x27;user-plus&#x27; },
-        settings: { title: &#x27;Sistem kütüphanesi&#x27;, copy: &#x27;Kullandığınız profil serilerini ve üretim kurallarını tek yerde güncel tutun.&#x27;, guide: &#x27;Sistem tanımlama&#x27;, steps: [&#x27;Seriyi bulun veya ekleyin&#x27;, &#x27;Kesim ve fire kurallarını girin&#x27;, &#x27;Sistemi kaydedin&#x27;], action: &#x27;Yeni sistem ekle&#x27;, icon: &#x27;plus&#x27; },
+        settings: { title: &#x27;Çalışma alanı ayarları&#x27;, copy: &#x27;Kullandığınız malzemeleri, para birimini ve profil sistemlerini tek yerde yönetin.&#x27;, guide: &#x27;Tercihleri güncelleme&#x27;, steps: [&#x27;Malzemeleri işaretleyin&#x27;, &#x27;Para birimini seçin&#x27;, &#x27;Tercihleri kaydedin&#x27;], action: &#x27;Yeni sistem ekle&#x27;, icon: &#x27;settings&#x27; },
         print: { title: &#x27;Müşteri belgesi&#x27;, copy: &#x27;Teklif, ölçü ve üretim çizimlerini müşteriye tek belgede verin.&#x27;, guide: &#x27;Belge kontrolü&#x27;, steps: [&#x27;Bilgileri kontrol edin&#x27;, &#x27;Çizimleri inceleyin&#x27;, &#x27;PDF olarak kaydedin&#x27;], action: &#x27;Ürün ekranına dön&#x27;, icon: &#x27;arrow-left&#x27; }
       };
       const wizardCopy = {
@@ -6670,6 +6876,19 @@ html&gt;body{padding:0}&lt;/style&gt;
       });
 
       root.querySelector(&#x27;#d360-new-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; openCustomerForm(null));
+      root.querySelector(&#x27;#d360-save-setup&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (!saveWorkspacePreferences(&#x27;setup&#x27;)) return;
+        setupScreen.hidden = true;
+        appShell.hidden = false;
+        state.page = &#x27;dashboard&#x27;;
+        showPage(&#x27;dashboard&#x27;);
+        root.querySelector(&#x27;#d360-action-status&#x27;).textContent = &#x27;Çalışma alanınız seçtiğiniz malzemelere göre hazırlandı.&#x27;;
+      });
+      root.querySelector(&#x27;#d360-save-preferences&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (!saveWorkspacePreferences(&#x27;settings&#x27;)) return;
+        root.querySelector(&#x27;#d360-preferences-status&#x27;).textContent = `${enabledMaterialIds().length} malzeme ve ${state.currency} para birimi kaydedildi.`;
+        showPage(&#x27;settings&#x27;);
+      });
       root.querySelector(&#x27;#d360-membership-plan&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.membershipPlan = membershipPlans[event.target.value] ? event.target.value : &#x27;free&#x27;;
         if (state.membershipPlan !== &#x27;company&#x27;) teamMembers.forEach(member =&gt; { member.status = &#x27;Askıda&#x27;; });
@@ -6865,13 +7084,15 @@ html&gt;body{padding:0}&lt;/style&gt;
       });
 
       function refreshWorkspaceViews() {
+        normalizeWorkspaceMaterialState();
         root.querySelector(&#x27;#d360-currency&#x27;).value = state.currency;
         root.querySelector(&#x27;#d360-exchange-rate&#x27;).value = state.exchangeRate;
         root.querySelector(&#x27;#d360-rate-mode&#x27;).value = state.rateMode;
         root.querySelector(&#x27;#d360-profit-rate&#x27;).value = state.profitRate;
         root.querySelector(&#x27;#d360-vat-rate&#x27;).value = state.vatRate;
-        root.querySelector(&#x27;#d360-product-count&#x27;).textContent = products.length;
-        root.querySelector(&#x27;#d360-material-count&#x27;).textContent = priceMaterials.length;
+        root.querySelector(&#x27;#d360-product-count&#x27;).textContent = products.filter(product =&gt; enabledMaterialsForProduct(product).length).length;
+        root.querySelector(&#x27;#d360-material-count&#x27;).textContent = priceMaterials.filter(priceItemMatchesEnabledMaterials).length;
+        renderWorkspacePreferences();
         renderCategories();
         renderProductGrid();
         renderConfigurator();
