@@ -1378,6 +1378,20 @@ html&gt;body{padding:0}&lt;/style&gt;
       padding-top: .7rem;
       border-top: 1px solid var(--border);
     }
+    #d360-professional-app .d360-language-row {
+      display: flex;
+      justify-content: flex-end;
+    }
+    #d360-professional-app .d360-language-control {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      color: var(--muted-foreground);
+    }
+    #d360-professional-app .d360-language-control .form-select {
+      width: auto;
+      min-width: 7.8rem;
+    }
     #d360-professional-app .d360-setup-screen {
       min-height: 100vh;
       display: grid;
@@ -2232,6 +2246,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       #d360-professional-app .d360-upgrade-button { padding-inline: .7rem; }
       #d360-professional-app .d360-account-menu &gt; summary &gt; span:not(.d360-avatar) { display: none; }
       #d360-professional-app .d360-material-check-grid { grid-template-columns: 1fr; }
+      #d360-professional-app .d360-language-control .form-select { min-width: 6.8rem; }
       #d360-professional-app .d360-page { padding-inline: .85rem; }
       #d360-professional-app .d360-home-hero { padding-top: .35rem; }
       #d360-professional-app .d360-home-hero h1 { font-size: 2.15rem; }
@@ -2333,6 +2348,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;/div&gt;
 
     &lt;div class=&quot;card d360-auth-card&quot;&gt;
+      &lt;div class=&quot;d360-language-row&quot;&gt;&lt;label class=&quot;d360-language-control&quot; for=&quot;d360-auth-language&quot;&gt;&lt;i data-lucide=&quot;languages&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;sr-only&quot;&gt;Dil&lt;/span&gt;&lt;select class=&quot;form-select d360-language-select&quot; id=&quot;d360-auth-language&quot; aria-label=&quot;Dil&quot;&gt;&lt;option value=&quot;tr&quot;&gt;Türkçe&lt;/option&gt;&lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;&lt;option value=&quot;el&quot;&gt;Ελληνικά&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;/div&gt;
       &lt;div class=&quot;d360-auth-tabs&quot; role=&quot;tablist&quot; aria-label=&quot;Hesap işlemi&quot;&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-auth-signin-tab&quot; data-auth-mode=&quot;signin&quot; role=&quot;tab&quot; aria-selected=&quot;true&quot;&gt;Giriş yap&lt;/button&gt;
         &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-auth-signup-tab&quot; data-auth-mode=&quot;signup&quot; role=&quot;tab&quot; aria-selected=&quot;false&quot;&gt;Hesap oluştur&lt;/button&gt;
@@ -2435,6 +2451,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   &lt;section class=&quot;d360-setup-screen&quot; id=&quot;d360-setup-screen&quot; aria-label=&quot;İlk çalışma alanı kurulumu&quot; hidden&gt;
     &lt;div class=&quot;card d360-setup-card&quot;&gt;
+      &lt;div class=&quot;d360-language-row&quot;&gt;&lt;label class=&quot;d360-language-control&quot; for=&quot;d360-setup-language&quot;&gt;&lt;i data-lucide=&quot;languages&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;sr-only&quot;&gt;Dil&lt;/span&gt;&lt;select class=&quot;form-select d360-language-select&quot; id=&quot;d360-setup-language&quot; aria-label=&quot;Dil&quot;&gt;&lt;option value=&quot;tr&quot;&gt;Türkçe&lt;/option&gt;&lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;&lt;option value=&quot;el&quot;&gt;Ελληνικά&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;/div&gt;
       &lt;div class=&quot;d360-auth-brand&quot;&gt;&lt;span class=&quot;d360-brand-mark&quot;&gt;&lt;i data-lucide=&quot;sliders-horizontal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;strong&gt;Doğrama360&lt;/strong&gt;&lt;span class=&quot;viz-badge&quot;&gt;İlk kurulum&lt;/span&gt;&lt;/div&gt;
       &lt;div class=&quot;d360-setup-heading&quot;&gt;
         &lt;h1&gt;Programı yaptığınız işe göre hazırlayalım&lt;/h1&gt;
@@ -2501,6 +2518,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;strong id=&quot;d360-page-title&quot;&gt;Başlangıç&lt;/strong&gt;
         &lt;/div&gt;
         &lt;div class=&quot;d360-top-actions&quot;&gt;
+          &lt;label class=&quot;d360-language-control&quot; for=&quot;d360-app-language&quot;&gt;&lt;i data-lucide=&quot;languages&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;sr-only&quot;&gt;Dil&lt;/span&gt;&lt;select class=&quot;form-select d360-language-select&quot; id=&quot;d360-app-language&quot; aria-label=&quot;Dil&quot;&gt;&lt;option value=&quot;tr&quot;&gt;Türkçe&lt;/option&gt;&lt;option value=&quot;en&quot;&gt;English&lt;/option&gt;&lt;option value=&quot;el&quot;&gt;Ελληνικά&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-top-logout&quot;&gt;&lt;i data-lucide=&quot;log-out&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Çıkış yap&lt;/button&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn d360-upgrade-button&quot; id=&quot;d360-upgrade-now&quot; title=&quot;Daha yüksek bir üyelik paketine geçin&quot;&gt;&lt;i data-lucide=&quot;crown&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Upgrade now&lt;/button&gt;
           &lt;details class=&quot;d360-account-menu&quot;&gt;
@@ -2998,6 +3016,249 @@ html&gt;body{padding:0}&lt;/style&gt;
       const EXCHANGE_RATE_API_URL = &#x27;https://api.frankfurter.dev/v2/rates?base=EUR&amp;quotes=TRY,USD,GBP&amp;providers=ECB&#x27;;
       const EXCHANGE_RATE_CACHE_KEY = &#x27;dograma360-ecb-rates-v1&#x27;;
       const EXCHANGE_RATE_CACHE_MS = 6 * 60 * 60 * 1000;
+      const LANGUAGE_STORAGE_KEY = &#x27;dograma360-language-v1&#x27;;
+      const supportedLanguages = [&#x27;tr&#x27;, &#x27;en&#x27;, &#x27;el&#x27;];
+      const uiTranslations = {
+        en: {
+          &#x27;Dil&#x27;: &#x27;Language&#x27;,
+          &#x27;İşleriniz her cihazda güvende&#x27;: &#x27;Your work is safe on every device&#x27;,
+          &#x27;Hesabınızla giriş yapın; müşterileriniz, ölçüleriniz, projeleriniz ve fiyat ayarlarınız yalnızca size ait bulut hesabında saklansın.&#x27;: &#x27;Sign in to keep customers, measurements, projects and pricing securely in your own cloud workspace.&#x27;,
+          &#x27;E-posta doğrulaması&#x27;: &#x27;Email verification&#x27;,
+          &#x27;E-postanıza gelen güvenli bağlantıya tıklayın; hesabınız otomatik açılır.&#x27;: &#x27;Click the secure link in your email and your account opens automatically.&#x27;,
+          &#x27;Otomatik bulut kaydı&#x27;: &#x27;Automatic cloud save&#x27;,
+          &#x27;Yaptığınız işlemler aynı hesapla farklı bilgisayarlarda kullanılabilir.&#x27;: &#x27;Your work is available on different computers with the same account.&#x27;,
+          &#x27;Kişiye özel erişim&#x27;: &#x27;Personal access&#x27;,
+          &#x27;Her kullanıcı yalnızca kendi kayıtlarını görür ve değiştirebilir.&#x27;: &#x27;Each user can only see and edit records allowed for their account.&#x27;,
+          &#x27;Giriş yap&#x27;: &#x27;Sign in&#x27;,
+          &#x27;Hesap oluştur&#x27;: &#x27;Create account&#x27;,
+          &#x27;Görünüm&#x27;: &#x27;Appearance&#x27;,
+          &#x27;Cihaz ayarını kullan&#x27;: &#x27;Use device setting&#x27;,
+          &#x27;Cihaz ayarı&#x27;: &#x27;Device setting&#x27;,
+          &#x27;Açık tema&#x27;: &#x27;Light theme&#x27;,
+          &#x27;Koyu tema&#x27;: &#x27;Dark theme&#x27;,
+          &#x27;Açık&#x27;: &#x27;Light&#x27;,
+          &#x27;Koyu&#x27;: &#x27;Dark&#x27;,
+          &#x27;Tekrar hoş geldiniz&#x27;: &#x27;Welcome back&#x27;,
+          &#x27;Kayıtlı e-posta ve şifrenizi girin.&#x27;: &#x27;Enter your registered email and password.&#x27;,
+          &#x27;E-posta&#x27;: &#x27;Email&#x27;,
+          &#x27;Şifre&#x27;: &#x27;Password&#x27;,
+          &#x27;Şifremi unuttum&#x27;: &#x27;Forgot password&#x27;,
+          &#x27;Yeni hesap oluşturun&#x27;: &#x27;Create a new account&#x27;,
+          &#x27;Bilgilerinizi girin, e-postanızdaki bağlantıya tıklayın, çalışmaya başlayın.&#x27;: &#x27;Enter your details, click the link in your email and start working.&#x27;,
+          &#x27;Ad soyad&#x27;: &#x27;Full name&#x27;,
+          &#x27;Firma adı&#x27;: &#x27;Company name&#x27;,
+          &#x27;(isteğe bağlı)&#x27;: &#x27;(optional)&#x27;,
+          &#x27;Şifreyi tekrar yazın&#x27;: &#x27;Repeat password&#x27;,
+          &#x27;En az 8 karakter kullanın.&#x27;: &#x27;Use at least 8 characters.&#x27;,
+          &#x27;E-posta doğrulama bağlantısı gönder&#x27;: &#x27;Send verification link&#x27;,
+          &#x27;E-postanızı kontrol edin&#x27;: &#x27;Check your email&#x27;,
+          &#x27;Bu ekranda kod yazmanız gerekmiyor.&#x27;: &#x27;You do not need to enter a code on this screen.&#x27;,
+          &#x27;Bağlantıyı tekrar gönder&#x27;: &#x27;Resend link&#x27;,
+          &#x27;E-postayı değiştir&#x27;: &#x27;Change email&#x27;,
+          &#x27;Tanıtım modunda devam et&#x27;: &#x27;Continue in demo mode&#x27;,
+          &#x27;İlk kurulum&#x27;: &#x27;Initial setup&#x27;,
+          &#x27;Programı yaptığınız işe göre hazırlayalım&#x27;: &#x27;Let’s prepare the program for your work&#x27;,
+          &#x27;Kullandığınız malzemeleri seçin. Ürün, proje ve sistem listelerinde yalnızca bu seçenekleri göreceksiniz.&#x27;: &#x27;Choose the materials you use. Product, project and system lists will show only those choices.&#x27;,
+          &#x27;Hangi malzemelerle çalışıyorsunuz?&#x27;: &#x27;Which materials do you work with?&#x27;,
+          &#x27;Ana para birimi&#x27;: &#x27;Main currency&#x27;,
+          &#x27;Teklifler bu para birimiyle hazırlanır; güncel kur internetten otomatik alınır.&#x27;: &#x27;Quotes use this currency; the latest exchange rate is retrieved automatically.&#x27;,
+          &#x27;Türk lirası (TRY)&#x27;: &#x27;Turkish lira (TRY)&#x27;,
+          &#x27;Euro (EUR)&#x27;: &#x27;Euro (EUR)&#x27;,
+          &#x27;Amerikan doları (USD)&#x27;: &#x27;US dollar (USD)&#x27;,
+          &#x27;İngiliz sterlini (GBP)&#x27;: &#x27;British pound (GBP)&#x27;,
+          &#x27;Seçimleri kaydet ve programa başla&#x27;: &#x27;Save choices and start&#x27;,
+          &#x27;Ana sayfa&#x27;: &#x27;Home&#x27;,
+          &#x27;Ölçü al&#x27;: &#x27;Take measurements&#x27;,
+          &#x27;Müşteriler&#x27;: &#x27;Customers&#x27;,
+          &#x27;Projeler&#x27;: &#x27;Projects&#x27;,
+          &#x27;Diğer&#x27;: &#x27;More&#x27;,
+          &#x27;Fiyat ve stok&#x27;: &#x27;Pricing and stock&#x27;,
+          &#x27;Malzeme kütüphanesi&#x27;: &#x27;Material library&#x27;,
+          &#x27;Ekip ve yetki&#x27;: &#x27;Team and permissions&#x27;,
+          &#x27;Ayarlar&#x27;: &#x27;Settings&#x27;,
+          &#x27;Çıkış yap&#x27;: &#x27;Sign out&#x27;,
+          &#x27;Başlangıç&#x27;: &#x27;Home&#x27;,
+          &#x27;Bugün ne yapacaksınız?&#x27;: &#x27;What would you like to do today?&#x27;,
+          &#x27;Bir iş seçin, gerisini birlikte tamamlayalım.&#x27;: &#x27;Choose a task and we’ll guide you through the rest.&#x27;,
+          &#x27;Karışık menüler yok. Başlamak istediğiniz işe dokunun; Doğrama360 size yalnızca sıradaki adımı gösterecek.&#x27;: &#x27;No confusing menus. Choose what you want to do and Doğrama360 will show only the next step.&#x27;,
+          &#x27;Müşteri bul&#x27;: &#x27;Find customer&#x27;,
+          &#x27;Projeleri aç&#x27;: &#x27;Open projects&#x27;,
+          &#x27;Müşteriyi ve projeyi seçerek yeni kapı veya pencere ölçüsü kaydedin.&#x27;: &#x27;Choose the customer and project, then record a new door or window measurement.&#x27;,
+          &#x27;İsim veya telefonla bulun; projesini ve ölçülerini açın.&#x27;: &#x27;Search by name or phone, then open the customer’s projects and measurements.&#x27;,
+          &#x27;Ölçüleri, teklifleri, kesim ve sipariş listelerini görüntüleyin.&#x27;: &#x27;View measurements, quotes, cutting lists and purchase lists.&#x27;,
+          &#x27;Başla&#x27;: &#x27;Start&#x27;,
+          &#x27;Müşterilere git&#x27;: &#x27;Go to customers&#x27;,
+          &#x27;Projeleri gör&#x27;: &#x27;View projects&#x27;,
+          &#x27;Son işler&#x27;: &#x27;Recent work&#x27;,
+          &#x27;Kaldığınız yerden devam edin.&#x27;: &#x27;Continue where you left off.&#x27;,
+          &#x27;Henüz proje yok. İlk ölçünüzü aldığınızda proje burada görünecek.&#x27;: &#x27;No projects yet. Your first project will appear here after you record a measurement.&#x27;,
+          &#x27;Yerel tanıtım hesabı&#x27;: &#x27;Local demo account&#x27;,
+          &#x27;Tanıtım kullanıcısı&#x27;: &#x27;Demo user&#x27;,
+          &#x27;Yalnızca bu tarayıcıya kaydediliyor&#x27;: &#x27;Saving only in this browser&#x27;,
+          &#x27;Bu tarayıcı yerel kayda izin vermiyor&#x27;: &#x27;This browser does not allow local saving&#x27;,
+          &#x27;Bulut bağlantısı kurulumu bekleniyor.&#x27;: &#x27;Cloud connection setup is pending.&#x27;,
+          &#x27;Bulut hesabı henüz bağlanmadı. Arayüzü incelemek için geçici tanıtım modunu açabilirsiniz.&#x27;: &#x27;The cloud account is not connected yet. You can use demo mode to review the interface.&#x27;,
+          &#x27;Doğrama360 hesabı&#x27;: &#x27;Doğrama360 account&#x27;,
+          &#x27;Hesap avantajları&#x27;: &#x27;Account benefits&#x27;,
+          &#x27;Hesap işlemi&#x27;: &#x27;Account action&#x27;,
+          &#x27;Ana menü&#x27;: &#x27;Main menu&#x27;,
+          &#x27;Çalışma alanları&#x27;: &#x27;Workspaces&#x27;,
+          &#x27;Diğer bölümler&#x27;: &#x27;More sections&#x27;,
+          &#x27;Başlangıç işleri&#x27;: &#x27;Quick start tasks&#x27;,
+          &#x27;Tümünü gör&#x27;: &#x27;View all&#x27;,
+          &#x27;Çalışma alanı tercihleri&#x27;: &#x27;Workspace preferences&#x27;,
+          &#x27;Yeni ürün ve projelerde görmek istediğiniz malzemeleri ve ana para birimini yönetin.&#x27;: &#x27;Manage the materials and main currency used for new products and projects.&#x27;,
+          &#x27;Kullandığınız malzemeler&#x27;: &#x27;Materials you use&#x27;,
+          &#x27;Tercihleri kaydet&#x27;: &#x27;Save preferences&#x27;,
+          &#x27;Profil sistemleri ve kurallar&#x27;: &#x27;Profile systems and rules&#x27;,
+          &#x27;Sistem ekle&#x27;: &#x27;Add system&#x27;,
+          &#x27;Yeni proje&#x27;: &#x27;New project&#x27;,
+          &#x27;Yeni ölçü al&#x27;: &#x27;New measurement&#x27;,
+          &#x27;Kaydet&#x27;: &#x27;Save&#x27;,
+          &#x27;Vazgeç&#x27;: &#x27;Cancel&#x27;,
+          &#x27;Düzenle&#x27;: &#x27;Edit&#x27;,
+          &#x27;Sil&#x27;: &#x27;Delete&#x27;,
+          &#x27;Geri dön&#x27;: &#x27;Go back&#x27;,
+          &#x27;Müşteri&#x27;: &#x27;Customer&#x27;,
+          &#x27;Proje&#x27;: &#x27;Project&#x27;,
+          &#x27;Ürün&#x27;: &#x27;Product&#x27;,
+          &#x27;Durum&#x27;: &#x27;Status&#x27;,
+          &#x27;İşlem&#x27;: &#x27;Action&#x27;,
+          &#x27;PVC-U + galvaniz takviye&#x27;: &#x27;PVC-U with galvanized reinforcement&#x27;,
+          &#x27;Alüminyum – ısısız seri&#x27;: &#x27;Aluminium – non-thermal series&#x27;,
+          &#x27;Alüminyum – ısı bariyerli&#x27;: &#x27;Aluminium – thermally broken&#x27;,
+          &#x27;Lamine masif ahşap&#x27;: &#x27;Laminated solid timber&#x27;,
+          &#x27;Ahşap-alüminyum kaplı&#x27;: &#x27;Aluminium-clad timber&#x27;,
+          &#x27;Çelik / galvaniz çelik&#x27;: &#x27;Steel / galvanized steel&#x27;,
+          &#x27;Isı bariyerli çelik&#x27;: &#x27;Thermally broken steel&#x27;,
+          &#x27;Paslanmaz çelik&#x27;: &#x27;Stainless steel&#x27;,
+          &#x27;Pultrüzyon fiberglas (FRP)&#x27;: &#x27;Pultruded fiberglass (FRP)&#x27;,
+          &#x27;GRP kompozit kapı&#x27;: &#x27;GRP composite door&#x27;,
+          &#x27;Kompozit panel / HPL / ACP&#x27;: &#x27;Composite panel / HPL / ACP&#x27;,
+          &#x27;Çerçevesiz yapısal cam&#x27;: &#x27;Frameless structural glass&#x27;
+        },
+        el: {
+          &#x27;Dil&#x27;: &#x27;Γλώσσα&#x27;,
+          &#x27;İşleriniz her cihazda güvende&#x27;: &#x27;Η εργασία σας είναι ασφαλής σε κάθε συσκευή&#x27;,
+          &#x27;Hesabınızla giriş yapın; müşterileriniz, ölçüleriniz, projeleriniz ve fiyat ayarlarınız yalnızca size ait bulut hesabında saklansın.&#x27;: &#x27;Συνδεθείτε ώστε πελάτες, μετρήσεις, έργα και τιμές να αποθηκεύονται με ασφάλεια στον δικό σας χώρο.&#x27;,
+          &#x27;E-posta doğrulaması&#x27;: &#x27;Επαλήθευση email&#x27;,
+          &#x27;E-postanıza gelen güvenli bağlantıya tıklayın; hesabınız otomatik açılır.&#x27;: &#x27;Πατήστε τον ασφαλή σύνδεσμο στο email και ο λογαριασμός ανοίγει αυτόματα.&#x27;,
+          &#x27;Otomatik bulut kaydı&#x27;: &#x27;Αυτόματη αποθήκευση στο cloud&#x27;,
+          &#x27;Yaptığınız işlemler aynı hesapla farklı bilgisayarlarda kullanılabilir.&#x27;: &#x27;Η εργασία σας είναι διαθέσιμη σε διαφορετικούς υπολογιστές με τον ίδιο λογαριασμό.&#x27;,
+          &#x27;Kişiye özel erişim&#x27;: &#x27;Προσωπική πρόσβαση&#x27;,
+          &#x27;Her kullanıcı yalnızca kendi kayıtlarını görür ve değiştirebilir.&#x27;: &#x27;Κάθε χρήστης βλέπει και αλλάζει μόνο τις εγγραφές που επιτρέπει ο λογαριασμός του.&#x27;,
+          &#x27;Giriş yap&#x27;: &#x27;Σύνδεση&#x27;,
+          &#x27;Hesap oluştur&#x27;: &#x27;Δημιουργία λογαριασμού&#x27;,
+          &#x27;Görünüm&#x27;: &#x27;Εμφάνιση&#x27;,
+          &#x27;Cihaz ayarını kullan&#x27;: &#x27;Χρήση ρύθμισης συσκευής&#x27;,
+          &#x27;Cihaz ayarı&#x27;: &#x27;Ρύθμιση συσκευής&#x27;,
+          &#x27;Açık tema&#x27;: &#x27;Φωτεινό θέμα&#x27;,
+          &#x27;Koyu tema&#x27;: &#x27;Σκούρο θέμα&#x27;,
+          &#x27;Açık&#x27;: &#x27;Φωτεινό&#x27;,
+          &#x27;Koyu&#x27;: &#x27;Σκούρο&#x27;,
+          &#x27;Tekrar hoş geldiniz&#x27;: &#x27;Καλώς ήρθατε ξανά&#x27;,
+          &#x27;Kayıtlı e-posta ve şifrenizi girin.&#x27;: &#x27;Εισαγάγετε το καταχωρημένο email και τον κωδικό σας.&#x27;,
+          &#x27;E-posta&#x27;: &#x27;Email&#x27;,
+          &#x27;Şifre&#x27;: &#x27;Κωδικός&#x27;,
+          &#x27;Şifremi unuttum&#x27;: &#x27;Ξέχασα τον κωδικό&#x27;,
+          &#x27;Yeni hesap oluşturun&#x27;: &#x27;Δημιουργήστε νέο λογαριασμό&#x27;,
+          &#x27;Bilgilerinizi girin, e-postanızdaki bağlantıya tıklayın, çalışmaya başlayın.&#x27;: &#x27;Εισαγάγετε τα στοιχεία σας, πατήστε τον σύνδεσμο στο email και ξεκινήστε.&#x27;,
+          &#x27;Ad soyad&#x27;: &#x27;Ονοματεπώνυμο&#x27;,
+          &#x27;Firma adı&#x27;: &#x27;Επωνυμία εταιρείας&#x27;,
+          &#x27;(isteğe bağlı)&#x27;: &#x27;(προαιρετικό)&#x27;,
+          &#x27;Şifreyi tekrar yazın&#x27;: &#x27;Επανάληψη κωδικού&#x27;,
+          &#x27;En az 8 karakter kullanın.&#x27;: &#x27;Χρησιμοποιήστε τουλάχιστον 8 χαρακτήρες.&#x27;,
+          &#x27;E-posta doğrulama bağlantısı gönder&#x27;: &#x27;Αποστολή συνδέσμου επαλήθευσης&#x27;,
+          &#x27;E-postanızı kontrol edin&#x27;: &#x27;Ελέγξτε το email σας&#x27;,
+          &#x27;Bu ekranda kod yazmanız gerekmiyor.&#x27;: &#x27;Δεν χρειάζεται να εισαγάγετε κωδικό σε αυτή την οθόνη.&#x27;,
+          &#x27;Bağlantıyı tekrar gönder&#x27;: &#x27;Επαναποστολή συνδέσμου&#x27;,
+          &#x27;E-postayı değiştir&#x27;: &#x27;Αλλαγή email&#x27;,
+          &#x27;Tanıtım modunda devam et&#x27;: &#x27;Συνέχεια σε λειτουργία επίδειξης&#x27;,
+          &#x27;İlk kurulum&#x27;: &#x27;Αρχική ρύθμιση&#x27;,
+          &#x27;Programı yaptığınız işe göre hazırlayalım&#x27;: &#x27;Ας προσαρμόσουμε το πρόγραμμα στην εργασία σας&#x27;,
+          &#x27;Kullandığınız malzemeleri seçin. Ürün, proje ve sistem listelerinde yalnızca bu seçenekleri göreceksiniz.&#x27;: &#x27;Επιλέξτε τα υλικά που χρησιμοποιείτε. Οι λίστες προϊόντων, έργων και συστημάτων θα εμφανίζουν μόνο αυτές τις επιλογές.&#x27;,
+          &#x27;Hangi malzemelerle çalışıyorsunuz?&#x27;: &#x27;Με ποια υλικά εργάζεστε;&#x27;,
+          &#x27;Ana para birimi&#x27;: &#x27;Κύριο νόμισμα&#x27;,
+          &#x27;Teklifler bu para birimiyle hazırlanır; güncel kur internetten otomatik alınır.&#x27;: &#x27;Οι προσφορές χρησιμοποιούν αυτό το νόμισμα και η ισοτιμία ενημερώνεται αυτόματα.&#x27;,
+          &#x27;Türk lirası (TRY)&#x27;: &#x27;Τουρκική λίρα (TRY)&#x27;,
+          &#x27;Euro (EUR)&#x27;: &#x27;Ευρώ (EUR)&#x27;,
+          &#x27;Amerikan doları (USD)&#x27;: &#x27;Δολάριο ΗΠΑ (USD)&#x27;,
+          &#x27;İngiliz sterlini (GBP)&#x27;: &#x27;Λίρα Αγγλίας (GBP)&#x27;,
+          &#x27;Seçimleri kaydet ve programa başla&#x27;: &#x27;Αποθήκευση και έναρξη&#x27;,
+          &#x27;Ana sayfa&#x27;: &#x27;Αρχική&#x27;,
+          &#x27;Ölçü al&#x27;: &#x27;Νέα μέτρηση&#x27;,
+          &#x27;Müşteriler&#x27;: &#x27;Πελάτες&#x27;,
+          &#x27;Projeler&#x27;: &#x27;Έργα&#x27;,
+          &#x27;Diğer&#x27;: &#x27;Περισσότερα&#x27;,
+          &#x27;Fiyat ve stok&#x27;: &#x27;Τιμές και απόθεμα&#x27;,
+          &#x27;Malzeme kütüphanesi&#x27;: &#x27;Βιβλιοθήκη υλικών&#x27;,
+          &#x27;Ekip ve yetki&#x27;: &#x27;Ομάδα και δικαιώματα&#x27;,
+          &#x27;Ayarlar&#x27;: &#x27;Ρυθμίσεις&#x27;,
+          &#x27;Çıkış yap&#x27;: &#x27;Αποσύνδεση&#x27;,
+          &#x27;Başlangıç&#x27;: &#x27;Αρχική&#x27;,
+          &#x27;Bugün ne yapacaksınız?&#x27;: &#x27;Τι θέλετε να κάνετε σήμερα;&#x27;,
+          &#x27;Bir iş seçin, gerisini birlikte tamamlayalım.&#x27;: &#x27;Επιλέξτε μια εργασία και θα σας καθοδηγήσουμε στα επόμενα βήματα.&#x27;,
+          &#x27;Karışık menüler yok. Başlamak istediğiniz işe dokunun; Doğrama360 size yalnızca sıradaki adımı gösterecek.&#x27;: &#x27;Χωρίς περίπλοκα μενού. Επιλέξτε την εργασία και το Doğrama360 θα εμφανίσει μόνο το επόμενο βήμα.&#x27;,
+          &#x27;Müşteri bul&#x27;: &#x27;Εύρεση πελάτη&#x27;,
+          &#x27;Projeleri aç&#x27;: &#x27;Άνοιγμα έργων&#x27;,
+          &#x27;Müşteriyi ve projeyi seçerek yeni kapı veya pencere ölçüsü kaydedin.&#x27;: &#x27;Επιλέξτε πελάτη και έργο και καταχωρίστε νέα μέτρηση πόρτας ή παραθύρου.&#x27;,
+          &#x27;İsim veya telefonla bulun; projesini ve ölçülerini açın.&#x27;: &#x27;Αναζητήστε με όνομα ή τηλέφωνο και ανοίξτε τα έργα και τις μετρήσεις του πελάτη.&#x27;,
+          &#x27;Ölçüleri, teklifleri, kesim ve sipariş listelerini görüntüleyin.&#x27;: &#x27;Δείτε μετρήσεις, προσφορές, λίστες κοπής και παραγγελιών.&#x27;,
+          &#x27;Başla&#x27;: &#x27;Έναρξη&#x27;,
+          &#x27;Müşterilere git&#x27;: &#x27;Μετάβαση στους πελάτες&#x27;,
+          &#x27;Projeleri gör&#x27;: &#x27;Προβολή έργων&#x27;,
+          &#x27;Son işler&#x27;: &#x27;Πρόσφατες εργασίες&#x27;,
+          &#x27;Kaldığınız yerden devam edin.&#x27;: &#x27;Συνεχίστε από εκεί που σταματήσατε.&#x27;,
+          &#x27;Henüz proje yok. İlk ölçünüzü aldığınızda proje burada görünecek.&#x27;: &#x27;Δεν υπάρχουν ακόμη έργα. Το πρώτο έργο θα εμφανιστεί εδώ μετά την καταχώριση μέτρησης.&#x27;,
+          &#x27;Yerel tanıtım hesabı&#x27;: &#x27;Τοπικός λογαριασμός επίδειξης&#x27;,
+          &#x27;Tanıtım kullanıcısı&#x27;: &#x27;Χρήστης επίδειξης&#x27;,
+          &#x27;Yalnızca bu tarayıcıya kaydediliyor&#x27;: &#x27;Αποθήκευση μόνο σε αυτό το πρόγραμμα περιήγησης&#x27;,
+          &#x27;Bu tarayıcı yerel kayda izin vermiyor&#x27;: &#x27;Το πρόγραμμα περιήγησης δεν επιτρέπει τοπική αποθήκευση&#x27;,
+          &#x27;Bulut bağlantısı kurulumu bekleniyor.&#x27;: &#x27;Εκκρεμεί η ρύθμιση σύνδεσης στο cloud.&#x27;,
+          &#x27;Bulut hesabı henüz bağlanmadı. Arayüzü incelemek için geçici tanıtım modunu açabilirsiniz.&#x27;: &#x27;Ο λογαριασμός cloud δεν έχει συνδεθεί. Μπορείτε να χρησιμοποιήσετε τη λειτουργία επίδειξης.&#x27;,
+          &#x27;Doğrama360 hesabı&#x27;: &#x27;Λογαριασμός Doğrama360&#x27;,
+          &#x27;Hesap avantajları&#x27;: &#x27;Πλεονεκτήματα λογαριασμού&#x27;,
+          &#x27;Hesap işlemi&#x27;: &#x27;Ενέργεια λογαριασμού&#x27;,
+          &#x27;Ana menü&#x27;: &#x27;Κύριο μενού&#x27;,
+          &#x27;Çalışma alanları&#x27;: &#x27;Χώροι εργασίας&#x27;,
+          &#x27;Diğer bölümler&#x27;: &#x27;Περισσότερες ενότητες&#x27;,
+          &#x27;Başlangıç işleri&#x27;: &#x27;Γρήγορες εργασίες&#x27;,
+          &#x27;Tümünü gör&#x27;: &#x27;Προβολή όλων&#x27;,
+          &#x27;Çalışma alanı tercihleri&#x27;: &#x27;Προτιμήσεις χώρου εργασίας&#x27;,
+          &#x27;Yeni ürün ve projelerde görmek istediğiniz malzemeleri ve ana para birimini yönetin.&#x27;: &#x27;Διαχειριστείτε τα υλικά και το κύριο νόμισμα για νέα προϊόντα και έργα.&#x27;,
+          &#x27;Kullandığınız malzemeler&#x27;: &#x27;Υλικά που χρησιμοποιείτε&#x27;,
+          &#x27;Tercihleri kaydet&#x27;: &#x27;Αποθήκευση προτιμήσεων&#x27;,
+          &#x27;Profil sistemleri ve kurallar&#x27;: &#x27;Συστήματα προφίλ και κανόνες&#x27;,
+          &#x27;Sistem ekle&#x27;: &#x27;Προσθήκη συστήματος&#x27;,
+          &#x27;Yeni proje&#x27;: &#x27;Νέο έργο&#x27;,
+          &#x27;Yeni ölçü al&#x27;: &#x27;Νέα μέτρηση&#x27;,
+          &#x27;Kaydet&#x27;: &#x27;Αποθήκευση&#x27;,
+          &#x27;Vazgeç&#x27;: &#x27;Ακύρωση&#x27;,
+          &#x27;Düzenle&#x27;: &#x27;Επεξεργασία&#x27;,
+          &#x27;Sil&#x27;: &#x27;Διαγραφή&#x27;,
+          &#x27;Geri dön&#x27;: &#x27;Επιστροφή&#x27;,
+          &#x27;Müşteri&#x27;: &#x27;Πελάτης&#x27;,
+          &#x27;Proje&#x27;: &#x27;Έργο&#x27;,
+          &#x27;Ürün&#x27;: &#x27;Προϊόν&#x27;,
+          &#x27;Durum&#x27;: &#x27;Κατάσταση&#x27;,
+          &#x27;İşlem&#x27;: &#x27;Ενέργεια&#x27;,
+          &#x27;PVC-U + galvaniz takviye&#x27;: &#x27;PVC-U με γαλβανισμένη ενίσχυση&#x27;,
+          &#x27;Alüminyum – ısısız seri&#x27;: &#x27;Αλουμίνιο – χωρίς θερμοδιακοπή&#x27;,
+          &#x27;Alüminyum – ısı bariyerli&#x27;: &#x27;Αλουμίνιο – με θερμοδιακοπή&#x27;,
+          &#x27;Lamine masif ahşap&#x27;: &#x27;Επικολλητή συμπαγής ξυλεία&#x27;,
+          &#x27;Ahşap-alüminyum kaplı&#x27;: &#x27;Ξύλο με επένδυση αλουμινίου&#x27;,
+          &#x27;Çelik / galvaniz çelik&#x27;: &#x27;Χάλυβας / γαλβανισμένος χάλυβας&#x27;,
+          &#x27;Isı bariyerli çelik&#x27;: &#x27;Χάλυβας με θερμοδιακοπή&#x27;,
+          &#x27;Paslanmaz çelik&#x27;: &#x27;Ανοξείδωτος χάλυβας&#x27;,
+          &#x27;Pultrüzyon fiberglas (FRP)&#x27;: &#x27;Υαλονήματα διέλασης (FRP)&#x27;,
+          &#x27;GRP kompozit kapı&#x27;: &#x27;Σύνθετη πόρτα GRP&#x27;,
+          &#x27;Kompozit panel / HPL / ACP&#x27;: &#x27;Σύνθετο πάνελ / HPL / ACP&#x27;,
+          &#x27;Çerçevesiz yapısal cam&#x27;: &#x27;Δομικό γυαλί χωρίς πλαίσιο&#x27;
+        }
+      };
+      const translatedTextState = new WeakMap();
+      const translatedAttributeState = new WeakMap();
+      let languageObserver = null;
       let cloudSaveTimer = null;
 
       const categories = [
@@ -3467,6 +3728,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         vatRate: 20,
         membershipPlan: &#x27;free&#x27;,
         theme: &#x27;system&#x27;,
+        language: &#x27;tr&#x27;,
         returnToProductAfterPricing: false,
         activeRole: &#x27;owner&#x27;,
         customerSearch: &#x27;&#x27;,
@@ -3699,6 +3961,88 @@ html&gt;body{padding:0}&lt;/style&gt;
         return project;
       }
 
+      function translatedValue(value, language = state.language) {
+        if (language === &#x27;tr&#x27;) return value;
+        return (uiTranslations[language] &amp;&amp; uiTranslations[language][value]) || value;
+      }
+
+      function translateTextNode(node) {
+        if (!node || node.nodeType !== Node.TEXT_NODE || !node.parentElement || node.parentElement.closest(&#x27;script, style, noscript&#x27;)) return;
+        let record = translatedTextState.get(node);
+        if (!record || node.nodeValue !== record.lastApplied) record = { original: node.nodeValue, lastApplied: node.nodeValue };
+        const original = record.original;
+        const trimmed = original.trim();
+        if (!trimmed) {
+          translatedTextState.set(node, record);
+          return;
+        }
+        const leading = original.match(/^\s*/)[0];
+        const trailing = original.match(/\s*$/)[0];
+        const nextValue = `${leading}${translatedValue(trimmed)}${trailing}`;
+        record.lastApplied = nextValue;
+        translatedTextState.set(node, record);
+        if (node.nodeValue !== nextValue) node.nodeValue = nextValue;
+      }
+
+      function translateElementAttributes(element) {
+        if (!element || element.nodeType !== Node.ELEMENT_NODE || element.matches(&#x27;script, style, noscript&#x27;)) return;
+        let records = translatedAttributeState.get(element);
+        if (!records) records = new Map();
+        [&#x27;aria-label&#x27;, &#x27;title&#x27;, &#x27;placeholder&#x27;].forEach(attribute =&gt; {
+          if (!element.hasAttribute(attribute)) return;
+          const current = element.getAttribute(attribute);
+          let record = records.get(attribute);
+          if (!record || current !== record.lastApplied) record = { original: current, lastApplied: current };
+          const nextValue = translatedValue(record.original);
+          record.lastApplied = nextValue;
+          records.set(attribute, record);
+          if (current !== nextValue) element.setAttribute(attribute, nextValue);
+        });
+        translatedAttributeState.set(element, records);
+      }
+
+      function translateSubtree(target) {
+        if (!target) return;
+        if (target.nodeType === Node.TEXT_NODE) {
+          translateTextNode(target);
+          return;
+        }
+        if (target.nodeType !== Node.ELEMENT_NODE) return;
+        translateElementAttributes(target);
+        target.querySelectorAll(&#x27;*&#x27;).forEach(translateElementAttributes);
+        const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
+        let textNode = walker.nextNode();
+        while (textNode) {
+          translateTextNode(textNode);
+          textNode = walker.nextNode();
+        }
+      }
+
+      function applyLanguagePreference(language, saveWorkspace = false) {
+        state.language = supportedLanguages.includes(language) ? language : &#x27;tr&#x27;;
+        document.documentElement.lang = state.language;
+        root.querySelectorAll(&#x27;.d360-language-select&#x27;).forEach(select =&gt; { select.value = state.language; });
+        translateSubtree(root);
+        try { localStorage.setItem(LANGUAGE_STORAGE_KEY, state.language); } catch (_) {}
+        if (saveWorkspace &amp;&amp; (authState.user || authState.demo)) persistData();
+      }
+
+      function initializeLanguage() {
+        root.querySelectorAll(&#x27;.d360-language-select&#x27;).forEach(select =&gt; {
+          select.addEventListener(&#x27;change&#x27;, event =&gt; applyLanguagePreference(event.target.value, true));
+        });
+        if (!languageObserver) {
+          languageObserver = new MutationObserver(mutations =&gt; {
+            mutations.forEach(mutation =&gt; {
+              if (mutation.type === &#x27;characterData&#x27;) translateTextNode(mutation.target);
+              mutation.addedNodes.forEach(translateSubtree);
+            });
+          });
+          languageObserver.observe(root, { subtree: true, childList: true, characterData: true });
+        }
+        applyLanguagePreference(state.language);
+      }
+
       function applyThemePreference(theme, saveWorkspace = false) {
         const value = [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(theme) ? theme : &#x27;system&#x27;;
         state.theme = value;
@@ -3713,6 +4057,9 @@ html&gt;body{padding:0}&lt;/style&gt;
       try {
         const savedTheme = localStorage.getItem(&#x27;dograma360-theme&#x27;);
         if ([&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(savedTheme)) state.theme = savedTheme;
+        const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+        const browserLanguage = String(navigator.language || &#x27;&#x27;).toLowerCase();
+        state.language = supportedLanguages.includes(savedLanguage) ? savedLanguage : (browserLanguage.startsWith(&#x27;el&#x27;) ? &#x27;el&#x27; : browserLanguage.startsWith(&#x27;en&#x27;) ? &#x27;en&#x27; : &#x27;tr&#x27;);
       } catch (error) { /* Tarayıcı depolaması kapalıysa cihaz ayarı kullanılır. */ }
       applyThemePreference(state.theme);
 
@@ -3741,7 +4088,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           deletedSystemIds: cloneValue(state.deletedSystemIds),
           priceMaterials: cloneValue(priceMaterials),
           pricing: { currency: state.currency, exchangeRate: state.exchangeRate, rateMode: state.rateMode, exchangeRates: cloneValue(state.exchangeRates), exchangeRateDate: state.exchangeRateDate, exchangeRateFetchedAt: state.exchangeRateFetchedAt, exchangeRateSource: state.exchangeRateSource, profitRate: state.profitRate, vatRate: state.vatRate },
-          appearance: { theme: state.theme },
+          appearance: { theme: state.theme, language: state.language },
           workspace: { membershipPlan: state.membershipPlan, enabledMaterials: cloneValue(state.enabledMaterials), materialSetupComplete: state.materialSetupComplete, simpleHomeVersion: 1 },
           updatedAt: new Date().toISOString()
         };
@@ -3807,6 +4154,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.vatRate = Number(stored.pricing.vatRate) || 0;
         }
         if (stored.appearance &amp;&amp; [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(stored.appearance.theme)) applyThemePreference(stored.appearance.theme);
+        if (stored.appearance &amp;&amp; supportedLanguages.includes(stored.appearance.language)) applyLanguagePreference(stored.appearance.language);
         if (stored.workspace &amp;&amp; membershipPlans[stored.workspace.membershipPlan]) state.membershipPlan = stored.workspace.membershipPlan;
         else if (Number(stored.version) &gt; 0) state.membershipPlan = &#x27;company&#x27;;
         if (stored.workspace &amp;&amp; Array.isArray(stored.workspace.enabledMaterials)) {
@@ -7113,6 +7461,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       updateNumber(&#x27;#d360-height&#x27;, &#x27;height&#x27;, 300, 6000);
       updateNumber(&#x27;#d360-qty&#x27;, &#x27;qty&#x27;, 1, 999);
       refreshWorkspaceViews();
+      initializeLanguage();
       initializeAuthentication();
       initializeExchangeRates();
     })();
