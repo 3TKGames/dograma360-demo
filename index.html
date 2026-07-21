@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data: https://tqhothlefdlxriqusmpq.supabase.co; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Doğrama360</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255),rgb(24 24 24))}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{box-sizing:border-box;padding:0;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0;min-height:100%;background:inherit}body{box-sizing:border-box;padding:0;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}</style>
 </head>
 <body>
 <iframe sandbox="allow-scripts allow-same-origin allow-modals" referrerpolicy="no-referrer" title="Doğrama360" srcdoc="&lt;!doctype html&gt;
@@ -813,7 +813,7 @@ svg {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;d360-professional-app&quot; data-version=&quot;multi-material-projects&quot;&gt;
+&lt;div id=&quot;d360-professional-app&quot; data-version=&quot;safe-deletion&quot;&gt;
   &lt;style&gt;
     #d360-professional-app {
       color: var(--foreground);
@@ -2573,7 +2573,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;table class=&quot;table&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Proje&lt;/th&gt;&lt;th&gt;Müşteri&lt;/th&gt;&lt;th&gt;Konum&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Ölçü / ürün&lt;/th&gt;&lt;th&gt;Durum&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;İşlem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;d360-project-table&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;
           &lt;/div&gt;
           &lt;div class=&quot;card d360-side-panel&quot; id=&quot;d360-project-detail&quot; hidden&gt;
-            &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong id=&quot;d360-project-detail-name&quot;&gt;Proje&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-project-detail-meta&quot;&gt;—&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-project-print&quot;&gt;&lt;i data-lucide=&quot;printer&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri çıktısı&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-project-add-measure&quot;&gt;Bu projeye ölçü ekle&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong id=&quot;d360-project-detail-name&quot;&gt;Proje&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-project-detail-meta&quot;&gt;—&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-project-print&quot;&gt;&lt;i data-lucide=&quot;printer&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri çıktısı&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-project-add-measure&quot;&gt;Bu projeye ölçü ekle&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn text-destructive&quot; id=&quot;d360-project-delete&quot;&gt;&lt;i data-lucide=&quot;trash-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Projeyi sil&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
             &lt;div id=&quot;d360-project-items&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-section&quot;&gt;
               &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Toplu sipariş listesi&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Projede kayıtlı bütün ölçüler birleştirilir; profil, cam, aksesuar ve sarf malzemeleri tek listede gösterilir.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-order-count&quot;&gt;0 kalem&lt;/span&gt;&lt;/div&gt;
@@ -3238,6 +3238,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         projectCustomerId: null,
         editingTeamMemberId: null,
         editingSystemId: null,
+        deletedSystemIds: [],
         systemDraftRules: [],
         systemSearch: &#x27;&#x27;,
         systemBrandFilter: &#x27;all&#x27;,
@@ -3462,11 +3463,12 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function workspacePayload() {
         return {
-          version: 8,
+          version: 9,
           customers: cloneValue(customers),
           projects: cloneValue(projects),
           teamMembers: cloneValue(teamMembers),
           systems: cloneValue(systems),
+          deletedSystemIds: cloneValue(state.deletedSystemIds),
           priceMaterials: cloneValue(priceMaterials),
           pricing: { currency: state.currency, exchangeRate: state.exchangeRate, profitRate: state.profitRate, vatRate: state.vatRate },
           appearance: { theme: state.theme },
@@ -3490,6 +3492,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.selectedCustomerId = null;
         state.measureCustomerId = &#x27;&#x27;;
         state.measureProjectId = &#x27;&#x27;;
+        state.deletedSystemIds = [];
       }
 
       function applyWorkspace(stored) {
@@ -3498,10 +3501,11 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (Array.isArray(stored.customers)) customers.splice(0, customers.length, ...stored.customers);
         if (Array.isArray(stored.projects)) projects.splice(0, projects.length, ...stored.projects);
         if (Array.isArray(stored.teamMembers)) teamMembers.splice(0, teamMembers.length, ...stored.teamMembers);
+        state.deletedSystemIds = Array.isArray(stored.deletedSystemIds) ? [...new Set(stored.deletedSystemIds)] : [];
         if (Array.isArray(stored.systems)) {
           const savedById = new Map(stored.systems.map(system =&gt; [system.id, system]));
-          const mergedSystems = seedWorkspace.systems.map(seed =&gt; normalizeSystem({ ...seed, ...(savedById.get(seed.id) || {}) }));
-          stored.systems.filter(system =&gt; !seedWorkspace.systems.some(seed =&gt; seed.id === system.id)).forEach(system =&gt; mergedSystems.unshift(normalizeSystem(system)));
+          const mergedSystems = seedWorkspace.systems.filter(seed =&gt; !state.deletedSystemIds.includes(seed.id)).map(seed =&gt; normalizeSystem({ ...seed, ...(savedById.get(seed.id) || {}) }));
+          stored.systems.filter(system =&gt; !state.deletedSystemIds.includes(system.id) &amp;&amp; !seedWorkspace.systems.some(seed =&gt; seed.id === system.id)).forEach(system =&gt; mergedSystems.unshift(normalizeSystem(system)));
           systems.splice(0, systems.length, ...mergedSystems);
         }
         if (Array.isArray(stored.priceMaterials)) {
@@ -3552,7 +3556,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         setSyncStatus(&#x27;Tüm değişiklikler kaydedildi&#x27;);
       }
 
-      function persistData() {
+      function persistData(immediateCloud = false) {
         const payload = workspacePayload();
         try {
           localStorage.setItem(userStorageKey(authState.user &amp;&amp; authState.user.id), JSON.stringify(payload));
@@ -3561,6 +3565,10 @@ html&gt;body{padding:0}&lt;/style&gt;
         }
         if (!cloudClient || !authState.user || authState.demo) return;
         clearTimeout(cloudSaveTimer);
+        if (immediateCloud) {
+          saveWorkspaceToCloud(payload);
+          return;
+        }
         cloudSaveTimer = setTimeout(() =&gt; { saveWorkspaceToCloud(payload); }, 450);
       }
 
@@ -4893,6 +4901,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-project-detail-meta&#x27;).textContent = `${customer ? customer.name : &#x27;Müşteri bulunamadı&#x27;} · ${project.location || &#x27;Konum belirtilmedi&#x27;} · Ana malzeme: ${(materialTypes[project.defaultMaterialId] || materialTypes.pvc).label} · ${project.products} ürün`;
         const items = project.items || [];
         root.querySelector(&#x27;#d360-project-print&#x27;).disabled = !items.length;
+        root.querySelector(&#x27;#d360-project-delete&#x27;).disabled = false;
         root.querySelector(&#x27;#d360-project-items&#x27;).innerHTML = items.length
           ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Ürün, poz ve ölçü&lt;/th&gt;&lt;th&gt;Sistem / saha kaydı&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Adet&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${items.map(item =&gt; `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.reference || &#x27;Poz belirtilmedi&#x27;)} · ${num.format(item.width)} × ${num.format(item.height)} mm · ${escapeHtml(item.addedAt || &#x27;&#x27;)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(item.system)}&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(item.material)} · ${escapeHtml(item.glass)} · ${escapeHtml(item.finish)}&lt;/div&gt;${item.note ? `&lt;div class=&quot;text-small&quot;&gt;Not: ${escapeHtml(item.note)}&lt;/div&gt;` : &#x27;&#x27;}${item.photoName ? `&lt;div class=&quot;text-small&quot;&gt;Fotoğraf: ${escapeHtml(item.photoName)}&lt;/div&gt;` : &#x27;&#x27;}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(item.total)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`
           : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Bu projede henüz ölçü yok. “Bu projeye ölçü ekle” ile ustanın ölçü girişine geçin.&lt;/div&gt;&#x27;;
@@ -5146,7 +5155,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           refreshProjectTotals(project);
         });
         const rows = projects.length
-          ? projects.map(project =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(project.no)}&lt;/code&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.name)} · ${(materialTypes[project.defaultMaterialId] || materialTypes.pvc).label}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(project.customer || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(project.location || &#x27;—&#x27;)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${project.products}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-project-view=&quot;${project.id}&quot;&gt;Aç&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)
+          ? projects.map(project =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(project.no)}&lt;/code&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.name)} · ${(materialTypes[project.defaultMaterialId] || materialTypes.pvc).label}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(project.customer || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(project.location || &#x27;—&#x27;)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${project.products}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;d360-action-cell&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-project-view=&quot;${project.id}&quot;&gt;Aç&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-project-delete=&quot;${project.id}&quot;&gt;Sil&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)
           : &#x27;&lt;tr&gt;&lt;td colspan=&quot;7&quot; class=&quot;d360-empty&quot;&gt;Henüz proje yok. “Yeni proje” ile müşteri ve konum bilgilerini girerek başlayın.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         root.querySelector(&#x27;#d360-project-table&#x27;).innerHTML = rows;
         const recent = root.querySelector(&#x27;#d360-home-recent&#x27;);
@@ -5165,6 +5174,29 @@ html&gt;body{padding:0}&lt;/style&gt;
         return projects.filter(project =&gt; project.customerId === customerId);
       }
 
+      function deleteProject(projectId) {
+        const project = projects.find(item =&gt; item.id === projectId);
+        if (!project) return;
+        const customer = customers.find(item =&gt; item.id === project.customerId);
+        const itemCount = (project.items || []).length;
+        const productCount = projectItemCount(project);
+        const confirmation = `${project.no} · ${project.name} projesini kalıcı olarak silmek istediğinize emin misiniz?\n\nMüşteri: ${customer ? customer.name : &#x27;Bağlı müşteri yok&#x27;}\n${itemCount} ölçü satırı · ${productCount} ürün ve bu projeye ait sipariş listesi silinecek.\n\nBu işlem geri alınamaz.`;
+        if (!globalThis.confirm(confirmation)) return;
+        const projectIndex = projects.findIndex(item =&gt; item.id === projectId);
+        if (projectIndex &gt;= 0) projects.splice(projectIndex, 1);
+        if (state.selectedProjectId === projectId) state.selectedProjectId = null;
+        if (state.measureProjectId === projectId) {
+          state.measureProjectId = &#x27;&#x27;;
+          state.measureCustomerId = &#x27;&#x27;;
+        }
+        root.querySelector(&#x27;#d360-project-badge&#x27;).textContent = &#x27;Proje seçilmedi&#x27;;
+        root.querySelector(&#x27;#d360-action-status&#x27;).textContent = `${project.name} projesi ve bağlı bütün ölçüleri kalıcı olarak silindi.`;
+        renderProjects();
+        renderCustomers();
+        renderAssignmentOptions();
+        persistData(true);
+      }
+
       function deleteCustomer(customerId) {
         const customer = customers.find(item =&gt; item.id === customerId);
         if (!customer) return;
@@ -5172,7 +5204,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const detail = linkedProjects.length
           ? ` Bu müşteriye bağlı ${linkedProjects.length} proje ve içlerindeki bütün ölçüler de silinecek.`
           : &#x27;&#x27;;
-        if (!globalThis.confirm(`${customer.name} müşterisini silmek istediğinize emin misiniz?${detail}`)) return;
+        if (!globalThis.confirm(`${customer.name} müşterisini kalıcı olarak silmek istediğinize emin misiniz?${detail}\n\nİletişim bilgileri, proje kayıtları, ölçüler ve sipariş listeleri silinecek. Bu işlem geri alınamaz.`)) return;
         const deletedProjectIds = new Set(linkedProjects.map(project =&gt; project.id));
         for (let index = projects.length - 1; index &gt;= 0; index -= 1) if (projects[index].customerId === customerId) projects.splice(index, 1);
         customers.splice(customers.findIndex(item =&gt; item.id === customerId), 1);
@@ -5188,7 +5220,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         toggleForm(&#x27;#d360-customer-project-form&#x27;, false);
         renderCustomers();
         renderProjects();
-        persistData();
+        root.querySelector(&#x27;#d360-action-status&#x27;).textContent = `${customer.name} müşterisi ve bağlı kayıtları kalıcı olarak silindi.`;
+        persistData(true);
       }
 
       function renderCustomers() {
@@ -5219,7 +5252,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-customer-detail-contact&#x27;).textContent = `${customer.phone} · ${customer.email || &#x27;E-posta yok&#x27;} · ${customer.status || &#x27;Aktif&#x27;}`;
         const list = customerProjects(customer.id);
         root.querySelector(&#x27;#d360-customer-projects&#x27;).innerHTML = list.length
-          ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Proje&lt;/th&gt;&lt;th&gt;Durum&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;İşlem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${list.map(project =&gt; `&lt;tr&gt;&lt;td&gt;${escapeHtml(project.name)}&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.location || &#x27;&#x27;)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-project-measure=&quot;${project.id}&quot;&gt;Ölçü ekle&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`
+          ? `&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Proje&lt;/th&gt;&lt;th&gt;Durum&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;Tutar&lt;/th&gt;&lt;th class=&quot;text-end&quot;&gt;İşlem&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${list.map(project =&gt; `&lt;tr&gt;&lt;td&gt;${escapeHtml(project.name)}&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.location || &#x27;&#x27;)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;d360-action-cell&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-project-measure=&quot;${project.id}&quot;&gt;Ölçü ekle&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-project-delete=&quot;${project.id}&quot;&gt;Sil&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;`
           : &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Bu müşteriye bağlı proje yok. “Proje ekle” ile başlayın.&lt;/div&gt;&#x27;;
       }
 
@@ -5351,6 +5384,48 @@ html&gt;body{padding:0}&lt;/style&gt;
         persistData();
       }
 
+      function deleteSystem(systemId) {
+        const system = systems.find(item =&gt; item.id === systemId);
+        if (!system) return;
+        if (system.id === &#x27;sys-generic&#x27;) {
+          globalThis.alert(&#x27;Genel üretim kuralları güvenli yedek sistem olarak kullanılır. Bu sistem silinemez; kurallarını düzenleyebilirsiniz.&#x27;);
+          return;
+        }
+        const affectedItems = [];
+        projects.forEach(project =&gt; (project.items || []).forEach(item =&gt; {
+          if (item.systemId === systemId) affectedItems.push({ project, item });
+        }));
+        const affectedQuantity = affectedItems.reduce((sum, entry) =&gt; sum + Math.max(1, Number(entry.item.qty) || 1), 0);
+        const usageWarning = affectedItems.length
+          ? `\n\nBu sistemi kullanan ${affectedItems.length} ölçü satırı ve ${affectedQuantity} ürün var. Bu kayıtlar silinmeyecek; malzemeye uygun başka bir profil sistemi otomatik atanıp maliyet ve sipariş listeleri yeniden hesaplanacak.`
+          : &#x27;&#x27;;
+        if (!globalThis.confirm(`${system.brand || &#x27;Özel sistem&#x27;} · ${system.name} profil sistemini kalıcı olarak silmek istediğinize emin misiniz?${usageWarning}\n\nBu işlem geri alınamaz.`)) return;
+        const systemIndex = systems.findIndex(item =&gt; item.id === systemId);
+        if (systemIndex &gt;= 0) systems.splice(systemIndex, 1);
+        if (!state.deletedSystemIds.includes(systemId)) state.deletedSystemIds.push(systemId);
+        affectedItems.forEach(({ item }) =&gt; {
+          item.systemId = &#x27;&#x27;;
+          item.system = &#x27;&#x27;;
+          item.technicalSource = &#x27;system-delete-reassignment&#x27;;
+          item.orderRows = [];
+          item.total = 0;
+          completeProjectItemTechnical(item);
+        });
+        [...new Set(affectedItems.map(entry =&gt; entry.project))].forEach(refreshProjectTotals);
+        if (state.systemId === systemId) state.systemId = automaticSystemForItem(selectedProduct(), state.material).id;
+        if (state.editingSystemId === systemId) {
+          state.editingSystemId = null;
+          state.systemDraftRules = [];
+          toggleForm(&#x27;#d360-system-form&#x27;, false);
+        }
+        root.querySelector(&#x27;#d360-action-status&#x27;).textContent = `${system.name} profil sistemi kalıcı olarak silindi${affectedItems.length ? &#x27;; bağlı ürünler uygun sisteme geçirildi&#x27; : &#x27;&#x27;}.`;
+        renderSystems();
+        renderProjects();
+        renderCustomers();
+        renderConfigurator();
+        persistData(true);
+      }
+
       function renderSystems() {
         const brands = [...new Set(systems.map(system =&gt; system.brand || &#x27;Özel sistem&#x27;))].sort((a, b) =&gt; a.localeCompare(b, &#x27;tr&#x27;));
         const brandFilter = root.querySelector(&#x27;#d360-system-brand-filter&#x27;);
@@ -5372,7 +5447,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           const materials = systemMaterials(system).map(material =&gt; material === &#x27;all&#x27; ? &#x27;Tüm malzemeler&#x27; : (materialTypes[material] ? materialTypes[material].label : material)).join(&#x27; / &#x27;);
           const applications = systemApplications(system).map(application =&gt; applicationLabels[application] || application).join(&#x27;, &#x27;);
           const verification = system.autoTechnical ? &#x27;Otomatik teknik profil&#x27; : &#x27;Üretime hazır&#x27;;
-          return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(system.brand || &#x27;Özel sistem&#x27;)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(system.name)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(system.region || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(applications)}&lt;/td&gt;&lt;td&gt;${escapeHtml(materials)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(verification)}&lt;/span&gt;&lt;div class=&quot;text-small&quot;&gt;${system.rules.length} kural&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;d360-action-cell&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-system-edit=&quot;${system.id}&quot;&gt;Düzenle&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
+          return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(system.brand || &#x27;Özel sistem&#x27;)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(system.name)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(system.region || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(applications)}&lt;/td&gt;&lt;td&gt;${escapeHtml(materials)}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(verification)}&lt;/span&gt;&lt;div class=&quot;text-small&quot;&gt;${system.rules.length} kural&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;div class=&quot;d360-action-cell&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-system-edit=&quot;${system.id}&quot;&gt;Düzenle&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-system-delete=&quot;${system.id}&quot;&gt;Sil&lt;/button&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;tr&gt;&lt;td colspan=&quot;6&quot; class=&quot;d360-empty&quot;&gt;Bu filtrelere uygun sistem bulunamadı. Aramayı veya filtreleri temizleyin.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         renderSystemOptions();
         ensureIcons();
@@ -5656,6 +5731,9 @@ html&gt;body{padding:0}&lt;/style&gt;
           renderProjectDetail();
         }
 
+        const projectDeleteButton = event.target.closest(&#x27;[data-project-delete]&#x27;);
+        if (projectDeleteButton &amp;&amp; root.contains(projectDeleteButton)) deleteProject(projectDeleteButton.dataset.projectDelete);
+
         const measureRemoveButton = event.target.closest(&#x27;[data-measure-remove]&#x27;);
         if (measureRemoveButton &amp;&amp; root.contains(measureRemoveButton)) {
           const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
@@ -5674,6 +5752,9 @@ html&gt;body{padding:0}&lt;/style&gt;
 
         const systemEditButton = event.target.closest(&#x27;[data-system-edit]&#x27;);
         if (systemEditButton &amp;&amp; root.contains(systemEditButton)) openSystemForm(systemEditButton.dataset.systemEdit);
+
+        const systemDeleteButton = event.target.closest(&#x27;[data-system-delete]&#x27;);
+        if (systemDeleteButton &amp;&amp; root.contains(systemDeleteButton)) deleteSystem(systemDeleteButton.dataset.systemDelete);
 
         const removeRuleButton = event.target.closest(&#x27;[data-rule-remove]&#x27;);
         if (removeRuleButton &amp;&amp; root.contains(removeRuleButton)) {
@@ -5957,6 +6038,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       root.querySelector(&#x27;#d360-project-print&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
         showProjectCustomerPrint(projects.find(project =&gt; project.id === state.selectedProjectId));
       });
+      root.querySelector(&#x27;#d360-project-delete&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; deleteProject(state.selectedProjectId));
       root.querySelector(&#x27;#d360-print-back&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
         showPage(state.printReturnPage || &#x27;projects&#x27;);
         if (state.printReturnPage === &#x27;projects&#x27;) renderProjectDetail();
