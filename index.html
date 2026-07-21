@@ -813,7 +813,7 @@ svg {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;d360-professional-app&quot; data-version=&quot;automatic-exchange-rates&quot;&gt;
+&lt;div id=&quot;d360-professional-app&quot; data-version=&quot;customer-project-decision-flow&quot;&gt;
   &lt;style&gt;
     #d360-professional-app {
       color: var(--foreground);
@@ -1037,6 +1037,63 @@ html&gt;body{padding:0}&lt;/style&gt;
     }
     #d360-professional-app .d360-assignment-wide {
       grid-column: 1 / -1;
+    }
+    #d360-professional-app .d360-decision-flow {
+      display: grid;
+      gap: 1rem;
+      max-width: 50rem;
+    }
+    #d360-professional-app .d360-decision-progress {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .5rem;
+    }
+    #d360-professional-app .d360-decision-progress &gt; span {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      padding-block: .55rem;
+      border-bottom: 2px solid var(--border);
+      color: var(--muted-foreground);
+    }
+    #d360-professional-app .d360-decision-progress &gt; span.is-current,
+    #d360-professional-app .d360-decision-progress &gt; span.is-complete {
+      color: var(--foreground);
+      border-bottom-color: var(--primary);
+    }
+    #d360-professional-app .d360-decision-progress b {
+      display: grid;
+      place-items: center;
+      width: 1.7rem;
+      height: 1.7rem;
+      border-radius: 50%;
+      color: var(--primary-foreground);
+      background: var(--primary);
+    }
+    #d360-professional-app .d360-decision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+    }
+    #d360-professional-app .d360-decision-card.d360-launch-card {
+      min-height: 8.5rem;
+      grid-template-rows: auto 1fr;
+      gap: .65rem;
+      padding: 1rem;
+    }
+    #d360-professional-app .d360-decision-card.d360-launch-card strong {
+      font-size: 1.1rem;
+    }
+    #d360-professional-app .d360-selected-decision {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: .75rem;
+    }
+    #d360-professional-app .d360-decision-section {
+      display: grid;
+      gap: .75rem;
+      padding-top: .25rem;
     }
     #d360-professional-app .d360-side-panel {
       display: grid;
@@ -1547,6 +1604,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       #d360-professional-app .d360-rule-builder,
       #d360-professional-app .d360-context-alert,
       #d360-professional-app .d360-assignment-grid,
+      #d360-professional-app .d360-decision-grid,
+      #d360-professional-app .d360-selected-decision,
       #d360-professional-app .d360-team-layout,
       #d360-professional-app .d360-module-grid,
       #d360-professional-app .d360-role-banner,
@@ -2383,33 +2442,62 @@ html&gt;body{padding:0}&lt;/style&gt;
 
         &lt;div class=&quot;d360-wizard&quot;&gt;
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;1&quot;&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Müşteri ve projeyi seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Bundan sonra ekleyeceğiniz bütün kapı ve pencereler bu proje hesabında toplanacak.&lt;/span&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-form-panel&quot;&gt;
-              &lt;div class=&quot;d360-assignment-grid&quot;&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project&quot;&gt;Proje&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-project&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-field d360-assignment-wide&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-default-material&quot;&gt;Projenin ana malzemesi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-default-material&quot;&gt;&lt;/select&gt;&lt;span class=&quot;text-small text-muted&quot;&gt;Yeni ürünler bu malzemeyle başlar; her üründe ayrıca değiştirebilirsiniz.&lt;/span&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-assignment-grid d360-assignment-wide&quot; id=&quot;d360-new-measure-project&quot; hidden&gt;
-                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-name&quot;&gt;Yeni proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;
-                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Müşteri ve proje&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;İki kısa seçim yapın. Sonraki bütün ölçüler seçtiğiniz proje altında toplanacak.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-decision-flow&quot;&gt;
+              &lt;div class=&quot;d360-decision-progress&quot; aria-label=&quot;Müşteri ve proje seçim durumu&quot;&gt;
+                &lt;span id=&quot;d360-customer-progress&quot; class=&quot;is-current&quot;&gt;&lt;b&gt;1&lt;/b&gt;Müşteri&lt;/span&gt;
+                &lt;span id=&quot;d360-project-progress&quot;&gt;&lt;b&gt;2&lt;/b&gt;Proje&lt;/span&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;d360-decision-section&quot; id=&quot;d360-customer-choice-panel&quot;&gt;
+                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;İlk soru: Müşteri için ne yapmak istiyorsunuz?&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Kayıtlı müşteriyi bulun veya yeni müşteri oluşturun.&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-decision-grid&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;d360-launch-card d360-decision-card&quot; id=&quot;d360-find-customer&quot;&gt;&lt;span class=&quot;d360-launch-icon&quot;&gt;&lt;i data-lucide=&quot;search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Müşteri bul&lt;/strong&gt;&lt;p&gt;Kayıtlı müşteriyi adı veya telefonuyla bulun.&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;d360-launch-card d360-decision-card&quot; id=&quot;d360-show-quick-customer&quot;&gt;&lt;span class=&quot;d360-launch-icon&quot;&gt;&lt;i data-lucide=&quot;user-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Yeni müşteri&lt;/strong&gt;&lt;p&gt;Müşteri listede yoksa hızlıca oluşturun.&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
-              &lt;div class=&quot;d360-context-alert&quot;&gt;&lt;i data-lucide=&quot;info&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-measure-assignment-help&quot;&gt;Önce müşteriyi seçin.&lt;/span&gt;&lt;/div&gt;
-              &lt;div class=&quot;d360-step-actions&quot;&gt;
-                &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-show-quick-customer&quot;&gt;&lt;i data-lucide=&quot;user-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri listede yok&lt;/button&gt;
-                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-assignment-continue&quot;&gt;Ürün seçimine devam et&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+
+              &lt;div class=&quot;d360-decision-section&quot; id=&quot;d360-existing-customer-panel&quot; hidden&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer-search&quot;&gt;Müşteri adı veya telefon&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-customer-search&quot; type=&quot;search&quot; placeholder=&quot;Örnek: Ahmet veya 0533…&quot; autocomplete=&quot;off&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer&quot;&gt;Bulunan müşteriler&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-customer&quot;&gt;&lt;/select&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-customer-result-help&quot;&gt;&lt;/span&gt;&lt;/div&gt;
               &lt;/div&gt;
+
               &lt;div class=&quot;card d360-form-panel&quot; id=&quot;d360-quick-customer-form&quot; hidden&gt;
-                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Yeni müşteri oluştur&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Kaydettikten sonra müşteri otomatik seçilecek ve proje oluşturabileceksiniz.&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Yeni müşteri oluştur&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Yalnızca temel bilgileri girin; kaydedince proje sorusu açılacak.&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-field-grid&quot;&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-name&quot;&gt;Müşteri / firma adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-name&quot; type=&quot;text&quot; autocomplete=&quot;name&quot;&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-phone&quot;&gt;Telefon&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-phone&quot; type=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-email&quot;&gt;E-posta &lt;span class=&quot;text-small text-muted&quot;&gt;(isteğe bağlı)&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-quick-customer-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
-                &lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-quick-customer&quot;&gt;Müşteriyi kaydet ve seç&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-cancel-quick-customer&quot;&gt;Vazgeç&lt;/button&gt;&lt;/div&gt;
+                &lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-quick-customer&quot;&gt;Müşteriyi kaydet ve devam et&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-cancel-quick-customer&quot;&gt;Vazgeç&lt;/button&gt;&lt;/div&gt;
               &lt;/div&gt;
+
+              &lt;div class=&quot;card d360-selected-decision&quot; id=&quot;d360-selected-customer&quot; hidden&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Seçili müşteri&lt;/span&gt;&lt;strong id=&quot;d360-selected-customer-name&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-change-customer&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Değiştir&lt;/button&gt;&lt;/div&gt;
+
+              &lt;div class=&quot;d360-decision-section&quot; id=&quot;d360-project-choice-panel&quot; hidden&gt;
+                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;İkinci soru: Proje için ne yapmak istiyorsunuz?&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Yeni iş açın veya müşterinin hazır projesine ölçü ekleyin.&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-decision-grid&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;d360-launch-card d360-decision-card&quot; id=&quot;d360-create-project-choice&quot;&gt;&lt;span class=&quot;d360-launch-icon&quot;&gt;&lt;i data-lucide=&quot;folder-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Yeni proje oluştur&lt;/strong&gt;&lt;p&gt;Proje adı, konumu ve ana malzemesini belirleyin.&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;d360-launch-card d360-decision-card&quot; id=&quot;d360-select-project-choice&quot;&gt;&lt;span class=&quot;d360-launch-icon&quot;&gt;&lt;i data-lucide=&quot;folder-open&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;span&gt;&lt;strong&gt;Hazır proje seç&lt;/strong&gt;&lt;p&gt;Bu müşterinin daha önce açılmış projesine devam edin.&lt;/p&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;d360-decision-section&quot; id=&quot;d360-existing-project-panel&quot; hidden&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project&quot;&gt;Hazır projeler&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-project&quot;&gt;&lt;/select&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-project-result-help&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;d360-decision-section&quot; id=&quot;d360-project-setup-panel&quot; hidden&gt;
+                &lt;div class=&quot;d360-assignment-grid&quot; id=&quot;d360-new-measure-project&quot; hidden&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-name&quot;&gt;Yeni proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-default-material&quot;&gt;Projenin ana malzemesi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-default-material&quot;&gt;&lt;/select&gt;&lt;span class=&quot;text-small text-muted&quot;&gt;Yeni ürünler bu malzemeyle başlar; her üründe ayrıca değiştirebilirsiniz.&lt;/span&gt;&lt;/div&gt;
+              &lt;/div&gt;
+
+              &lt;div class=&quot;d360-context-alert&quot; id=&quot;d360-assignment-help-panel&quot;&gt;&lt;i data-lucide=&quot;info&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-measure-assignment-help&quot;&gt;Önce müşteri için bir seçenek seçin.&lt;/span&gt;&lt;/div&gt;
               &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-assignment-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;d360-step-actions&quot; id=&quot;d360-assignment-actions&quot; hidden&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary d360-step-actions-end&quot; id=&quot;d360-assignment-continue&quot;&gt;Ürün ve ölçü seçimine geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
             &lt;/div&gt;
           &lt;/section&gt;
 
@@ -3244,6 +3332,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         projectItems: 0,
         measureCustomerId: &#x27;&#x27;,
         measureProjectId: &#x27;&#x27;,
+        assignmentCustomerMode: &#x27;choice&#x27;,
+        assignmentProjectMode: &#x27;choice&#x27;,
+        measureCustomerSearch: &#x27;&#x27;,
         projectDefaultMaterial: &#x27;pvc&#x27;,
         libraryMaterial: &#x27;pvc&#x27;,
         selectedProjectId: null,
@@ -3527,6 +3618,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.selectedCustomerId = null;
         state.measureCustomerId = &#x27;&#x27;;
         state.measureProjectId = &#x27;&#x27;;
+        state.assignmentCustomerMode = &#x27;choice&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        state.measureCustomerSearch = &#x27;&#x27;;
         state.deletedSystemIds = [];
       }
 
@@ -5159,12 +5253,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
         const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
         const pendingName = root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim();
+        const pendingLocation = root.querySelector(&#x27;#d360-measure-project-location&#x27;).value.trim();
         const label = customer
           ? `${customer.name} · ${project ? project.name : (pendingName || &#x27;Yeni proje&#x27;)}`
           : &#x27;Önce müşteri ve proje seçin&#x27;;
         root.querySelectorAll(&#x27;[data-assignment-summary]&#x27;).forEach(element =&gt; { element.textContent = label; });
         const continueButton = root.querySelector(&#x27;#d360-assignment-continue&#x27;);
-        if (continueButton) continueButton.disabled = !customer;
+        const ready = Boolean(customer &amp;&amp; (project || (state.assignmentProjectMode === &#x27;new&#x27; &amp;&amp; pendingName &amp;&amp; pendingLocation)));
+        if (continueButton) continueButton.disabled = !ready;
+        const projectProgress = root.querySelector(&#x27;#d360-project-progress&#x27;);
+        if (projectProgress &amp;&amp; customer) projectProgress.className = ready ? &#x27;is-complete&#x27; : &#x27;is-current&#x27;;
       }
 
       function validateAssignmentContext() {
@@ -5194,7 +5292,10 @@ html&gt;body{padding:0}&lt;/style&gt;
             status: &#x27;Ölçü bekliyor&#x27;,
             defaultMaterialId: chosenMaterial
           });
-          if (project) state.measureProjectId = project.id;
+          if (project) {
+            state.measureProjectId = project.id;
+            state.assignmentProjectMode = &#x27;existing&#x27;;
+          }
         }
         if (!project) {
           root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = canCreateProjectRecord() ? &#x27;Proje oluşturulamadı. Bilgileri kontrol edip tekrar deneyin.&#x27; : membershipLimitMessage(&#x27;project&#x27;);
@@ -5224,46 +5325,102 @@ html&gt;body{padding:0}&lt;/style&gt;
         const materialSelect = root.querySelector(&#x27;#d360-project-default-material&#x27;);
         const newProjectFields = root.querySelector(&#x27;#d360-new-measure-project&#x27;);
         const help = root.querySelector(&#x27;#d360-measure-assignment-help&#x27;);
+        const customerChoicePanel = root.querySelector(&#x27;#d360-customer-choice-panel&#x27;);
+        const existingCustomerPanel = root.querySelector(&#x27;#d360-existing-customer-panel&#x27;);
+        const quickCustomerForm = root.querySelector(&#x27;#d360-quick-customer-form&#x27;);
+        const selectedCustomer = root.querySelector(&#x27;#d360-selected-customer&#x27;);
+        const projectChoicePanel = root.querySelector(&#x27;#d360-project-choice-panel&#x27;);
+        const existingProjectPanel = root.querySelector(&#x27;#d360-existing-project-panel&#x27;);
+        const projectSetupPanel = root.querySelector(&#x27;#d360-project-setup-panel&#x27;);
+        const assignmentActions = root.querySelector(&#x27;#d360-assignment-actions&#x27;);
+        const customerProgress = root.querySelector(&#x27;#d360-customer-progress&#x27;);
+        const projectProgress = root.querySelector(&#x27;#d360-project-progress&#x27;);
         materialSelect.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
-        customerSelect.innerHTML = customers.length
-          ? `&lt;option value=&quot;&quot;&gt;Müşteri seçin&lt;/option&gt;${customers.map(customer =&gt; `&lt;option value=&quot;${customer.id}&quot;&gt;${escapeHtml(customer.name)} · ${escapeHtml(customer.status || &#x27;Aktif&#x27;)}${canViewCustomerContact() ? ` · ${escapeHtml(customer.phone)}` : &#x27;&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;)}`
-          : &#x27;&lt;option value=&quot;&quot;&gt;Önce müşteri ekleyin&lt;/option&gt;&#x27;;
-        customerSelect.disabled = !customers.length;
+        const search = state.measureCustomerSearch.trim().toLocaleLowerCase(&#x27;tr-TR&#x27;);
+        const visibleCustomers = customers.filter(customer =&gt; !search || `${customer.name} ${customer.phone || &#x27;&#x27;}`.toLocaleLowerCase(&#x27;tr-TR&#x27;).includes(search));
+        customerSelect.innerHTML = visibleCustomers.length
+          ? `&lt;option value=&quot;&quot;&gt;Bir müşteri seçin&lt;/option&gt;${visibleCustomers.map(customer =&gt; `&lt;option value=&quot;${customer.id}&quot;&gt;${escapeHtml(customer.name)} · ${escapeHtml(customer.status || &#x27;Aktif&#x27;)}${canViewCustomerContact() ? ` · ${escapeHtml(customer.phone)}` : &#x27;&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;)}`
+          : &#x27;&lt;option value=&quot;&quot;&gt;Eşleşen müşteri bulunamadı&lt;/option&gt;&#x27;;
+        customerSelect.disabled = !visibleCustomers.length;
+        root.querySelector(&#x27;#d360-measure-customer-search&#x27;).value = state.measureCustomerSearch;
+        root.querySelector(&#x27;#d360-customer-result-help&#x27;).textContent = customers.length
+          ? `${visibleCustomers.length} müşteri gösteriliyor.`
+          : &#x27;Henüz kayıtlı müşteri yok. “Yeni müşteri” seçeneğini kullanın.&#x27;;
         if (!customers.some(customer =&gt; customer.id === state.measureCustomerId)) state.measureCustomerId = &#x27;&#x27;;
         customerSelect.value = state.measureCustomerId;
 
         if (!state.measureCustomerId) {
           state.measureProjectId = &#x27;&#x27;;
+          state.assignmentProjectMode = &#x27;choice&#x27;;
           projectSelect.innerHTML = &#x27;&lt;option value=&quot;&quot;&gt;Önce müşteri seçin&lt;/option&gt;&#x27;;
           projectSelect.disabled = true;
           materialSelect.disabled = false;
           materialSelect.value = state.projectDefaultMaterial;
           newProjectFields.hidden = true;
-          help.textContent = customers.length ? &#x27;Ölçünün kimin hesabına kaydedileceğini seçin.&#x27; : &#x27;Önce Müşteriler bölümünden müşteri ekleyin; sonra bu ekrana dönün.&#x27;;
+          customerChoicePanel.hidden = false;
+          existingCustomerPanel.hidden = state.assignmentCustomerMode !== &#x27;find&#x27;;
+          quickCustomerForm.hidden = state.assignmentCustomerMode !== &#x27;new&#x27;;
+          selectedCustomer.hidden = true;
+          projectChoicePanel.hidden = true;
+          existingProjectPanel.hidden = true;
+          projectSetupPanel.hidden = true;
+          assignmentActions.hidden = true;
+          customerProgress.className = &#x27;is-current&#x27;;
+          projectProgress.className = &#x27;&#x27;;
+          root.querySelector(&#x27;#d360-find-customer&#x27;).classList.toggle(&#x27;d360-launch-card-primary&#x27;, state.assignmentCustomerMode === &#x27;find&#x27;);
+          root.querySelector(&#x27;#d360-show-quick-customer&#x27;).classList.toggle(&#x27;d360-launch-card-primary&#x27;, state.assignmentCustomerMode === &#x27;new&#x27;);
+          help.textContent = state.assignmentCustomerMode === &#x27;find&#x27;
+            ? &#x27;Müşterinin adını veya telefonunu yazın ve listeden seçin.&#x27;
+            : state.assignmentCustomerMode === &#x27;new&#x27;
+              ? &#x27;Temel müşteri bilgilerini girip kaydedin; sonra proje seçimine geçeceksiniz.&#x27;
+              : &#x27;Önce “Müşteri bul” veya “Yeni müşteri” seçeneklerinden birini seçin.&#x27;;
           renderProjectCustomerOptions();
           renderMeasurementBatch();
           renderAssignmentSummary();
+          ensureIcons();
           return;
         }
 
         const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
         const list = projects.filter(project =&gt; project.customerId === state.measureCustomerId);
-        projectSelect.disabled = false;
-        projectSelect.innerHTML = `&lt;option value=&quot;new&quot;&gt;+ Yeni proje oluştur&lt;/option&gt;${list.map(project =&gt; `&lt;option value=&quot;${project.id}&quot;&gt;${escapeHtml(project.name)} · ${escapeHtml(project.location || &#x27;Konum yok&#x27;)}&lt;/option&gt;`).join(&#x27;&#x27;)}`;
-        if (state.measureProjectId !== &#x27;new&#x27; &amp;&amp; !list.some(project =&gt; project.id === state.measureProjectId)) state.measureProjectId = &#x27;new&#x27;;
-        if (!state.measureProjectId) state.measureProjectId = &#x27;new&#x27;;
+        customerChoicePanel.hidden = true;
+        existingCustomerPanel.hidden = true;
+        quickCustomerForm.hidden = true;
+        selectedCustomer.hidden = false;
+        root.querySelector(&#x27;#d360-selected-customer-name&#x27;).textContent = customer.name;
+        projectChoicePanel.hidden = false;
+        customerProgress.className = &#x27;is-complete&#x27;;
+        projectProgress.className = &#x27;is-current&#x27;;
+        projectSelect.disabled = !list.length;
+        projectSelect.innerHTML = list.length
+          ? `&lt;option value=&quot;&quot;&gt;Hazır proje seçin&lt;/option&gt;${list.map(project =&gt; `&lt;option value=&quot;${project.id}&quot;&gt;${escapeHtml(project.name)} · ${escapeHtml(project.location || &#x27;Konum yok&#x27;)}&lt;/option&gt;`).join(&#x27;&#x27;)}`
+          : &#x27;&lt;option value=&quot;&quot;&gt;Bu müşterinin hazır projesi yok&lt;/option&gt;&#x27;;
+        if (state.measureProjectId !== &#x27;new&#x27; &amp;&amp; !list.some(project =&gt; project.id === state.measureProjectId)) state.measureProjectId = &#x27;&#x27;;
         projectSelect.value = state.measureProjectId;
-        newProjectFields.hidden = state.measureProjectId !== &#x27;new&#x27;;
         const project = list.find(item =&gt; item.id === state.measureProjectId);
         if (project &amp;&amp; materialTypes[project.defaultMaterialId]) state.projectDefaultMaterial = project.defaultMaterialId;
         materialSelect.disabled = false;
         materialSelect.value = state.projectDefaultMaterial;
+        existingProjectPanel.hidden = state.assignmentProjectMode !== &#x27;existing&#x27;;
+        newProjectFields.hidden = state.assignmentProjectMode !== &#x27;new&#x27;;
+        projectSetupPanel.hidden = state.assignmentProjectMode === &#x27;choice&#x27; || (state.assignmentProjectMode === &#x27;existing&#x27; &amp;&amp; !project);
+        assignmentActions.hidden = state.assignmentProjectMode === &#x27;choice&#x27; || (state.assignmentProjectMode === &#x27;existing&#x27; &amp;&amp; !project);
+        root.querySelector(&#x27;#d360-create-project-choice&#x27;).classList.toggle(&#x27;d360-launch-card-primary&#x27;, state.assignmentProjectMode === &#x27;new&#x27;);
+        root.querySelector(&#x27;#d360-select-project-choice&#x27;).classList.toggle(&#x27;d360-launch-card-primary&#x27;, state.assignmentProjectMode === &#x27;existing&#x27;);
+        root.querySelector(&#x27;#d360-project-result-help&#x27;).textContent = list.length
+          ? `${list.length} hazır proje bulundu.`
+          : &#x27;Hazır proje yok. “Yeni proje oluştur” seçeneğini kullanın.&#x27;;
         help.textContent = project
-          ? `Bu ölçü ${customer.name} / ${project.name} projesine eklenecek. Ana malzeme: ${materialTypes[state.projectDefaultMaterial].label}.`
-          : `${customer.name} için yeni bir proje oluşturulacak; proje adı, konumu ve ana malzemeyi seçin.`;
+          ? `${customer.name} / ${project.name} seçildi. Ana malzemeyi kontrol edip devam edin.`
+          : state.assignmentProjectMode === &#x27;new&#x27;
+            ? `${customer.name} için yeni proje adı ve konumunu girin.`
+            : state.assignmentProjectMode === &#x27;existing&#x27;
+              ? &#x27;Hazır projelerden birini seçin.&#x27;
+              : &#x27;Şimdi “Yeni proje oluştur” veya “Hazır proje seç” seçeneklerinden birini seçin.&#x27;;
         renderProjectCustomerOptions();
         renderMeasurementBatch();
         renderAssignmentSummary();
+        ensureIcons();
       }
 
       function renderMeasurementBatch(message = &#x27;&#x27;) {
@@ -5303,7 +5460,10 @@ html&gt;body{padding:0}&lt;/style&gt;
             status: &#x27;Ölçü alındı&#x27;,
             defaultMaterialId: root.querySelector(&#x27;#d360-project-default-material&#x27;).value || state.projectDefaultMaterial
           });
-          if (project) state.measureProjectId = project.id;
+          if (project) {
+            state.measureProjectId = project.id;
+            state.assignmentProjectMode = &#x27;existing&#x27;;
+          }
         }
         return project || null;
       }
@@ -5567,7 +5727,10 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (!customers.some(customer =&gt; customer.id === customerId)) return;
         const projectExists = projects.some(project =&gt; project.id === projectId &amp;&amp; project.customerId === customerId);
         state.measureCustomerId = customerId;
-        state.measureProjectId = projectExists ? projectId : &#x27;new&#x27;;
+        state.measureProjectId = projectExists ? projectId : &#x27;&#x27;;
+        state.assignmentCustomerMode = &#x27;selected&#x27;;
+        state.assignmentProjectMode = projectExists ? &#x27;existing&#x27; : &#x27;choice&#x27;;
+        state.measureCustomerSearch = &#x27;&#x27;;
         const project = projects.find(item =&gt; item.id === projectId);
         state.projectDefaultMaterial = project &amp;&amp; materialTypes[project.defaultMaterialId] ? project.defaultMaterialId : &#x27;pvc&#x27;;
         setCurrentMaterial(state.projectDefaultMaterial);
@@ -5592,6 +5755,9 @@ html&gt;body{padding:0}&lt;/style&gt;
       function startNewMeasurement() {
         state.measureCustomerId = &#x27;&#x27;;
         state.measureProjectId = &#x27;&#x27;;
+        state.assignmentCustomerMode = &#x27;choice&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        state.measureCustomerSearch = &#x27;&#x27;;
         state.projectDefaultMaterial = &#x27;pvc&#x27;;
         setCurrentMaterial(&#x27;pvc&#x27;);
         state.category = &#x27;all&#x27;;
@@ -6130,13 +6296,16 @@ html&gt;body{padding:0}&lt;/style&gt;
       root.querySelector(&#x27;#d360-material-filter&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.materialFilter = event.target.value; renderMaterialTable(); });
       root.querySelector(&#x27;#d360-measure-customer&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.measureCustomerId = event.target.value;
-        state.measureProjectId = state.measureCustomerId ? &#x27;new&#x27; : &#x27;&#x27;;
+        state.assignmentCustomerMode = state.measureCustomerId ? &#x27;selected&#x27; : &#x27;find&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
         renderAssignmentOptions();
       });
       root.querySelector(&#x27;#d360-measure-project&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.measureProjectId = event.target.value;
+        state.assignmentProjectMode = &#x27;existing&#x27;;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
         renderAssignmentOptions();
@@ -6159,15 +6328,66 @@ html&gt;body{padding:0}&lt;/style&gt;
         renderAssignmentOptions();
       });
       root.querySelector(&#x27;#d360-measure-project-name&#x27;).addEventListener(&#x27;input&#x27;, renderAssignmentSummary);
+      root.querySelector(&#x27;#d360-measure-project-location&#x27;).addEventListener(&#x27;input&#x27;, renderAssignmentSummary);
       root.querySelector(&#x27;#d360-assignment-continue&#x27;).addEventListener(&#x27;click&#x27;, confirmMeasurementAssignment);
+      root.querySelector(&#x27;#d360-find-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        state.assignmentCustomerMode = &#x27;find&#x27;;
+        state.measureCustomerId = &#x27;&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
+        root.querySelector(&#x27;#d360-measure-customer-search&#x27;).focus();
+      });
       root.querySelector(&#x27;#d360-show-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
-        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = false;
+        state.assignmentCustomerMode = &#x27;new&#x27;;
+        state.measureCustomerId = &#x27;&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
         root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
         root.querySelector(&#x27;#d360-quick-customer-name&#x27;).focus();
       });
+      root.querySelector(&#x27;#d360-measure-customer-search&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; {
+        state.measureCustomerSearch = event.target.value;
+        renderAssignmentOptions();
+      });
+      root.querySelector(&#x27;#d360-change-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        state.measureCustomerId = &#x27;&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
+        state.assignmentCustomerMode = &#x27;choice&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        state.measureCustomerSearch = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
+      });
+      root.querySelector(&#x27;#d360-create-project-choice&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (!canCreateProjectRecord()) {
+          root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = membershipLimitMessage(&#x27;project&#x27;);
+          return;
+        }
+        state.assignmentProjectMode = &#x27;new&#x27;;
+        state.measureProjectId = &#x27;new&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
+        root.querySelector(&#x27;#d360-measure-project-name&#x27;).focus();
+      });
+      root.querySelector(&#x27;#d360-select-project-choice&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        const list = projects.filter(project =&gt; project.customerId === state.measureCustomerId);
+        if (!list.length) {
+          root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;Bu müşterinin hazır projesi yok. “Yeni proje oluştur” seçeneğini kullanın.&#x27;;
+          return;
+        }
+        state.assignmentProjectMode = &#x27;existing&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
+        root.querySelector(&#x27;#d360-measure-project&#x27;).focus();
+      });
       root.querySelector(&#x27;#d360-cancel-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
-        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = true;
+        state.assignmentCustomerMode = &#x27;choice&#x27;;
         root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
       });
       root.querySelector(&#x27;#d360-save-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
         const nameInput = root.querySelector(&#x27;#d360-quick-customer-name&#x27;);
@@ -6187,17 +6407,19 @@ html&gt;body{padding:0}&lt;/style&gt;
         const customer = { id: makeId(&#x27;cus&#x27;), name, phone, email, status: &#x27;Aktif&#x27; };
         customers.unshift(customer);
         state.measureCustomerId = customer.id;
-        state.measureProjectId = &#x27;new&#x27;;
+        state.measureProjectId = &#x27;&#x27;;
+        state.assignmentCustomerMode = &#x27;selected&#x27;;
+        state.assignmentProjectMode = &#x27;choice&#x27;;
+        state.measureCustomerSearch = &#x27;&#x27;;
         state.selectedCustomerId = customer.id;
         nameInput.value = &#x27;&#x27;;
         phoneInput.value = &#x27;&#x27;;
         emailInput.value = &#x27;&#x27;;
-        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = true;
         root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
         renderCustomers();
         renderAssignmentOptions();
         persistData();
-        root.querySelector(&#x27;#d360-measure-project-name&#x27;).focus();
+        root.querySelector(&#x27;#d360-create-project-choice&#x27;).focus();
       });
       root.querySelector(&#x27;#d360-measure-model&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.selected = event.target.value;
