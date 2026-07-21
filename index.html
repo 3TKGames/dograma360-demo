@@ -2011,6 +2011,17 @@ html&gt;body{padding:0}&lt;/style&gt;
       list-style: none;
     }
     #d360-professional-app .d360-account-menu &gt; summary::-webkit-details-marker { display: none; }
+    #d360-professional-app .d360-account-identity {
+      display: grid;
+      gap: .12rem;
+      align-items: start;
+      min-width: 0;
+    }
+    #d360-professional-app .d360-account-identity &gt; strong,
+    #d360-professional-app .d360-account-identity &gt; .d360-sync-status {
+      display: flex;
+      width: 100%;
+    }
     #d360-professional-app .d360-avatar {
       display: grid;
       place-items: center;
@@ -2171,7 +2182,6 @@ html&gt;body{padding:0}&lt;/style&gt;
         left: auto;
       }
       #d360-professional-app .d360-topbar-title .text-small { display: none; }
-      #d360-professional-app #d360-new-project { display: none; }
       #d360-professional-app .d360-upgrade-button { padding-inline: .7rem; }
       #d360-professional-app .d360-account-menu &gt; summary &gt; span:not(.d360-avatar) { display: none; }
       #d360-professional-app .d360-page { padding-inline: .85rem; }
@@ -2423,10 +2433,10 @@ html&gt;body{padding:0}&lt;/style&gt;
           &lt;strong id=&quot;d360-page-title&quot;&gt;Başlangıç&lt;/strong&gt;
         &lt;/div&gt;
         &lt;div class=&quot;d360-top-actions&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-new-project&quot;&gt;&lt;i data-lucide=&quot;search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri bul&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-top-logout&quot;&gt;&lt;i data-lucide=&quot;log-out&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Çıkış yap&lt;/button&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn d360-upgrade-button&quot; id=&quot;d360-upgrade-now&quot; title=&quot;Daha yüksek bir üyelik paketine geçin&quot;&gt;&lt;i data-lucide=&quot;crown&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Upgrade now&lt;/button&gt;
           &lt;details class=&quot;d360-account-menu&quot;&gt;
-            &lt;summary&gt;&lt;span class=&quot;d360-avatar&quot; aria-hidden=&quot;true&quot;&gt;K&lt;/span&gt;&lt;span&gt;&lt;strong id=&quot;d360-user-name&quot;&gt;Kullanıcı&lt;/strong&gt;&lt;span class=&quot;text-small text-muted d360-sync-status&quot; id=&quot;d360-sync-status&quot;&gt;&lt;i data-lucide=&quot;cloud&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Hazırlanıyor&lt;/span&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
+            &lt;summary&gt;&lt;span class=&quot;d360-avatar&quot; aria-hidden=&quot;true&quot;&gt;K&lt;/span&gt;&lt;span class=&quot;d360-account-identity&quot;&gt;&lt;strong id=&quot;d360-user-name&quot;&gt;Kullanıcı&lt;/strong&gt;&lt;span class=&quot;text-small text-muted d360-sync-status&quot; id=&quot;d360-sync-status&quot;&gt;&lt;i data-lucide=&quot;cloud&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Hazırlanıyor&lt;/span&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
             &lt;div class=&quot;d360-account-popover&quot;&gt;
               &lt;div class=&quot;d360-account-meta&quot;&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-active-role-badge&quot;&gt;&lt;i data-lucide=&quot;shield-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Yönetim&lt;/span&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-project-badge&quot;&gt;Proje seçilmedi&lt;/span&gt;&lt;/div&gt;
               &lt;div class=&quot;d360-fixed-role&quot;&gt;&lt;i data-lucide=&quot;lock-keyhole&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;d360-fixed-role-copy&quot;&gt;&lt;strong&gt;Sabit hesap yetkisi&lt;/strong&gt;&lt;span class=&quot;text-small text-muted&quot; id=&quot;d360-fixed-role-note&quot;&gt;Rolünüz hesap sahibi tarafından belirlenir ve buradan değiştirilemez.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
@@ -3947,11 +3957,13 @@ html&gt;body{padding:0}&lt;/style&gt;
           setAuthBusy(false);
           setAuthMessage(error ? authErrorMessage(error) : &#x27;Şifre yenileme e-postası gönderildi.&#x27;, Boolean(error));
         });
-        root.querySelector(&#x27;#d360-logout&#x27;).addEventListener(&#x27;click&#x27;, async () =&gt; {
+        const signOutCurrentAccount = async () =&gt; {
           clearTimeout(cloudSaveTimer);
           if (cloudClient &amp;&amp; authState.user) await cloudClient.auth.signOut();
           showSignedOut();
-        });
+        };
+        root.querySelector(&#x27;#d360-logout&#x27;).addEventListener(&#x27;click&#x27;, signOutCurrentAccount);
+        root.querySelector(&#x27;#d360-top-logout&#x27;).addEventListener(&#x27;click&#x27;, signOutCurrentAccount);
         if (!cloudClient) {
           root.querySelector(&#x27;#d360-auth-config&#x27;).hidden = false;
           setAuthMessage(&#x27;Bulut bağlantısı kurulumu bekleniyor.&#x27;);
@@ -6584,11 +6596,6 @@ html&gt;body{padding:0}&lt;/style&gt;
       root.querySelector(&#x27;#d360-print-now&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
         globalThis.print();
       });
-      root.querySelector(&#x27;#d360-new-project&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
-        showPage(&#x27;customers&#x27;);
-        root.querySelector(&#x27;#d360-customer-search&#x27;).focus();
-      });
-
       root.querySelector(&#x27;#d360-new-measure&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
         startNewMeasurement();
       });
