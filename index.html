@@ -924,7 +924,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     }
     #d360-professional-app .d360-wizard-steps {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: .45rem;
     }
     #d360-professional-app .d360-wizard-steps .btn {
@@ -1781,7 +1781,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       background: color-mix(in srgb, var(--primary) 7%, transparent);
     }
     #d360-professional-app .d360-wizard-steps {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       padding: .45rem;
       border: 1px solid var(--border);
       background: color-mix(in srgb, var(--background) 94%, var(--primary) 6%);
@@ -2362,26 +2362,58 @@ html&gt;body{padding:0}&lt;/style&gt;
       &lt;section class=&quot;d360-page&quot; data-page-view=&quot;catalog&quot; hidden&gt;
         &lt;div class=&quot;d360-heading&quot;&gt;
           &lt;div&gt;
-            &lt;strong&gt;Ürün ve ölçü listesi&lt;/strong&gt;
-            &lt;div class=&quot;text-small text-muted&quot;&gt;&lt;span id=&quot;d360-product-count&quot;&gt;0&lt;/span&gt; ürün şablonu · Ürünü seçin, ölçüsünü ekleyin ve sıradaki ürüne geçin&lt;/div&gt;
+            &lt;strong&gt;Yeni ölçü kaydı&lt;/strong&gt;
+            &lt;div class=&quot;text-small text-muted&quot;&gt;Önce müşteri ve projeyi belirleyin; sonra &lt;span id=&quot;d360-product-count&quot;&gt;0&lt;/span&gt; şablondan ürün, ölçü ve malzemeleri bu proje hesabına ekleyin&lt;/div&gt;
           &lt;/div&gt;
-          &lt;span class=&quot;viz-badge&quot; id=&quot;d360-wizard-counter&quot;&gt;Adım 1 / 3&lt;/span&gt;
+          &lt;span class=&quot;viz-badge&quot; id=&quot;d360-wizard-counter&quot;&gt;Adım 1 / 4&lt;/span&gt;
         &lt;/div&gt;
 
         &lt;div class=&quot;d360-guide-line&quot; aria-live=&quot;polite&quot;&gt;
           &lt;span class=&quot;d360-guide-icon&quot;&gt;&lt;i data-lucide=&quot;compass&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-          &lt;div&gt;&lt;strong id=&quot;d360-wizard-title&quot;&gt;Önce ürün tipini seçin&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-wizard-help&quot;&gt;Pencere, kapı, sürme, panjur veya arşiv sistemlerinden bir şablon seçin.&lt;/div&gt;&lt;/div&gt;
+          &lt;div&gt;&lt;strong id=&quot;d360-wizard-title&quot;&gt;Önce müşteri ve projeyi belirleyin&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-wizard-help&quot;&gt;Ölçünün kime ve hangi işe ait olduğunu seçin; kayıt yoksa bu ekranda oluşturun.&lt;/div&gt;&lt;/div&gt;
         &lt;/div&gt;
 
-        &lt;nav class=&quot;d360-wizard-steps&quot; aria-label=&quot;Ürün oluşturma adımları&quot;&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-wizard-step=&quot;1&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;d360-step-number&quot;&gt;1&lt;/span&gt;Ürün, ölçü &amp; malzeme&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;4&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;2&lt;/span&gt;Üretim&lt;/button&gt;
-          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;5&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;3&lt;/span&gt;Teklif&lt;/button&gt;
+        &lt;nav class=&quot;d360-wizard-steps&quot; aria-label=&quot;Ölçü kayıt adımları&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-wizard-step=&quot;1&quot; aria-current=&quot;step&quot;&gt;&lt;span class=&quot;d360-step-number&quot;&gt;1&lt;/span&gt;Müşteri &amp; proje&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;2&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;2&lt;/span&gt;Ürün, ölçü &amp; malzeme&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;4&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;3&lt;/span&gt;Üretim&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; data-wizard-step=&quot;5&quot; disabled&gt;&lt;span class=&quot;d360-step-number&quot;&gt;4&lt;/span&gt;Teklif&lt;/button&gt;
         &lt;/nav&gt;
 
         &lt;div class=&quot;d360-wizard&quot;&gt;
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;1&quot;&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Ölçüsünü alacağınız ürünü seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Ürüne dokunduğunuzda ölçü alanı otomatik açılır.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Müşteri ve projeyi seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Bundan sonra ekleyeceğiniz bütün kapı ve pencereler bu proje hesabında toplanacak.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-form-panel&quot;&gt;
+              &lt;div class=&quot;d360-assignment-grid&quot;&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project&quot;&gt;Proje&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-project&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-assignment-grid d360-assignment-wide&quot; id=&quot;d360-new-measure-project&quot; hidden&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-name&quot;&gt;Yeni proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;d360-context-alert&quot;&gt;&lt;i data-lucide=&quot;info&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-measure-assignment-help&quot;&gt;Önce müşteriyi seçin.&lt;/span&gt;&lt;/div&gt;
+              &lt;div class=&quot;d360-step-actions&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-show-quick-customer&quot;&gt;&lt;i data-lucide=&quot;user-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri listede yok&lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-assignment-continue&quot;&gt;Ürün seçimine devam et&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;card d360-form-panel&quot; id=&quot;d360-quick-customer-form&quot; hidden&gt;
+                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Yeni müşteri oluştur&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Kaydettikten sonra müşteri otomatik seçilecek ve proje oluşturabileceksiniz.&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-field-grid&quot;&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-name&quot;&gt;Müşteri / firma adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-name&quot; type=&quot;text&quot; autocomplete=&quot;name&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-phone&quot;&gt;Telefon&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-phone&quot; type=&quot;tel&quot; autocomplete=&quot;tel&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-quick-customer-email&quot;&gt;E-posta &lt;span class=&quot;text-small text-muted&quot;&gt;(isteğe bağlı)&lt;/span&gt;&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-quick-customer-email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-quick-customer-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-quick-customer&quot;&gt;Müşteriyi kaydet ve seç&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-cancel-quick-customer&quot;&gt;Vazgeç&lt;/button&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-assignment-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/section&gt;
+
+          &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;2&quot; hidden&gt;
+            &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili iş&lt;/div&gt;&lt;strong data-assignment-summary&gt;Önce müşteri ve proje seçin&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Tüm ürünler bu proje altında saklanacak.&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Değiştir&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;2. Ölçüsünü alacağınız ürünü seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Ürüne dokunduğunuzda ölçü ve malzeme alanı otomatik açılır.&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-toolbar&quot;&gt;
               &lt;label class=&quot;form-label&quot; for=&quot;d360-product-search&quot;&gt;Ürün ara
                 &lt;input class=&quot;form-control&quot; id=&quot;d360-product-search&quot; type=&quot;search&quot; placeholder=&quot;Örnek: sürme, panjur, kapı…&quot;&gt;
@@ -2392,14 +2424,15 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;div class=&quot;d360-category-row&quot; id=&quot;d360-categories&quot; aria-label=&quot;Ürün kategorileri&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-catalog-grid&quot; id=&quot;d360-product-grid&quot; aria-label=&quot;Ürün şablonları&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;card d360-selected&quot; aria-live=&quot;polite&quot;&gt;
-              &lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Nasıl ilerler?&lt;/div&gt;&lt;strong id=&quot;d360-selected-name&quot;&gt;Bir ürün seçin&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-selected-meta&quot;&gt;Ürünü seç → ölçüyü gir → listeye ekle → yeni ürünü seç&lt;/div&gt;&lt;/div&gt;
+              &lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Sıradaki seçim&lt;/div&gt;&lt;strong id=&quot;d360-selected-name&quot;&gt;Bir ürün seçin&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-selected-meta&quot;&gt;Ürünü seç → ölçü ve malzemeyi gir → proje listesine ekle&lt;/div&gt;&lt;/div&gt;
               &lt;span class=&quot;viz-badge&quot;&gt;Tek ekran akışı&lt;/span&gt;
             &lt;/div&gt;
           &lt;/section&gt;
 
-          &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;2&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;1. Ürün, ölçü ve malzemeyi birlikte ekleyin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her satır üretime hazır kaydedilir. Sonra “Yeni ürün ekle” ile sıradaki ürüne geçin.&lt;/span&gt;&lt;/div&gt;
-            &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili ürün&lt;/div&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;div class=&quot;text-small&quot; data-selected-meta&gt;—&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Başka ürün seç&lt;/button&gt;&lt;/div&gt;
+          &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;3&quot; hidden&gt;
+            &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili iş&lt;/div&gt;&lt;strong data-assignment-summary&gt;—&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Ürün bu müşterinin proje hesabına eklenecek.&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri / proje değiştir&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;2. Ürün, ölçü ve malzemeyi birlikte ekleyin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her satır üretime hazır kaydedilir. Sonra “Yeni ürün ekle” ile sıradaki ürüne geçin.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili ürün&lt;/div&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;div class=&quot;text-small&quot; data-selected-meta&gt;—&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;2&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Başka ürün seç&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-form-panel&quot;&gt;
               &lt;div class=&quot;d360-field-grid&quot;&gt;
                 &lt;select class=&quot;form-select&quot; id=&quot;d360-measure-model&quot; hidden aria-hidden=&quot;true&quot;&gt;&lt;/select&gt;
@@ -2429,18 +2462,6 @@ html&gt;body{padding:0}&lt;/style&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
               &lt;div class=&quot;card d360-form-panel&quot;&gt;
-                &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Bu ölçü kime ve hangi projeye ait?&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Önce müşteriyi seçin. Mevcut projeyi seçebilir veya aynı anda yeni proje oluşturabilirsiniz.&lt;/span&gt;&lt;/div&gt;
-                &lt;div class=&quot;d360-assignment-grid&quot;&gt;
-                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project&quot;&gt;Proje&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-project&quot;&gt;&lt;/select&gt;&lt;/div&gt;
-                  &lt;div class=&quot;d360-assignment-grid d360-assignment-wide&quot; id=&quot;d360-new-measure-project&quot; hidden&gt;
-                    &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-name&quot;&gt;Yeni proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;
-                    &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;
-                  &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;d360-context-alert&quot;&gt;&lt;i data-lucide=&quot;user-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-measure-assignment-help&quot;&gt;Listede müşteri yoksa önce müşteri kaydı oluşturun.&lt;/span&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-page=&quot;customers&quot;&gt;Müşterilere git&lt;/button&gt;&lt;/div&gt;
-              &lt;/div&gt;
-              &lt;div class=&quot;card d360-form-panel&quot;&gt;
                 &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Saha kaydı&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Poz, fotoğraf ve usta notu ölçüyle birlikte saklanır; ofiste tekrar bilgi aramaya gerek kalmaz.&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-assignment-grid&quot;&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-reference&quot;&gt;Poz / oda / cephe&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-reference&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Salon P01&quot;&gt;&lt;/div&gt;
@@ -2461,11 +2482,11 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;/div&gt;
               &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-measure-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürünlere dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;4&quot;&gt;Tüm ürünlerin üretimini gör&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;2&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürünlere dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;4&quot;&gt;Tüm ürünlerin üretimini gör&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;4&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;2. Projedeki bütün üretim kayıtları&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her ürünün çizimi, ölçüsü, sistemi, malzemesi, kesim listesi ve aksesuarları birlikte gösterilir.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;3. Projedeki bütün üretim kayıtları&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Her ürünün çizimi, ölçüsü, sistemi, malzemesi, kesim listesi ve aksesuarları birlikte gösterilir.&lt;/span&gt;&lt;/div&gt;
             &lt;div id=&quot;d360-production-all&quot; class=&quot;d360-production-list&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-section&quot;&gt;
               &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Projenin birleşik sipariş listesi&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Bütün ürünlerdeki aynı profil, cam, aksesuar ve sarf kalemleri otomatik toplanır.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-production-order-count&quot;&gt;0 kalem&lt;/span&gt;&lt;/div&gt;
@@ -2473,11 +2494,11 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;/div&gt;
             &lt;div hidden aria-hidden=&quot;true&quot;&gt;&lt;svg id=&quot;d360-product-svg&quot; class=&quot;d360-product-svg&quot; viewBox=&quot;0 0 560 370&quot; role=&quot;img&quot; aria-labelledby=&quot;d360-svg-title d360-svg-desc&quot;&gt;&lt;title id=&quot;d360-svg-title&quot;&gt;Ürün önizlemesi&lt;/title&gt;&lt;desc id=&quot;d360-svg-desc&quot;&gt;Seçilen ürün ve ölçülere göre teknik önizleme.&lt;/desc&gt;&lt;/svg&gt;&lt;div id=&quot;d360-config-output&quot;&gt;&lt;/div&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-note text-small&quot;&gt;Üretime gönderilmeden önce her ürünün ölçüsünü ve profil sistemini kontrol edin.&lt;/div&gt;
-            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;2&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürün listesine dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;5&quot;&gt;Proje teklifine geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-actions&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;3&quot;&gt;&lt;i data-lucide=&quot;arrow-left&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Ürün listesine dön&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-step-next=&quot;5&quot;&gt;Proje teklifine geç&lt;i data-lucide=&quot;arrow-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
           &lt;/section&gt;
 
           &lt;section class=&quot;d360-wizard-panel&quot; data-step-panel=&quot;5&quot; hidden&gt;
-            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;3. Fiyatı ve proje kaydını kontrol edin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Projeye eklediğiniz bütün ürünler üretim ve sipariş listelerinde saklanır.&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;4. Fiyatı ve proje kaydını kontrol edin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Projeye eklediğiniz bütün ürünler üretim ve sipariş listelerinde saklanır.&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;viz-grid d360-kpi-grid&quot; aria-label=&quot;Hesap özeti&quot;&gt;
               &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span&gt;Tek ürün&lt;/span&gt;&lt;strong class=&quot;viz-stat-value&quot; id=&quot;d360-unit-total&quot;&gt;—&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;KDV dahil&lt;/span&gt;&lt;/div&gt;
               &lt;div class=&quot;card viz-stat&quot;&gt;&lt;span&gt;Bu ölçü kaydı&lt;/span&gt;&lt;strong class=&quot;viz-stat-value&quot; id=&quot;d360-grand-total&quot;&gt;—&lt;/strong&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-qty-label&quot;&gt;1 adet&lt;/span&gt;&lt;/div&gt;
@@ -4753,6 +4774,60 @@ html&gt;body{padding:0}&lt;/style&gt;
         select.disabled = !customers.length;
       }
 
+      function renderAssignmentSummary() {
+        const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
+        const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+        const pendingName = root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim();
+        const label = customer
+          ? `${customer.name} · ${project ? project.name : (pendingName || &#x27;Yeni proje&#x27;)}`
+          : &#x27;Önce müşteri ve proje seçin&#x27;;
+        root.querySelectorAll(&#x27;[data-assignment-summary]&#x27;).forEach(element =&gt; { element.textContent = label; });
+        const continueButton = root.querySelector(&#x27;#d360-assignment-continue&#x27;);
+        if (continueButton) continueButton.disabled = !customer;
+      }
+
+      function validateAssignmentContext() {
+        const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
+        const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+        const newName = root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim();
+        const newLocation = root.querySelector(&#x27;#d360-measure-project-location&#x27;).value.trim();
+        let message = &#x27;&#x27;;
+        if (!customer) message = &#x27;Önce müşteri seçin veya “Müşteri listede yok” düğmesiyle yeni kayıt oluşturun.&#x27;;
+        else if (state.measureProjectId === &#x27;new&#x27; &amp;&amp; (!newName || !newLocation)) message = &#x27;Yeni proje için proje adı ve konum / şantiye bilgisi girin.&#x27;;
+        else if (state.measureProjectId !== &#x27;new&#x27; &amp;&amp; !project) message = &#x27;Mevcut bir proje seçin veya yeni proje oluşturun.&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = message;
+        return !message;
+      }
+
+      function confirmMeasurementAssignment() {
+        if (!validateAssignmentContext()) return;
+        const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
+        let project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+        if (state.measureProjectId === &#x27;new&#x27;) {
+          project = createProject({
+            customerId: customer.id,
+            name: root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim(),
+            location: root.querySelector(&#x27;#d360-measure-project-location&#x27;).value.trim(),
+            status: &#x27;Ölçü bekliyor&#x27;
+          });
+          if (project) state.measureProjectId = project.id;
+        }
+        if (!project) {
+          root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;Proje oluşturulamadı. Bilgileri kontrol edip tekrar deneyin.&#x27;;
+          return;
+        }
+        state.selectedCustomerId = customer.id;
+        state.selectedProjectId = project.id;
+        state.maxStep = Math.max(state.maxStep, 2);
+        root.querySelector(&#x27;#d360-project-badge&#x27;).textContent = `${project.name} · ${project.products || 0} ürün`;
+        renderProjects();
+        renderCustomers();
+        renderAssignmentOptions();
+        persistData();
+        showWizardStep(2);
+        root.querySelector(&#x27;#d360-product-search&#x27;).focus();
+      }
+
       function renderAssignmentOptions() {
         const customerSelect = root.querySelector(&#x27;#d360-measure-customer&#x27;);
         const projectSelect = root.querySelector(&#x27;#d360-measure-project&#x27;);
@@ -4773,6 +4848,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           help.textContent = customers.length ? &#x27;Ölçünün kimin hesabına kaydedileceğini seçin.&#x27; : &#x27;Önce Müşteriler bölümünden müşteri ekleyin; sonra bu ekrana dönün.&#x27;;
           renderProjectCustomerOptions();
           renderMeasurementBatch();
+          renderAssignmentSummary();
           return;
         }
 
@@ -4790,6 +4866,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           : `${customer.name} için yeni bir proje oluşturulacak; proje adı ve konumu zorunludur.`;
         renderProjectCustomerOptions();
         renderMeasurementBatch();
+        renderAssignmentSummary();
       }
 
       function renderMeasurementBatch(message = &#x27;&#x27;) {
@@ -4901,7 +4978,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
         renderCategories();
         renderProductGrid();
-        showWizardStep(1);
+        showWizardStep(2);
         root.querySelector(&#x27;#d360-product-search&#x27;).focus();
       }
 
@@ -5030,8 +5107,9 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function openMeasurementEntry(customerId, projectId = &#x27;new&#x27;) {
         if (!customers.some(customer =&gt; customer.id === customerId)) return;
+        const projectExists = projects.some(project =&gt; project.id === projectId &amp;&amp; project.customerId === customerId);
         state.measureCustomerId = customerId;
-        state.measureProjectId = projectId;
+        state.measureProjectId = projectExists ? projectId : &#x27;new&#x27;;
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-product-search&#x27;).value = &#x27;&#x27;;
@@ -5039,15 +5117,15 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-measure-note&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-measure-photo&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-measure-field-status&#x27;).textContent = &#x27;Fotoğraf isteğe bağlıdır; poz ve not proje ekibinin tamamı tarafından görülebilir.&#x27;;
-        state.step = 2;
-        state.maxStep = Math.max(state.maxStep, 2);
+        state.step = projectExists ? 2 : 1;
+        state.maxStep = projectExists ? Math.max(state.maxStep, 2) : 1;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
         renderCategories();
         renderProductGrid();
         renderMeasurementModelOptions();
         renderAssignmentOptions();
         showPage(&#x27;catalog&#x27;);
-        showWizardStep(2);
+        showWizardStep(projectExists ? 2 : 1);
       }
 
       function startNewMeasurement() {
@@ -5161,7 +5239,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       const pageTitles = { dashboard: &#x27;Başlangıç&#x27;, catalog: &#x27;Yeni ölçü ve ürün&#x27;, projects: &#x27;Projeler&#x27;, materials: &#x27;Fiyat ve stok yönetimi&#x27;, customers: &#x27;Müşteriler&#x27;, team: &#x27;Ekip ve yetki yönetimi&#x27;, settings: &#x27;Profil sistemleri&#x27;, print: &#x27;Müşteri çıktısı&#x27; };
       const pageContexts = {
         dashboard: { title: &#x27;Bugün ne yapmak istiyorsunuz?&#x27;, copy: &#x27;Tek bir iş seçin; program sonraki adımı size gösterecek.&#x27;, guide: &#x27;En kolay başlangıç&#x27;, steps: [&#x27;Müşteriyi bulun&#x27;, &#x27;Projeyi seçin&#x27;, &#x27;Ölçüyü kaydedin&#x27;], action: &#x27;Ölçü almaya başla&#x27;, icon: &#x27;ruler&#x27; },
-        catalog: { title: &#x27;Ölçü ve ürün kaydı&#x27;, copy: &#x27;Ekranda yalnızca sıradaki kararı verin. Diğer detaylar sonra gelir.&#x27;, guide: &#x27;5 adımda teklif&#x27;, steps: [&#x27;Ürün tipini seçin&#x27;, &#x27;Müşteriyi ve projeyi bağlayın&#x27;, &#x27;Ölçüyü kaydedin&#x27;], action: &#x27;Yeni ölçüye dön&#x27;, icon: &#x27;rotate-ccw&#x27; },
+        catalog: { title: &#x27;Ölçü ve ürün kaydı&#x27;, copy: &#x27;Önce müşteri ile projeyi seçin; ardından bütün ürünleri aynı proje listesine ekleyin.&#x27;, guide: &#x27;Doğru kayıt sırası&#x27;, steps: [&#x27;Müşteri ve projeyi belirleyin&#x27;, &#x27;Ürün, ölçü ve malzemeyi ekleyin&#x27;, &#x27;Üretim ve teklifi kontrol edin&#x27;], action: &#x27;Yeni ölçüye dön&#x27;, icon: &#x27;rotate-ccw&#x27; },
         customers: { title: &#x27;Müşteri kartı&#x27;, copy: &#x27;Önce müşteri adı veya telefonunu yazın; sonra ölçüyü doğrudan projeye ekleyin.&#x27;, guide: &#x27;Kayıt sırası&#x27;, steps: [&#x27;Müşteriyi bulun&#x27;, &#x27;Yoksa yeni kayıt açın&#x27;, &#x27;Projesine ölçü ekleyin&#x27;], action: &#x27;Yeni müşteri ekle&#x27;, icon: &#x27;user-plus&#x27; },
         projects: { title: &#x27;Proje merkezi&#x27;, copy: &#x27;Tüm ölçüler, ürünler, sipariş listesi ve müşteri çıktısı aynı projede toplanır.&#x27;, guide: &#x27;Proje ile çalışın&#x27;, steps: [&#x27;Projeyi açın&#x27;, &#x27;Ölçüleri ekleyin&#x27;, &#x27;Toplu sipariş listesini alın&#x27;], action: &#x27;Yeni proje oluştur&#x27;, icon: &#x27;folder-plus&#x27; },
         materials: { title: &#x27;Fiyat ve stok&#x27;, copy: &#x27;Kâr, KDV ve malzeme fiyatını bir kez güncelleyin; yeni teklifler otomatik hesaplansın.&#x27;, guide: &#x27;Fiyat güncelleme&#x27;, steps: [&#x27;Para birimini seçin&#x27;, &#x27;Fiyatları girin veya CSV yükleyin&#x27;, &#x27;Kaydet tuşuna basın&#x27;], action: &#x27;Hesap ayarlarını aç&#x27;, icon: &#x27;sliders-horizontal&#x27; },
@@ -5170,9 +5248,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         print: { title: &#x27;Müşteri belgesi&#x27;, copy: &#x27;Teklif, ölçü ve üretim çizimlerini müşteriye tek belgede verin.&#x27;, guide: &#x27;Belge kontrolü&#x27;, steps: [&#x27;Bilgileri kontrol edin&#x27;, &#x27;Çizimleri inceleyin&#x27;, &#x27;PDF olarak kaydedin&#x27;], action: &#x27;Ürün ekranına dön&#x27;, icon: &#x27;arrow-left&#x27; }
       };
       const wizardCopy = {
-        1: { title: &#x27;Ölçüsünü alacağınız ürünü seçin&#x27;, help: &#x27;Ürüne dokunduğunuzda ölçü girişi otomatik açılacak.&#x27; },
-        2: { title: &#x27;Ürün, ölçü ve malzemeyi listeye ekleyin&#x27;, help: &#x27;Profil, cam, renk ve kullanım seçimi her ürünle birlikte kaydedilir.&#x27; },
-        3: { title: &#x27;Ürün kaydını tamamlayın&#x27;, help: &#x27;Ürün ve teknik seçimler aynı proje satırında saklanır.&#x27; },
+        1: { title: &#x27;Önce müşteri ve projeyi belirleyin&#x27;, help: &#x27;Kayıt yoksa bu ekrandan oluşturun; sonraki bütün ürünler seçtiğiniz projeye eklenecek.&#x27; },
+        2: { title: &#x27;Şimdi ürün tipini seçin&#x27;, help: &#x27;Pencere, kapı, sürme, panjur veya diğer sistemlerden bir şablon seçin.&#x27; },
+        3: { title: &#x27;Ölçü ve malzemeyi proje listesine ekleyin&#x27;, help: &#x27;Profil, cam, renk ve kullanım seçimi seçili müşteri ve proje altında saklanır.&#x27; },
         4: { title: &#x27;Projedeki bütün üretim kayıtlarını kontrol edin&#x27;, help: &#x27;Tüm çizimler, ölçüler, kesimler ve birleşik sipariş listesi birlikte gösterilir.&#x27; },
         5: { title: &#x27;Proje teklifi hazır&#x27;, help: &#x27;Toplamı kontrol edin; bütün ürünler seçtiğiniz müşterinin proje hesabında saklanır.&#x27; }
       };
@@ -5200,14 +5278,15 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelectorAll(&#x27;[data-step-panel]&#x27;).forEach(panel =&gt; { panel.hidden = Number(panel.dataset.stepPanel) !== target; });
         root.querySelectorAll(&#x27;[data-wizard-step]&#x27;).forEach(button =&gt; {
           const buttonStep = Number(button.dataset.wizardStep);
-          const active = target &lt;= 3 ? buttonStep === 1 : buttonStep === target;
+          const active = buttonStep === target || (buttonStep === 2 &amp;&amp; target === 3);
           button.disabled = buttonStep &gt; state.maxStep;
           button.classList.toggle(&#x27;btn-primary&#x27;, active);
           button.classList.toggle(&#x27;btn-ghost&#x27;, !active);
           if (active) button.setAttribute(&#x27;aria-current&#x27;, &#x27;step&#x27;);
           else button.removeAttribute(&#x27;aria-current&#x27;);
         });
-        root.querySelector(&#x27;#d360-wizard-counter&#x27;).textContent = `Adım ${target &lt;= 3 ? 1 : target - 2} / 3`;
+        const visibleStep = target === 1 ? 1 : target &lt;= 3 ? 2 : target === 4 ? 3 : 4;
+        root.querySelector(&#x27;#d360-wizard-counter&#x27;).textContent = `Adım ${visibleStep} / 4`;
         root.querySelector(&#x27;#d360-wizard-title&#x27;).textContent = wizardCopy[target].title;
         root.querySelector(&#x27;#d360-wizard-help&#x27;).textContent = wizardCopy[target].help;
         renderChoiceSummary();
@@ -5222,8 +5301,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           const project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
           if (!project || !Array.isArray(project.items) || !project.items.length) {
             root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;Üretimi görmek için önce en az bir ürünü ölçüsü ve malzemesiyle listeye ekleyin.&#x27;;
-            state.maxStep = Math.max(state.maxStep, 2);
-            showWizardStep(2);
+            state.maxStep = Math.max(state.maxStep, 3);
+            showWizardStep(3);
             return;
           }
           const fits = state.width &lt;= systemRule(&#x27;maxWidth&#x27;, 12000) &amp;&amp; state.height &lt;= systemRule(&#x27;maxHeight&#x27;, 6000);
@@ -5447,8 +5526,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           renderProductGrid();
           renderConfigurator();
           renderChoiceSummary();
-          state.maxStep = Math.max(state.maxStep, 2);
-          showWizardStep(2);
+          state.maxStep = Math.max(state.maxStep, 3);
+          showWizardStep(3);
           root.querySelector(&#x27;#d360-width&#x27;).focus();
         }
 
@@ -5483,12 +5562,51 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.measureCustomerId = event.target.value;
         state.measureProjectId = state.measureCustomerId ? &#x27;new&#x27; : &#x27;&#x27;;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
         renderAssignmentOptions();
       });
       root.querySelector(&#x27;#d360-measure-project&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.measureProjectId = event.target.value;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
         renderAssignmentOptions();
+      });
+      root.querySelector(&#x27;#d360-measure-project-name&#x27;).addEventListener(&#x27;input&#x27;, renderAssignmentSummary);
+      root.querySelector(&#x27;#d360-assignment-continue&#x27;).addEventListener(&#x27;click&#x27;, confirmMeasurementAssignment);
+      root.querySelector(&#x27;#d360-show-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = false;
+        root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-quick-customer-name&#x27;).focus();
+      });
+      root.querySelector(&#x27;#d360-cancel-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = true;
+        root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
+      });
+      root.querySelector(&#x27;#d360-save-quick-customer&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        const nameInput = root.querySelector(&#x27;#d360-quick-customer-name&#x27;);
+        const phoneInput = root.querySelector(&#x27;#d360-quick-customer-phone&#x27;);
+        const emailInput = root.querySelector(&#x27;#d360-quick-customer-email&#x27;);
+        const name = nameInput.value.trim();
+        const phone = phoneInput.value.trim();
+        const email = emailInput.value.trim();
+        if (!name || !phone || (email &amp;&amp; !emailInput.checkValidity())) {
+          root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;Müşteri adı, telefon ve varsa geçerli bir e-posta girin.&#x27;;
+          return;
+        }
+        const customer = { id: makeId(&#x27;cus&#x27;), name, phone, email, status: &#x27;Aktif&#x27; };
+        customers.unshift(customer);
+        state.measureCustomerId = customer.id;
+        state.measureProjectId = &#x27;new&#x27;;
+        state.selectedCustomerId = customer.id;
+        nameInput.value = &#x27;&#x27;;
+        phoneInput.value = &#x27;&#x27;;
+        emailInput.value = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-quick-customer-form&#x27;).hidden = true;
+        root.querySelector(&#x27;#d360-quick-customer-error&#x27;).textContent = &#x27;&#x27;;
+        renderCustomers();
+        renderAssignmentOptions();
+        persistData();
+        root.querySelector(&#x27;#d360-measure-project-name&#x27;).focus();
       });
       root.querySelector(&#x27;#d360-measure-model&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
         state.selected = event.target.value;
