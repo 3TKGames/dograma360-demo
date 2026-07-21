@@ -6,7 +6,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data: https://tqhothlefdlxriqusmpq.supabase.co; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Doğrama360</title>
-<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0;min-height:100%}body{box-sizing:border-box;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}</style>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255),rgb(24 24 24))}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{box-sizing:border-box;padding:0;background:inherit}iframe{display:block;width:100%;max-width:1600px;height:100vh;margin:0 auto;border:0}</style>
 </head>
 <body>
 <iframe sandbox="allow-scripts allow-same-origin allow-modals" referrerpolicy="no-referrer" title="Doğrama360" srcdoc="&lt;!doctype html&gt;
@@ -813,7 +813,7 @@ svg {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;d360-professional-app&quot;&gt;
+&lt;div id=&quot;d360-professional-app&quot; data-version=&quot;multi-material-projects&quot;&gt;
   &lt;style&gt;
     #d360-professional-app {
       color: var(--foreground);
@@ -2307,6 +2307,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;summary aria-label=&quot;Diğer bölümler&quot;&gt;&lt;i data-lucide=&quot;menu&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Diğer&lt;/span&gt;&lt;/summary&gt;
             &lt;div class=&quot;d360-more-popover&quot;&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;materials&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;package&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Fiyat ve stok&lt;/span&gt;&lt;/button&gt;
+              &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;library&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;library-big&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Malzeme kütüphanesi&lt;/span&gt;&lt;/button&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;team&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;users-round&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Ekip ve yetki&lt;/span&gt;&lt;/button&gt;
               &lt;button type=&quot;button&quot; class=&quot;btn btn-ghost btn-block&quot; data-page=&quot;settings&quot; aria-selected=&quot;false&quot;&gt;&lt;i data-lucide=&quot;settings&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span&gt;Profil sistemleri&lt;/span&gt;&lt;/button&gt;
             &lt;/div&gt;
@@ -2387,6 +2388,7 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;div class=&quot;d360-assignment-grid&quot;&gt;
                 &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project&quot;&gt;Proje&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-measure-project&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-field d360-assignment-wide&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-default-material&quot;&gt;Projenin ana malzemesi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-default-material&quot;&gt;&lt;/select&gt;&lt;span class=&quot;text-small text-muted&quot;&gt;Yeni ürünler bu malzemeyle başlar; her üründe ayrıca değiştirebilirsiniz.&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-assignment-grid d360-assignment-wide&quot; id=&quot;d360-new-measure-project&quot; hidden&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-name&quot;&gt;Yeni proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-measure-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-measure-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;
@@ -2415,6 +2417,9 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;div class=&quot;card d360-selected&quot;&gt;&lt;div&gt;&lt;div class=&quot;text-small&quot;&gt;Seçili iş&lt;/div&gt;&lt;strong data-assignment-summary&gt;Önce müşteri ve proje seçin&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Tüm ürünler bu proje altında saklanacak.&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-step-back=&quot;1&quot;&gt;&lt;i data-lucide=&quot;replace&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Değiştir&lt;/button&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;2. Ölçüsünü alacağınız ürünü seçin&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Ürüne dokunduğunuzda ölçü ve malzeme alanı otomatik açılır.&lt;/span&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-toolbar&quot;&gt;
+              &lt;label class=&quot;form-label&quot; for=&quot;d360-catalog-material&quot;&gt;Bu ürün için malzeme
+                &lt;select class=&quot;form-select&quot; id=&quot;d360-catalog-material&quot;&gt;&lt;/select&gt;
+              &lt;/label&gt;
               &lt;label class=&quot;form-label&quot; for=&quot;d360-product-search&quot;&gt;Ürün ara
                 &lt;input class=&quot;form-control&quot; id=&quot;d360-product-search&quot; type=&quot;search&quot; placeholder=&quot;Örnek: sürme, panjur, kapı…&quot;&gt;
               &lt;/label&gt;
@@ -2448,13 +2453,14 @@ html&gt;body{padding:0}&lt;/style&gt;
               &lt;div class=&quot;card d360-form-panel&quot;&gt;
                 &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Bu ürünün malzemesi&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Profil, cam, renk ve kullanım seçimi bu ürün satırıyla birlikte saklanır.&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-field-grid&quot;&gt;
-                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-material&quot;&gt;Malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-material&quot;&gt;&lt;/select&gt;&lt;/div&gt;
+                  &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-material&quot;&gt;Malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-material&quot;&gt;&lt;/select&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost&quot; id=&quot;d360-reset-product-material&quot;&gt;&lt;i data-lucide=&quot;undo-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Proje malzemesine dön&lt;/button&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-profile-system&quot;&gt;Profil sistemi&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-profile-system&quot;&gt;&lt;/select&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-glass&quot;&gt;Cam / dolgu&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-glass&quot;&gt;&lt;option value=&quot;double&quot;&gt;4+16+4 ısıcam&lt;/option&gt;&lt;option value=&quot;lowe&quot;&gt;Low-E ısıcam&lt;/option&gt;&lt;option value=&quot;triple&quot;&gt;Üçlü ısıcam&lt;/option&gt;&lt;option value=&quot;tempered&quot;&gt;Temperli cam&lt;/option&gt;&lt;option value=&quot;laminated&quot;&gt;Lamine güvenlik camı&lt;/option&gt;&lt;option value=&quot;acoustic&quot;&gt;Akustik cam&lt;/option&gt;&lt;option value=&quot;fire&quot;&gt;Yangına dayanımlı cam&lt;/option&gt;&lt;option value=&quot;panel&quot;&gt;Sandviç panel&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-finish&quot;&gt;Renk / yüzey&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-finish&quot;&gt;&lt;option value=&quot;white&quot;&gt;Beyaz&lt;/option&gt;&lt;option value=&quot;anthracite&quot;&gt;Antrasit&lt;/option&gt;&lt;option value=&quot;black&quot;&gt;Siyah&lt;/option&gt;&lt;option value=&quot;bronze&quot;&gt;Bronz&lt;/option&gt;&lt;option value=&quot;wood&quot;&gt;Ahşap desen&lt;/option&gt;&lt;option value=&quot;ral&quot;&gt;Özel RAL&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
                   &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-operation&quot;&gt;Kumanda / kullanım&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-operation&quot;&gt;&lt;option value=&quot;manual&quot;&gt;Manuel&lt;/option&gt;&lt;option value=&quot;motor&quot;&gt;Motorlu&lt;/option&gt;&lt;option value=&quot;smart&quot;&gt;Akıllı ev uyumlu motor&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-system-fit-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;d360-context-alert&quot;&gt;&lt;i data-lucide=&quot;layers-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;text-small&quot; id=&quot;d360-material-scope-status&quot;&gt;Projenin ana malzemesi kullanılıyor.&lt;/span&gt;&lt;/div&gt;
                 &lt;div class=&quot;d360-choice-summary&quot; aria-live=&quot;polite&quot;&gt;
                   &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ürün&lt;/span&gt;&lt;strong data-selected-name&gt;—&lt;/strong&gt;&lt;/div&gt;
                   &lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Ölçü&lt;/span&gt;&lt;strong id=&quot;d360-dimension-summary&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;
@@ -2558,7 +2564,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Projeler&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Müşteri, konum, ölçüler ve ürünler tek proje hesabında&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-page=&quot;catalog&quot; id=&quot;d360-new-measure&quot;&gt;&lt;i data-lucide=&quot;ruler&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Yeni ölçü al&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-project-create&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Yeni proje&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;
         &lt;div class=&quot;card d360-form-panel&quot; id=&quot;d360-standalone-project-form&quot; hidden&gt;
           &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong&gt;Yeni proje oluştur&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Projeyi bir müşteriye bağlayın; daha sonra ölçü ve ürünleri bu hesaba ekleyin.&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;d360-field-grid&quot;&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-standalone-project-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-name&quot;&gt;Proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-standalone-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-standalone-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-status&quot;&gt;Durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-standalone-project-status&quot;&gt;&lt;option&gt;Ölçü bekliyor&lt;/option&gt;&lt;option&gt;Ölçü alındı&lt;/option&gt;&lt;option&gt;Teklif hazırlanıyor&lt;/option&gt;&lt;option&gt;Onay bekliyor&lt;/option&gt;&lt;option&gt;Üretimde&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;d360-field-grid&quot;&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-customer&quot;&gt;Müşteri&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-standalone-project-customer&quot;&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-name&quot;&gt;Proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-standalone-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-location&quot;&gt;Konum / şantiye&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-standalone-project-location&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Çatalköy, Girne&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-material&quot;&gt;Ana malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-standalone-project-material&quot;&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-standalone-project-status&quot;&gt;Durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-standalone-project-status&quot;&gt;&lt;option&gt;Ölçü bekliyor&lt;/option&gt;&lt;option&gt;Ölçü alındı&lt;/option&gt;&lt;option&gt;Teklif hazırlanıyor&lt;/option&gt;&lt;option&gt;Onay bekliyor&lt;/option&gt;&lt;option&gt;Üretimde&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-standalone-project-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
           &lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-standalone-project&quot;&gt;Projeyi oluştur&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-cancel-standalone-project&quot;&gt;Vazgeç&lt;/button&gt;&lt;/div&gt;
         &lt;/div&gt;
@@ -2620,6 +2626,18 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;div class=&quot;d360-status text-small&quot; id=&quot;d360-price-status&quot; role=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
       &lt;/section&gt;
 
+      &lt;section class=&quot;d360-page&quot; data-page-view=&quot;library&quot; hidden&gt;
+        &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Malzeme ve sistem kütüphanesi&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Türkiye, Kıbrıs, İngiltere ve uluslararası pazarda kullanılan doğrama aileleri&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-library-count&quot;&gt;0 aile&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;d360-guide-line&quot;&gt;&lt;span class=&quot;d360-guide-icon&quot;&gt;&lt;i data-lucide=&quot;layers-3&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;div&gt;&lt;strong&gt;Önce malzemeyi, sonra o malzemeye uygun ürünü seçin.&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;Aşağıdaki bileşenler teklif ve sipariş şablonudur. Marka-seri kesim kuralları üretimden önce üretici kataloğuyla doğrulanmalıdır.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;d360-toolbar&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-library-material&quot;&gt;Malzeme ailesi&lt;select class=&quot;form-select&quot; id=&quot;d360-library-material&quot;&gt;&lt;/select&gt;&lt;/label&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-library-start&quot;&gt;&lt;i data-lucide=&quot;ruler&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Bu malzemeyle ölçü al&lt;/button&gt;&lt;/div&gt;
+        &lt;div class=&quot;card d360-form-panel&quot;&gt;
+          &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong id=&quot;d360-library-title&quot;&gt;Malzeme&lt;/strong&gt;&lt;div class=&quot;text-small&quot; id=&quot;d360-library-summary&quot;&gt;—&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-library-region&quot;&gt;—&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;d360-choice-summary&quot;&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Yapı&lt;/span&gt;&lt;strong id=&quot;d360-library-structure&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Güçlü yön&lt;/span&gt;&lt;strong id=&quot;d360-library-strength&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;&lt;div&gt;&lt;span class=&quot;text-small&quot;&gt;Dikkat&lt;/span&gt;&lt;strong id=&quot;d360-library-caution&quot;&gt;—&lt;/strong&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;d360-section&quot;&gt;&lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Bu malzemeyle yapılabilen ürünler&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Ürün kataloğu otomatik olarak bu aileye göre süzülür.&lt;/div&gt;&lt;/div&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-library-product-count&quot;&gt;0 ürün&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;d360-catalog-grid&quot; id=&quot;d360-library-products&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;d360-section&quot;&gt;&lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Tipik malzeme ve aksesuar listesi&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Kasa, kanat, takviye, conta, cam/dolgu, donanım ve montaj sarfları.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;table-responsive&quot;&gt;&lt;table class=&quot;table table-sm&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Kod&lt;/th&gt;&lt;th&gt;Bileşen&lt;/th&gt;&lt;th&gt;Grup&lt;/th&gt;&lt;th&gt;Birim&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;d360-library-components&quot;&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;
+      &lt;/section&gt;
+
       &lt;section class=&quot;d360-page&quot; data-page-view=&quot;customers&quot; hidden&gt;
         &lt;div class=&quot;d360-heading&quot;&gt;&lt;div&gt;&lt;strong&gt;Müşteriyi bulun&lt;/strong&gt;&lt;div class=&quot;text-small text-muted&quot;&gt;Adını veya telefon numarasını yazın.&lt;/div&gt;&lt;/div&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-new-customer&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri listede yok&lt;/button&gt;&lt;/div&gt;
         &lt;div class=&quot;d360-guide-line&quot; aria-live=&quot;polite&quot;&gt;
@@ -2640,7 +2658,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;/div&gt;
         &lt;div class=&quot;card d360-form-panel&quot; id=&quot;d360-customer-project-form&quot; hidden&gt;
           &lt;div class=&quot;d360-step-heading&quot;&gt;&lt;strong id=&quot;d360-project-form-title&quot;&gt;Müşteriye proje ekle&lt;/strong&gt;&lt;span class=&quot;text-small&quot;&gt;Proje global proje listesine ve müşteri kartına birlikte eklenir.&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;d360-field-grid&quot;&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-name&quot;&gt;Proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-location&quot;&gt;Konum&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-location&quot; type=&quot;text&quot; placeholder=&quot;İlçe / şantiye&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-status&quot;&gt;Durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-status&quot;&gt;&lt;option&gt;Teklif hazırlanıyor&lt;/option&gt;&lt;option&gt;Onay bekliyor&lt;/option&gt;&lt;option&gt;Ölçü alındı&lt;/option&gt;&lt;option&gt;Üretimde&lt;/option&gt;&lt;option&gt;Montajda&lt;/option&gt;&lt;option&gt;Teslim edildi&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-total&quot;&gt;Tahmini tutar&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-total&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;100&quot; value=&quot;0&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+          &lt;div class=&quot;d360-field-grid&quot;&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-name&quot;&gt;Proje adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: Girne Villa&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-location&quot;&gt;Konum&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-location&quot; type=&quot;text&quot; placeholder=&quot;İlçe / şantiye&quot;&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-material&quot;&gt;Ana malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-material&quot;&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-status&quot;&gt;Durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-project-status&quot;&gt;&lt;option&gt;Teklif hazırlanıyor&lt;/option&gt;&lt;option&gt;Onay bekliyor&lt;/option&gt;&lt;option&gt;Ölçü alındı&lt;/option&gt;&lt;option&gt;Üretimde&lt;/option&gt;&lt;option&gt;Montajda&lt;/option&gt;&lt;option&gt;Teslim edildi&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-project-total&quot;&gt;Tahmini tutar&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-project-total&quot; type=&quot;number&quot; min=&quot;0&quot; step=&quot;100&quot; value=&quot;0&quot;&gt;&lt;/div&gt;&lt;/div&gt;
           &lt;div class=&quot;d360-validation text-small text-destructive&quot; id=&quot;d360-project-error&quot; role=&quot;alert&quot;&gt;&lt;/div&gt;
           &lt;div class=&quot;viz-row&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-save-customer-project&quot;&gt;Projeyi kaydet&lt;/button&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; id=&quot;d360-cancel-customer-project&quot;&gt;Vazgeç&lt;/button&gt;&lt;/div&gt;
         &lt;/div&gt;
@@ -2699,7 +2717,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-name&quot;&gt;Sistem / seri adı&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-system-name&quot; type=&quot;text&quot; placeholder=&quot;Örnek: WD55 Kapı &amp; Pencere&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-brand&quot;&gt;Marka&lt;/label&gt;&lt;input class=&quot;form-control&quot; id=&quot;d360-system-brand&quot; type=&quot;text&quot; placeholder=&quot;Örnek: AKPA&quot;&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-region&quot;&gt;Pazar / bölge&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-region&quot;&gt;&lt;option&gt;Kıbrıs&lt;/option&gt;&lt;option&gt;Türkiye&lt;/option&gt;&lt;option&gt;Türkiye &amp; Kıbrıs&lt;/option&gt;&lt;option&gt;Uluslararası&lt;/option&gt;&lt;option&gt;Özel atölye&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
-            &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-material&quot;&gt;Ana malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-material&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm malzemeler&lt;/option&gt;&lt;option value=&quot;pvc&quot;&gt;PVC-U + galvaniz&lt;/option&gt;&lt;option value=&quot;aluCold&quot;&gt;Alüminyum – soğuk seri&lt;/option&gt;&lt;option value=&quot;aluThermal&quot;&gt;Alüminyum – ısı bariyerli&lt;/option&gt;&lt;option value=&quot;steel&quot;&gt;Çelik&lt;/option&gt;&lt;option value=&quot;woodAlu&quot;&gt;Ahşap-alüminyum&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
+            &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-material&quot;&gt;Ana malzeme&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-material&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm malzemeler&lt;/option&gt;&lt;option value=&quot;pvc&quot;&gt;PVC-U + galvaniz&lt;/option&gt;&lt;option value=&quot;aluCold&quot;&gt;Alüminyum – ısısız seri&lt;/option&gt;&lt;option value=&quot;aluThermal&quot;&gt;Alüminyum – ısı bariyerli&lt;/option&gt;&lt;option value=&quot;wood&quot;&gt;Lamine ahşap&lt;/option&gt;&lt;option value=&quot;woodAlu&quot;&gt;Ahşap-alüminyum&lt;/option&gt;&lt;option value=&quot;steel&quot;&gt;Çelik / galvaniz&lt;/option&gt;&lt;option value=&quot;steelThermal&quot;&gt;Isı bariyerli çelik&lt;/option&gt;&lt;option value=&quot;stainless&quot;&gt;Paslanmaz çelik&lt;/option&gt;&lt;option value=&quot;fiberglass&quot;&gt;Pultrüzyon fiberglas&lt;/option&gt;&lt;option value=&quot;grpDoor&quot;&gt;GRP kompozit kapı&lt;/option&gt;&lt;option value=&quot;composite&quot;&gt;Kompozit panel / HPL / ACP&lt;/option&gt;&lt;option value=&quot;glass&quot;&gt;Çerçevesiz cam&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-application&quot;&gt;Kullanım alanı&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-application&quot;&gt;&lt;option value=&quot;all&quot;&gt;Tüm ürünler&lt;/option&gt;&lt;option value=&quot;window&quot;&gt;Pencere&lt;/option&gt;&lt;option value=&quot;door&quot;&gt;Kapı&lt;/option&gt;&lt;option value=&quot;sliding&quot;&gt;Sürme / katlanır&lt;/option&gt;&lt;option value=&quot;shading&quot;&gt;Panjur / gölgeleme&lt;/option&gt;&lt;option value=&quot;facade&quot;&gt;Cephe&lt;/option&gt;&lt;option value=&quot;auxiliary&quot;&gt;Tamamlayıcı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
             &lt;div class=&quot;d360-field&quot;&gt;&lt;label class=&quot;form-label&quot; for=&quot;d360-system-verification&quot;&gt;Teknik durum&lt;/label&gt;&lt;select class=&quot;form-select&quot; id=&quot;d360-system-verification&quot;&gt;&lt;option value=&quot;auto&quot;&gt;Teknik profili otomatik oluştur&lt;/option&gt;&lt;option value=&quot;catalog&quot;&gt;Seri adı doğrulandı&lt;/option&gt;&lt;option value=&quot;archive&quot;&gt;Atölye arşivinden eşleşti&lt;/option&gt;&lt;option value=&quot;ready&quot;&gt;Üretim kuralları elle doğrulandı&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;
           &lt;/div&gt;
@@ -2777,20 +2795,38 @@ html&gt;body{padding:0}&lt;/style&gt;
       ];
 
       const materialTypes = {
-        pvc: { label: &#x27;PVC-U&#x27;, rate: 285 },
-        aluCold: { label: &#x27;Alüminyum – soğuk seri&#x27;, rate: 330 },
+        pvc: { label: &#x27;PVC-U + galvaniz takviye&#x27;, rate: 285 },
+        aluCold: { label: &#x27;Alüminyum – ısısız seri&#x27;, rate: 330 },
         aluThermal: { label: &#x27;Alüminyum – ısı bariyerli&#x27;, rate: 470 },
-        wood: { label: &#x27;Lamine ahşap&#x27;, rate: 560 },
-        woodAlu: { label: &#x27;Ahşap-alüminyum&#x27;, rate: 720 },
-        steel: { label: &#x27;Çelik profil&#x27;, rate: 410 },
+        wood: { label: &#x27;Lamine masif ahşap&#x27;, rate: 560 },
+        woodAlu: { label: &#x27;Ahşap-alüminyum kaplı&#x27;, rate: 720 },
+        steel: { label: &#x27;Çelik / galvaniz çelik&#x27;, rate: 410 },
+        steelThermal: { label: &#x27;Isı bariyerli çelik&#x27;, rate: 620 },
         stainless: { label: &#x27;Paslanmaz çelik&#x27;, rate: 690 },
-        composite: { label: &#x27;Kompozit / fiberglas&#x27;, rate: 430 },
-        glass: { label: &#x27;Çerçevesiz cam&#x27;, rate: 180 }
+        fiberglass: { label: &#x27;Pultrüzyon fiberglas (FRP)&#x27;, rate: 540 },
+        grpDoor: { label: &#x27;GRP kompozit kapı&#x27;, rate: 610 },
+        composite: { label: &#x27;Kompozit panel / HPL / ACP&#x27;, rate: 430 },
+        glass: { label: &#x27;Çerçevesiz yapısal cam&#x27;, rate: 180 }
       };
 
-      const allFrameMaterials = [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;, &#x27;composite&#x27;];
+      const materialLibrary = {
+        pvc: { region: &#x27;TR · CY · UK · Global&#x27;, summary: &#x27;Çok odacıklı PVC-U profil; taşıyıcı bölgelerde galvaniz çelik takviye, kaynaklı köşe, EPDM/TPE conta ve çevresel donanım.&#x27;, structure: &#x27;PVC-U kasa + kanat + çelik takviye&#x27;, strength: &#x27;Bakım kolaylığı ve ısı yalıtımı&#x27;, caution: &#x27;Takviye, genleşme ve drenaj seri kuralına bağlıdır&#x27;, components: [&#x27;PVC-KASA70&#x27;,&#x27;PVC-KANAT70&#x27;,&#x27;PVC-ORTA70&#x27;,&#x27;PVC-CITA&#x27;,&#x27;GALV-15&#x27;,&#x27;PVC-CONTA&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;KILIT-MP&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;,&#x27;KOPUK&#x27;] },
+        aluCold: { region: &#x27;TR · CY · Akdeniz · Global&#x27;, summary: &#x27;Isı bariyersiz ekstrüzyon alüminyum; iç bölme, cam balkon, panjur, vitrin, gölgeleme ve iklim şartına göre dış doğramada kullanılır.&#x27;, structure: &#x27;Ekstrüzyon profil + köşe takozu&#x27;, strength: &#x27;İnce kesit, dayanım ve çok yönlülük&#x27;, caution: &#x27;Isıl köprü ve yoğuşma kontrol edilmelidir&#x27;, components: [&#x27;ALU-50&#x27;,&#x27;ALU-CITA&#x27;,&#x27;ALU-KOSE&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;,&#x27;KOPUK&#x27;] },
+        aluThermal: { region: &#x27;TR · CY · UK · Global&#x27;, summary: &#x27;İç ve dış alüminyum kabukları poliamid bariyerle ayıran yalıtımlı profil ailesi; pencere, kapı, sürme ve cephede yaygındır.&#x27;, structure: &#x27;Alüminyum + poliamid bariyer&#x27;, strength: &#x27;Büyük açıklık ve hava dayanımı&#x27;, caution: &#x27;Uf/Uw ve bariyer genişliği seri bazında doğrulanır&#x27;, components: [&#x27;ALU-TB75&#x27;,&#x27;ALU-TB-KANAT&#x27;,&#x27;POLYAMID-24&#x27;,&#x27;ALU-CITA&#x27;,&#x27;ALU-KOSE&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;,&#x27;KOPUK&#x27;] },
+        wood: { region: &#x27;UK · Avrupa · Global&#x27;, summary: &#x27;Katmanlı/lamine ahşap kasa ve kanat; koruyucu kaplama, cam çıtası, conta ve damlalıkla tamamlanır.&#x27;, structure: &#x27;Lamine ahşap + yüzey sistemi&#x27;, strength: &#x27;Doğal görünüm ve düşük ısı iletimi&#x27;, caution: &#x27;Nem, kaplama bakımı ve tür seçimi önemlidir&#x27;, components: [&#x27;AHSP-LAM&#x27;,&#x27;AHSP-KANAT&#x27;,&#x27;AHSP-CITA&#x27;,&#x27;AHSP-BOYA&#x27;,&#x27;AHSP-DAMLALIK&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;] },
+        woodAlu: { region: &#x27;UK · Avrupa · Global&#x27;, summary: &#x27;İçte ahşap taşıyıcı, dışta klipsli alüminyum hava kabuğu; dış bakım ihtiyacını azaltır.&#x27;, structure: &#x27;Ahşap çekirdek + alüminyum dış kapak&#x27;, strength: &#x27;İçte ahşap, dışta hava dayanımı&#x27;, caution: &#x27;Klips, havalandırma boşluğu ve birleşimler seri özeldir&#x27;, components: [&#x27;AHSP-ALU&#x27;,&#x27;AHSP-LAM&#x27;,&#x27;WA-ALU-KAPAK&#x27;,&#x27;WA-KLIPS&#x27;,&#x27;AHSP-BOYA&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;] },
+        steel: { region: &#x27;TR · CY · UK · Global&#x27;, summary: &#x27;Galvanizli, kutu veya ince görüş çizgili çelik profiller; kaynak/bağlantı, korozyon koruması, conta ve ağır hizmet donanımıyla kullanılır.&#x27;, structure: &#x27;Çelik profil + kaynak/bağlantı&#x27;, strength: &#x27;Yüksek dayanım ve güvenlik&#x27;, caution: &#x27;Korozyon ve ısı köprüsü çözülmelidir&#x27;, components: [&#x27;CELIK-60&#x27;,&#x27;CELIK-KANAT&#x27;,&#x27;CELIK-GALV&#x27;,&#x27;CELIK-ASTAR&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;KILIT-MP&#x27;,&#x27;MENTESE&#x27;,&#x27;ANKRAJ&#x27;,&#x27;SILIKON&#x27;] },
+        steelThermal: { region: &#x27;UK · Avrupa · Global&#x27;, summary: &#x27;İç ve dış çelik kabukların yalıtım elemanıyla ayrıldığı ince kesitli termal pencere/kapı sistemi.&#x27;, structure: &#x27;Çelik kabuk + termal izolatör&#x27;, strength: &#x27;İnce görüş çizgisi ve yalıtım&#x27;, caution: &#x27;Yangın, güvenlik ve termal sınıf sistem sertifikasına bağlıdır&#x27;, components: [&#x27;ST-TB-FRAME&#x27;,&#x27;ST-TB-SASH&#x27;,&#x27;ST-TB-ISO&#x27;,&#x27;ST-TB-BEAD&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;KILIT-MP&#x27;,&#x27;MENTESE&#x27;,&#x27;ANKRAJ&#x27;,&#x27;SILIKON&#x27;] },
+        stainless: { region: &#x27;CY · UK · Global&#x27;, summary: &#x27;Korozyona dayanıklı paslanmaz profil ve bağlantılar; cam kapı, korkuluk, spider cephe ve kıyı uygulamalarında kullanılır.&#x27;, structure: &#x27;Paslanmaz profil + mekanik bağlantı&#x27;, strength: &#x27;Korozyon dayanımı ve mimari görünüm&#x27;, caution: &#x27;Alaşım sınıfı ve yüzey ortamla eşleştirilmelidir&#x27;, components: [&#x27;PASLANMAZ&#x27;,&#x27;INOX-BAGLANTI&#x27;,&#x27;SPIDER-ARM&#x27;,&#x27;PATCH-SET&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;ANKRAJ&#x27;,&#x27;SILIKON&#x27;] },
+        fiberglass: { region: &#x27;UK · Kuzey Amerika · Global&#x27;, summary: &#x27;Pultrüzyonla üretilmiş cam elyaf takviyeli polimer kasa/kanat; düşük genleşme ve kompozit köşe bağlantıları sunar.&#x27;, structure: &#x27;Pultrüzyon FRP profil&#x27;, strength: &#x27;Boyutsal kararlılık ve ısı performansı&#x27;, caution: &#x27;Yerel tedarik ve bağlantı detayı üreticiye bağlıdır&#x27;, components: [&#x27;FRP-FRAME&#x27;,&#x27;FRP-SASH&#x27;,&#x27;FRP-MULLION&#x27;,&#x27;FRP-CORNER&#x27;,&#x27;FRP-COAT&#x27;,&#x27;CONTA-EPDM&#x27;,&#x27;AKS-CIFT&#x27;,&#x27;VIDA&#x27;,&#x27;SILIKON&#x27;] },
+        grpDoor: { region: &#x27;UK · Avrupa · Global&#x27;, summary: &#x27;GRP dış kabuk, köpük çekirdek, çevresel karkas, eşik, çok noktalı kilit ve hava contalarından oluşan kompozit kapı seti.&#x27;, structure: &#x27;GRP yüzey + köpük çekirdek + karkas&#x27;, strength: &#x27;Yalıtım, güvenlik ve düşük bakım&#x27;, caution: &#x27;Kapı seti güvenlik/yangın beyanı bileşenleriyle birlikte geçerlidir&#x27;, components: [&#x27;GRP-SKIN&#x27;,&#x27;GRP-CORE&#x27;,&#x27;GRP-STILE&#x27;,&#x27;GRP-FRAME&#x27;,&#x27;GRP-THRESH&#x27;,&#x27;GRP-SEAL&#x27;,&#x27;KILIT-MP&#x27;,&#x27;MENTESE&#x27;,&#x27;SILIKON&#x27;] },
+        composite: { region: &#x27;TR · CY · UK · Global&#x27;, summary: &#x27;ACP, HPL veya kompakt/yalıtımlı panel; alt konstrüksiyon, konsol, ankraj, bant ve mastikle cephe/kapı dolgusu oluşturur.&#x27;, structure: &#x27;Panel + alt konstrüksiyon&#x27;, strength: &#x27;Hafif kaplama ve yüzey çeşitliliği&#x27;, caution: &#x27;Yangın sınıfı, çekirdek ve sabitleme tasarımı kritiktir&#x27;, components: [&#x27;ACP-4&#x27;,&#x27;HPL-8&#x27;,&#x27;COMP-RAIL&#x27;,&#x27;COMP-BRACKET&#x27;,&#x27;ANKRAJ&#x27;,&#x27;VHB-BANT&#x27;,&#x27;SILIKON&#x27;] },
+        glass: { region: &#x27;TR · CY · UK · Global&#x27;, summary: &#x27;Temperli/lamine/yalıtım camı; patch, spider, kanal veya strüktürel silikonla çerçevesiz ya da cephe sistemi oluşturur.&#x27;, structure: &#x27;Güvenlik camı + noktasal/kanal bağlantı&#x27;, strength: &#x27;Şeffaflık ve kesintisiz görünüm&#x27;, caution: &#x27;Cam kalınlığı, delikler ve taşıyıcı hesabı mühendislik gerektirir&#x27;, components: [&#x27;CAM-TEMP&#x27;,&#x27;CAM-LAM&#x27;,&#x27;CAM-ISI&#x27;,&#x27;SPIDER-ARM&#x27;,&#x27;PATCH-SET&#x27;,&#x27;CAM-TAKOZ&#x27;,&#x27;STRUCT-SIL&#x27;,&#x27;ANKRAJ&#x27;] }
+      };
+
+      const allFrameMaterials = [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;, &#x27;steelThermal&#x27;, &#x27;fiberglass&#x27;];
       const aluminiumMaterials = [&#x27;aluCold&#x27;, &#x27;aluThermal&#x27;];
-      const glassMaterials = [&#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;stainless&#x27;, &#x27;glass&#x27;];
+      const glassMaterials = [&#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;steelThermal&#x27;, &#x27;stainless&#x27;, &#x27;glass&#x27;];
 
       const products = [
         { id: &#x27;fixed-window&#x27;, category: &#x27;window&#x27;, name: &#x27;Sabit pencere&#x27;, kind: &#x27;fixed&#x27;, materials: allFrameMaterials, panels: 1 },
@@ -2814,19 +2850,19 @@ html&gt;body{padding:0}&lt;/style&gt;
         { id: &#x27;single-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Tek kanat kapı&#x27;, kind: &#x27;door1&#x27;, materials: allFrameMaterials, panels: 1 },
         { id: &#x27;double-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Çift kanat kapı&#x27;, kind: &#x27;door2&#x27;, materials: allFrameMaterials, panels: 2 },
         { id: &#x27;balcony-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Balkon kapısı&#x27;, kind: &#x27;door1&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;], panels: 1 },
-        { id: &#x27;entrance-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Bina giriş kapısı&#x27;, kind: &#x27;door1&#x27;, materials: [&#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;, &#x27;composite&#x27;], panels: 1 },
-        { id: &#x27;panel-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Panel kapı&#x27;, kind: &#x27;panelDoor&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluThermal&#x27;, &#x27;steel&#x27;, &#x27;composite&#x27;], panels: 1 },
+        { id: &#x27;entrance-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Bina giriş kapısı&#x27;, kind: &#x27;door1&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;, &#x27;steelThermal&#x27;, &#x27;fiberglass&#x27;, &#x27;grpDoor&#x27;], panels: 1 },
+        { id: &#x27;panel-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Panel / kompozit kapı&#x27;, kind: &#x27;panelDoor&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluThermal&#x27;, &#x27;steel&#x27;, &#x27;steelThermal&#x27;, &#x27;grpDoor&#x27;, &#x27;composite&#x27;], panels: 1 },
         { id: &#x27;glass-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Cam kapı&#x27;, kind: &#x27;glassDoor&#x27;, materials: glassMaterials, panels: 1 },
-        { id: &#x27;pivot-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Pivot giriş kapısı&#x27;, kind: &#x27;pivotDoor&#x27;, materials: [&#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;], panels: 1 },
+        { id: &#x27;pivot-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Pivot giriş kapısı&#x27;, kind: &#x27;pivotDoor&#x27;, materials: [&#x27;aluThermal&#x27;, &#x27;wood&#x27;, &#x27;woodAlu&#x27;, &#x27;steel&#x27;, &#x27;steelThermal&#x27;], panels: 1 },
         { id: &#x27;shopfront-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Mağaza kapısı&#x27;, kind: &#x27;glassDoor&#x27;, materials: [&#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;stainless&#x27;, &#x27;glass&#x27;], panels: 1 },
         { id: &#x27;automatic-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Otomatik kayar kapı&#x27;, kind: &#x27;autoSlide&#x27;, materials: glassMaterials, panels: 2 },
-        { id: &#x27;panic-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Panik barlı acil çıkış&#x27;, kind: &#x27;door1&#x27;, materials: [&#x27;aluThermal&#x27;, &#x27;steel&#x27;], panels: 1 },
-        { id: &#x27;fire-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Yangın kapısı&#x27;, kind: &#x27;panelDoor&#x27;, materials: [&#x27;steel&#x27;, &#x27;stainless&#x27;], panels: 1 },
+        { id: &#x27;panic-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Panik barlı acil çıkış&#x27;, kind: &#x27;door1&#x27;, materials: [&#x27;aluThermal&#x27;, &#x27;steel&#x27;, &#x27;steelThermal&#x27;], panels: 1 },
+        { id: &#x27;fire-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Sertifikalı yangın kapısı&#x27;, kind: &#x27;panelDoor&#x27;, materials: [&#x27;steel&#x27;, &#x27;steelThermal&#x27;, &#x27;stainless&#x27;, &#x27;grpDoor&#x27;], panels: 1 },
         { id: &#x27;security-door&#x27;, category: &#x27;door&#x27;, name: &#x27;Çelik güvenlik kapısı&#x27;, kind: &#x27;panelDoor&#x27;, materials: [&#x27;steel&#x27;, &#x27;stainless&#x27;], panels: 1 },
         { id: &#x27;garage-sectional&#x27;, category: &#x27;door&#x27;, name: &#x27;Seksiyonel garaj kapısı&#x27;, kind: &#x27;garage&#x27;, materials: [&#x27;steel&#x27;, &#x27;aluCold&#x27;], panels: 5 },
         { id: &#x27;garage-roller&#x27;, category: &#x27;door&#x27;, name: &#x27;Sarmal garaj kapısı&#x27;, kind: &#x27;shutter&#x27;, materials: [&#x27;aluCold&#x27;, &#x27;steel&#x27;], panels: 1 },
 
-        { id: &#x27;slide-2&#x27;, category: &#x27;sliding&#x27;, name: &#x27;2 ray sürme pencere&#x27;, kind: &#x27;slide2&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;], panels: 2 },
+        { id: &#x27;slide-2&#x27;, category: &#x27;sliding&#x27;, name: &#x27;2 ray sürme pencere&#x27;, kind: &#x27;slide2&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;, &#x27;woodAlu&#x27;, &#x27;fiberglass&#x27;], panels: 2 },
         { id: &#x27;slide-3&#x27;, category: &#x27;sliding&#x27;, name: &#x27;3 ray sürme pencere&#x27;, kind: &#x27;slide3&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;], panels: 3 },
         { id: &#x27;slide-4&#x27;, category: &#x27;sliding&#x27;, name: &#x27;4 kanat sürme sistem&#x27;, kind: &#x27;slide4&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluCold&#x27;, &#x27;aluThermal&#x27;], panels: 4 },
         { id: &#x27;lift-slide&#x27;, category: &#x27;sliding&#x27;, name: &#x27;Kaldır-sür kapı&#x27;, kind: &#x27;slide2&#x27;, materials: [&#x27;pvc&#x27;, &#x27;aluThermal&#x27;, &#x27;woodAlu&#x27;], panels: 2, premium: true },
@@ -2947,7 +2983,47 @@ html&gt;body{padding:0}&lt;/style&gt;
         { code: &#x27;SILIKON&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Nötr silikon&#x27;, unit: &#x27;tüp&#x27;, price: 210, stock: 72 },
         { code: &#x27;KOPUK&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Montaj köpüğü&#x27;, unit: &#x27;adet&#x27;, price: 230, stock: 58 },
         { code: &#x27;VIDA&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Montaj vidası&#x27;, unit: &#x27;adet&#x27;, price: 4.5, stock: 2400 },
-        { code: &#x27;ANKRAJ&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Cephe ankraj konsolu&#x27;, unit: &#x27;adet&#x27;, price: 185, stock: 132 }
+        { code: &#x27;ANKRAJ&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Cephe ankraj konsolu&#x27;, unit: &#x27;adet&#x27;, price: 185, stock: 132 },
+        { code: &#x27;PVC-CITA&#x27;, group: &#x27;profile&#x27;, name: &#x27;PVC-U cam çıtası&#x27;, unit: &#x27;m&#x27;, price: 95, stock: 240 },
+        { code: &#x27;PVC-CONTA&#x27;, group: &#x27;consumable&#x27;, name: &#x27;PVC sistem kasa/kanat contası&#x27;, unit: &#x27;m&#x27;, price: 18, stock: 760 },
+        { code: &#x27;ALU-CITA&#x27;, group: &#x27;profile&#x27;, name: &#x27;Alüminyum cam çıtası&#x27;, unit: &#x27;m&#x27;, price: 82, stock: 260 },
+        { code: &#x27;ALU-KOSE&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Alüminyum köşe takozu ve bağlantı&#x27;, unit: &#x27;set&#x27;, price: 85, stock: 320 },
+        { code: &#x27;ALU-TB-KANAT&#x27;, group: &#x27;profile&#x27;, name: &#x27;Isı bariyerli alüminyum kanat profili&#x27;, unit: &#x27;m&#x27;, price: 495, stock: 96 },
+        { code: &#x27;POLYAMID-24&#x27;, group: &#x27;profile&#x27;, name: &#x27;Poliamid ısı bariyeri 24 mm&#x27;, unit: &#x27;m&#x27;, price: 72, stock: 360 },
+        { code: &#x27;AHSP-KANAT&#x27;, group: &#x27;profile&#x27;, name: &#x27;Lamine ahşap kanat profili&#x27;, unit: &#x27;m&#x27;, price: 590, stock: 38 },
+        { code: &#x27;AHSP-CITA&#x27;, group: &#x27;profile&#x27;, name: &#x27;Ahşap cam çıtası&#x27;, unit: &#x27;m&#x27;, price: 135, stock: 92 },
+        { code: &#x27;AHSP-BOYA&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Ahşap emprenye, astar ve son kat&#x27;, unit: &#x27;m²&#x27;, price: 420, stock: 40 },
+        { code: &#x27;AHSP-DAMLALIK&#x27;, group: &#x27;profile&#x27;, name: &#x27;Ahşap sistem dış damlalık&#x27;, unit: &#x27;m&#x27;, price: 150, stock: 68 },
+        { code: &#x27;WA-ALU-KAPAK&#x27;, group: &#x27;profile&#x27;, name: &#x27;Ahşap-alüminyum dış kapak&#x27;, unit: &#x27;m&#x27;, price: 260, stock: 70 },
+        { code: &#x27;WA-KLIPS&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Ahşap-alüminyum kapak klipsi&#x27;, unit: &#x27;adet&#x27;, price: 12, stock: 620 },
+        { code: &#x27;CELIK-KANAT&#x27;, group: &#x27;profile&#x27;, name: &#x27;Çelik kanat profili&#x27;, unit: &#x27;m&#x27;, price: 435, stock: 58 },
+        { code: &#x27;CELIK-GALV&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Çelik profil galvaniz/korozyon koruması&#x27;, unit: &#x27;m²&#x27;, price: 210, stock: 65 },
+        { code: &#x27;CELIK-ASTAR&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Çelik antikorozif astar ve boya&#x27;, unit: &#x27;m²&#x27;, price: 260, stock: 54 },
+        { code: &#x27;ST-TB-FRAME&#x27;, group: &#x27;profile&#x27;, name: &#x27;Isı bariyerli çelik kasa profili&#x27;, unit: &#x27;m&#x27;, price: 620, stock: 34 },
+        { code: &#x27;ST-TB-SASH&#x27;, group: &#x27;profile&#x27;, name: &#x27;Isı bariyerli çelik kanat profili&#x27;, unit: &#x27;m&#x27;, price: 650, stock: 30 },
+        { code: &#x27;ST-TB-ISO&#x27;, group: &#x27;profile&#x27;, name: &#x27;Çelik sistem termal izolatörü&#x27;, unit: &#x27;m&#x27;, price: 105, stock: 120 },
+        { code: &#x27;ST-TB-BEAD&#x27;, group: &#x27;profile&#x27;, name: &#x27;Çelik sistem cam çıtası&#x27;, unit: &#x27;m&#x27;, price: 145, stock: 90 },
+        { code: &#x27;INOX-BAGLANTI&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Paslanmaz mekanik bağlantı seti&#x27;, unit: &#x27;set&#x27;, price: 280, stock: 84 },
+        { code: &#x27;FRP-FRAME&#x27;, group: &#x27;profile&#x27;, name: &#x27;Pultrüzyon FRP kasa profili&#x27;, unit: &#x27;m&#x27;, price: 540, stock: 40 },
+        { code: &#x27;FRP-SASH&#x27;, group: &#x27;profile&#x27;, name: &#x27;Pultrüzyon FRP kanat profili&#x27;, unit: &#x27;m&#x27;, price: 570, stock: 36 },
+        { code: &#x27;FRP-MULLION&#x27;, group: &#x27;profile&#x27;, name: &#x27;Pultrüzyon FRP orta kayıt&#x27;, unit: &#x27;m&#x27;, price: 585, stock: 28 },
+        { code: &#x27;FRP-CORNER&#x27;, group: &#x27;hardware&#x27;, name: &#x27;FRP köşe bağlantı seti&#x27;, unit: &#x27;set&#x27;, price: 165, stock: 72 },
+        { code: &#x27;FRP-COAT&#x27;, group: &#x27;consumable&#x27;, name: &#x27;FRP akrilik yüzey kaplaması&#x27;, unit: &#x27;m²&#x27;, price: 285, stock: 38 },
+        { code: &#x27;GRP-SKIN&#x27;, group: &#x27;profile&#x27;, name: &#x27;GRP kompozit kapı dış yüzeyi&#x27;, unit: &#x27;m²&#x27;, price: 980, stock: 25 },
+        { code: &#x27;GRP-CORE&#x27;, group: &#x27;profile&#x27;, name: &#x27;Yalıtımlı kapı çekirdeği&#x27;, unit: &#x27;m²&#x27;, price: 620, stock: 28 },
+        { code: &#x27;GRP-STILE&#x27;, group: &#x27;profile&#x27;, name: &#x27;Kompozit kapı çevresel karkası&#x27;, unit: &#x27;m&#x27;, price: 240, stock: 84 },
+        { code: &#x27;GRP-FRAME&#x27;, group: &#x27;profile&#x27;, name: &#x27;Kompozit kapı kasa profili&#x27;, unit: &#x27;m&#x27;, price: 610, stock: 32 },
+        { code: &#x27;GRP-THRESH&#x27;, group: &#x27;profile&#x27;, name: &#x27;Kompozit kapı ısı bariyerli eşiği&#x27;, unit: &#x27;m&#x27;, price: 420, stock: 36 },
+        { code: &#x27;GRP-SEAL&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Kompozit kapı hava contası&#x27;, unit: &#x27;m&#x27;, price: 28, stock: 240 },
+        { code: &#x27;ACP-4&#x27;, group: &#x27;profile&#x27;, name: &#x27;ACP kompozit panel 4 mm&#x27;, unit: &#x27;m²&#x27;, price: 780, stock: 70 },
+        { code: &#x27;HPL-8&#x27;, group: &#x27;profile&#x27;, name: &#x27;Dış cephe kompakt HPL 8 mm&#x27;, unit: &#x27;m²&#x27;, price: 1120, stock: 45 },
+        { code: &#x27;COMP-RAIL&#x27;, group: &#x27;profile&#x27;, name: &#x27;Kompozit panel alt konstrüksiyon rayı&#x27;, unit: &#x27;m&#x27;, price: 245, stock: 130 },
+        { code: &#x27;COMP-BRACKET&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Kompozit cephe ayarlı konsolu&#x27;, unit: &#x27;adet&#x27;, price: 155, stock: 160 },
+        { code: &#x27;VHB-BANT&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Cephe montaj bandı&#x27;, unit: &#x27;m&#x27;, price: 42, stock: 260 },
+        { code: &#x27;SPIDER-ARM&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Paslanmaz spider bağlantı kolu&#x27;, unit: &#x27;adet&#x27;, price: 1850, stock: 24 },
+        { code: &#x27;PATCH-SET&#x27;, group: &#x27;hardware&#x27;, name: &#x27;Cam kapı patch donanım seti&#x27;, unit: &#x27;set&#x27;, price: 3200, stock: 16 },
+        { code: &#x27;CAM-TAKOZ&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Cam taşıma ve ayar takozu&#x27;, unit: &#x27;adet&#x27;, price: 9, stock: 900 },
+        { code: &#x27;STRUCT-SIL&#x27;, group: &#x27;consumable&#x27;, name: &#x27;Strüktürel cephe silikonu&#x27;, unit: &#x27;tüp&#x27;, price: 480, stock: 42 }
       ];
 
       const projects = [];
@@ -2967,12 +3043,12 @@ html&gt;body{padding:0}&lt;/style&gt;
       ];
 
       const rolePages = {
-        owner: [&#x27;dashboard&#x27;, &#x27;catalog&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;, &#x27;team&#x27;, &#x27;settings&#x27;],
+        owner: [&#x27;dashboard&#x27;, &#x27;catalog&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;, &#x27;library&#x27;, &#x27;team&#x27;, &#x27;settings&#x27;],
         crm: [&#x27;dashboard&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;],
-        survey: [&#x27;dashboard&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;],
+        survey: [&#x27;dashboard&#x27;, &#x27;catalog&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;, &#x27;library&#x27;],
         accounting: [&#x27;dashboard&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;],
-        production: [&#x27;dashboard&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;],
-        procurement: [&#x27;dashboard&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;],
+        production: [&#x27;dashboard&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;, &#x27;library&#x27;],
+        procurement: [&#x27;dashboard&#x27;, &#x27;projects&#x27;, &#x27;materials&#x27;, &#x27;library&#x27;],
         installation: [&#x27;dashboard&#x27;, &#x27;customers&#x27;, &#x27;projects&#x27;]
       };
 
@@ -3022,6 +3098,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         { id: &#x27;sys-pvc70&#x27;, brand: &#x27;Atölye&#x27;, name: &#x27;PVC 70 mm genel&#x27;, material: &#x27;pvc&#x27;, materials: [&#x27;pvc&#x27;], applications: [&#x27;window&#x27;, &#x27;door&#x27;], region: &#x27;Özel atölye&#x27;, verification: &#x27;ready&#x27;, technicalReady: true, status: &#x27;Üretime hazır&#x27;, rules: [{ type: &#x27;maxWidth&#x27;, value: 3000, unit: &#x27;mm&#x27; }, { type: &#x27;maxHeight&#x27;, value: 3000, unit: &#x27;mm&#x27; }, { type: &#x27;wastePercent&#x27;, value: 8, unit: &#x27;%&#x27; }, { type: &#x27;priceFactor&#x27;, value: 1, unit: &#x27;x&#x27; }] },
         { id: &#x27;sys-alu75&#x27;, brand: &#x27;Atölye&#x27;, name: &#x27;Alüminyum 75 TB genel&#x27;, material: &#x27;aluThermal&#x27;, materials: [&#x27;aluThermal&#x27;], applications: [&#x27;window&#x27;, &#x27;door&#x27;], region: &#x27;Özel atölye&#x27;, verification: &#x27;ready&#x27;, technicalReady: true, status: &#x27;Üretime hazır&#x27;, rules: [{ type: &#x27;maxWidth&#x27;, value: 5000, unit: &#x27;mm&#x27; }, { type: &#x27;maxHeight&#x27;, value: 3500, unit: &#x27;mm&#x27; }, { type: &#x27;wastePercent&#x27;, value: 8, unit: &#x27;%&#x27; }, { type: &#x27;priceFactor&#x27;, value: 1.12, unit: &#x27;x&#x27; }] },
         { id: &#x27;sys-hs&#x27;, brand: &#x27;Atölye&#x27;, name: &#x27;HS kaldır-sür genel&#x27;, material: &#x27;aluThermal&#x27;, materials: [&#x27;aluThermal&#x27;], applications: [&#x27;sliding&#x27;], region: &#x27;Özel atölye&#x27;, verification: &#x27;ready&#x27;, technicalReady: true, status: &#x27;Üretime hazır&#x27;, rules: [{ type: &#x27;maxWidth&#x27;, value: 6500, unit: &#x27;mm&#x27; }, { type: &#x27;maxHeight&#x27;, value: 3200, unit: &#x27;mm&#x27; }, { type: &#x27;wastePercent&#x27;, value: 10, unit: &#x27;%&#x27; }, { type: &#x27;priceFactor&#x27;, value: 1.25, unit: &#x27;x&#x27; }] },
+        catalogueSystem(&#x27;generic-alu-cold&#x27;, &#x27;Genel şablon&#x27;, &#x27;Isısız alüminyum doğrama&#x27;, &#x27;aluCold&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;sliding&#x27;, &#x27;shading&#x27;, &#x27;auxiliary&#x27;], &#x27;TR · CY · Global&#x27;),
+        catalogueSystem(&#x27;generic-wood&#x27;, &#x27;Genel şablon&#x27;, &#x27;Lamine ahşap doğrama&#x27;, &#x27;wood&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;sliding&#x27;], &#x27;UK · Avrupa · Global&#x27;),
+        catalogueSystem(&#x27;generic-woodalu&#x27;, &#x27;Genel şablon&#x27;, &#x27;Ahşap-alüminyum doğrama&#x27;, &#x27;woodAlu&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;sliding&#x27;, &#x27;facade&#x27;], &#x27;UK · Avrupa · Global&#x27;),
+        catalogueSystem(&#x27;generic-steel&#x27;, &#x27;Genel şablon&#x27;, &#x27;Çelik doğrama&#x27;, &#x27;steel&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;facade&#x27;, &#x27;auxiliary&#x27;], &#x27;TR · CY · UK · Global&#x27;),
+        catalogueSystem(&#x27;generic-steel-tb&#x27;, &#x27;Genel şablon&#x27;, &#x27;Isı bariyerli çelik doğrama&#x27;, &#x27;steelThermal&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;facade&#x27;], &#x27;UK · Avrupa · Global&#x27;),
+        catalogueSystem(&#x27;generic-stainless&#x27;, &#x27;Genel şablon&#x27;, &#x27;Paslanmaz cam ve cephe sistemi&#x27;, &#x27;stainless&#x27;, [&#x27;door&#x27;, &#x27;facade&#x27;, &#x27;auxiliary&#x27;], &#x27;CY · UK · Global&#x27;),
+        catalogueSystem(&#x27;generic-frp&#x27;, &#x27;Genel şablon&#x27;, &#x27;Pultrüzyon FRP doğrama&#x27;, &#x27;fiberglass&#x27;, [&#x27;window&#x27;, &#x27;door&#x27;, &#x27;sliding&#x27;], &#x27;UK · Global&#x27;),
+        catalogueSystem(&#x27;generic-grp-door&#x27;, &#x27;Genel şablon&#x27;, &#x27;GRP kompozit kapı seti&#x27;, &#x27;grpDoor&#x27;, [&#x27;door&#x27;], &#x27;UK · Avrupa · Global&#x27;),
+        catalogueSystem(&#x27;generic-composite&#x27;, &#x27;Genel şablon&#x27;, &#x27;Kompozit panel ve alt konstrüksiyon&#x27;, &#x27;composite&#x27;, [&#x27;door&#x27;, &#x27;facade&#x27;, &#x27;auxiliary&#x27;], &#x27;TR · CY · UK · Global&#x27;),
+        catalogueSystem(&#x27;generic-glass&#x27;, &#x27;Genel şablon&#x27;, &#x27;Çerçevesiz yapısal cam&#x27;, &#x27;glass&#x27;, [&#x27;door&#x27;, &#x27;facade&#x27;, &#x27;sliding&#x27;], &#x27;TR · CY · UK · Global&#x27;),
 
         { id: &#x27;sys-aldoks-dar&#x27;, brand: &#x27;AKPA · ALDOKS&#x27;, name: &#x27;ALDOKS Dar ZET–TAF&#x27;, material: &#x27;aluCold&#x27;, materials: [&#x27;aluCold&#x27;], applications: [&#x27;window&#x27;, &#x27;door&#x27;], region: &#x27;Türkiye &amp; Kıbrıs&#x27;, verification: &#x27;archive&#x27;, technicalReady: false, status: &#x27;Atölye arşivinden eşleşti&#x27;, rules: [{ type: &#x27;wastePercent&#x27;, value: 8, unit: &#x27;%&#x27; }] },
         { id: &#x27;sys-aldoks-genis&#x27;, brand: &#x27;AKPA · ALDOKS&#x27;, name: &#x27;ALDOKS Geniş ZET–TAF Kapı&#x27;, material: &#x27;aluCold&#x27;, materials: [&#x27;aluCold&#x27;], applications: [&#x27;door&#x27;], region: &#x27;Türkiye &amp; Kıbrıs&#x27;, verification: &#x27;archive&#x27;, technicalReady: false, status: &#x27;Atölye arşivinden eşleşti&#x27;, rules: [{ type: &#x27;wastePercent&#x27;, value: 8, unit: &#x27;%&#x27; }] },
@@ -3135,6 +3221,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         projectItems: 0,
         measureCustomerId: &#x27;&#x27;,
         measureProjectId: &#x27;&#x27;,
+        projectDefaultMaterial: &#x27;pvc&#x27;,
+        libraryMaterial: &#x27;pvc&#x27;,
         selectedProjectId: null,
         materialFilter: &#x27;all&#x27;,
         currency: &#x27;TRY&#x27;,
@@ -3196,6 +3284,24 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function selectedProduct() {
         return products.find(product =&gt; product.id === state.selected) || products[0];
+      }
+
+      function activeMeasurementProject() {
+        return projects.find(project =&gt; project.id === state.measureProjectId &amp;&amp; project.customerId === state.measureCustomerId) || null;
+      }
+
+      function activeProjectMaterial() {
+        const project = activeMeasurementProject();
+        return project &amp;&amp; materialTypes[project.defaultMaterialId] ? project.defaultMaterialId : state.projectDefaultMaterial;
+      }
+
+      function setCurrentMaterial(materialId, resetProductIfNeeded = true) {
+        if (!materialTypes[materialId]) return;
+        state.material = materialId;
+        if (resetProductIfNeeded &amp;&amp; !selectedProduct().materials.includes(materialId)) {
+          const replacement = products.find(product =&gt; product.materials.includes(materialId) &amp;&amp; (state.category === &#x27;all&#x27; || product.category === state.category)) || products.find(product =&gt; product.materials.includes(materialId));
+          if (replacement) state.selected = replacement.id;
+        }
       }
 
       const applicationLabels = { all: &#x27;Tüm ürünler&#x27;, window: &#x27;Pencere&#x27;, door: &#x27;Kapı&#x27;, sliding: &#x27;Sürme / katlanır&#x27;, shading: &#x27;Panjur / gölgeleme&#x27;, facade: &#x27;Cephe&#x27;, auxiliary: &#x27;Tamamlayıcı&#x27; };
@@ -3345,7 +3451,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function profileRate(materialId) {
-        const codes = { pvc: &#x27;PVC-KANAT70&#x27;, aluCold: &#x27;ALU-50&#x27;, aluThermal: &#x27;ALU-TB75&#x27;, wood: &#x27;AHSP-LAM&#x27;, woodAlu: &#x27;AHSP-ALU&#x27;, steel: &#x27;CELIK-60&#x27;, stainless: &#x27;PASLANMAZ&#x27;, composite: &#x27;PVC-KANAT70&#x27;, glass: &#x27;CAM-TEMP&#x27; };
+        const codes = { pvc: &#x27;PVC-KANAT70&#x27;, aluCold: &#x27;ALU-50&#x27;, aluThermal: &#x27;ALU-TB75&#x27;, wood: &#x27;AHSP-LAM&#x27;, woodAlu: &#x27;AHSP-ALU&#x27;, steel: &#x27;CELIK-60&#x27;, steelThermal: &#x27;ST-TB-FRAME&#x27;, stainless: &#x27;PASLANMAZ&#x27;, fiberglass: &#x27;FRP-FRAME&#x27;, grpDoor: &#x27;GRP-FRAME&#x27;, composite: &#x27;COMP-RAIL&#x27;, glass: &#x27;CAM-TEMP&#x27; };
         return priceValue(codes[materialId], materialTypes[materialId].rate);
       }
 
@@ -3413,7 +3519,10 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (stored.appearance &amp;&amp; [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(stored.appearance.theme)) applyThemePreference(stored.appearance.theme);
         if (stored.workspace &amp;&amp; stored.workspace.simpleHomeVersion === 1 &amp;&amp; roleDefinitions.some(role =&gt; role.id === stored.workspace.activeRole)) state.activeRole = stored.workspace.activeRole;
         customers.forEach(customer =&gt; { if (!customer.status) customer.status = &#x27;Aktif&#x27;; });
-        projects.forEach(completeProjectTechnicalData);
+        projects.forEach(project =&gt; {
+          if (!materialTypes[project.defaultMaterialId]) project.defaultMaterialId = (project.items &amp;&amp; project.items[0] &amp;&amp; project.items[0].materialId) || &#x27;pvc&#x27;;
+          completeProjectTechnicalData(project);
+        });
       }
 
       function userStorageKey(userId) {
@@ -3712,7 +3821,7 @@ html&gt;body{padding:0}&lt;/style&gt;
 
       function renderCategories() {
         root.querySelector(&#x27;#d360-categories&#x27;).innerHTML = categories.map(category =&gt; {
-          const count = category.id === &#x27;all&#x27; ? products.length : products.filter(product =&gt; product.category === category.id).length;
+          const count = products.filter(product =&gt; product.materials.includes(state.material) &amp;&amp; (category.id === &#x27;all&#x27; || product.category === category.id)).length;
           const active = category.id === state.category;
           return `&lt;button type=&quot;button&quot; class=&quot;btn${active ? &#x27;&#x27; : &#x27; btn-ghost&#x27;} d360-cat-${category.id}&quot; data-category=&quot;${category.id}&quot; aria-pressed=&quot;${active}&quot;&gt;&lt;span class=&quot;d360-cat-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;${category.label} · ${count}&lt;/button&gt;`;
         }).join(&#x27;&#x27;);
@@ -3732,13 +3841,19 @@ html&gt;body{padding:0}&lt;/style&gt;
         const search = state.search.trim().toLocaleLowerCase(&#x27;tr-TR&#x27;);
         return products.filter(product =&gt; {
           const categoryMatch = state.category === &#x27;all&#x27; || product.category === state.category;
+          const materialMatch = product.materials.includes(state.material);
           const searchMatch = !search || `${product.name} ${categoryLabels[product.category]} ${product.id}`.toLocaleLowerCase(&#x27;tr-TR&#x27;).includes(search);
-          return categoryMatch &amp;&amp; searchMatch;
+          return categoryMatch &amp;&amp; materialMatch &amp;&amp; searchMatch;
         });
       }
 
       function renderProductGrid() {
         const list = filteredProducts();
+        const materialSelect = root.querySelector(&#x27;#d360-catalog-material&#x27;);
+        if (materialSelect) {
+          materialSelect.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}${id === activeProjectMaterial() ? &#x27; · proje ana malzemesi&#x27; : &#x27;&#x27;}&lt;/option&gt;`).join(&#x27;&#x27;);
+          materialSelect.value = state.material;
+        }
         root.querySelector(&#x27;#d360-result-count&#x27;).textContent = `${list.length} ürün`;
         root.querySelector(&#x27;#d360-product-grid&#x27;).innerHTML = list.length ? list.map(product =&gt; {
           const active = product.id === state.selected;
@@ -3754,6 +3869,13 @@ html&gt;body{padding:0}&lt;/style&gt;
         const select = root.querySelector(&#x27;#d360-material&#x27;);
         select.innerHTML = product.materials.map(id =&gt; `&lt;option value=&quot;${id}&quot;&gt;${materialTypes[id].label}&lt;/option&gt;`).join(&#x27;&#x27;);
         select.value = state.material;
+        const projectMaterial = activeProjectMaterial();
+        const scope = root.querySelector(&#x27;#d360-material-scope-status&#x27;);
+        if (scope) scope.textContent = state.material === projectMaterial
+          ? `Projenin ana malzemesi kullanılıyor: ${materialTypes[projectMaterial].label}.`
+          : `Bu ürün için özel malzeme seçildi: ${materialTypes[state.material].label}. Proje varsayılanı ${materialTypes[projectMaterial].label} olarak kalır.`;
+        const reset = root.querySelector(&#x27;#d360-reset-product-material&#x27;);
+        if (reset) reset.disabled = state.material === projectMaterial || !product.materials.includes(projectMaterial);
         renderSystemOptions();
       }
 
@@ -4096,9 +4218,12 @@ html&gt;body{padding:0}&lt;/style&gt;
           wood: { frame: &#x27;AHSP-LAM&#x27;, panel: &#x27;AHSP-LAM&#x27; },
           woodAlu: { frame: &#x27;AHSP-ALU&#x27;, panel: &#x27;AHSP-ALU&#x27; },
           steel: { frame: &#x27;CELIK-60&#x27;, panel: &#x27;CELIK-60&#x27; },
+          steelThermal: { frame: &#x27;ST-TB-FRAME&#x27;, panel: &#x27;ST-TB-SASH&#x27; },
           stainless: { frame: &#x27;PASLANMAZ&#x27;, panel: &#x27;PASLANMAZ&#x27; },
-          composite: { frame: &#x27;PVC-KASA70&#x27;, panel: &#x27;PVC-KANAT70&#x27; },
-          glass: { frame: &#x27;ALU-50&#x27;, panel: &#x27;ALU-50&#x27; }
+          fiberglass: { frame: &#x27;FRP-FRAME&#x27;, panel: &#x27;FRP-SASH&#x27; },
+          grpDoor: { frame: &#x27;GRP-FRAME&#x27;, panel: &#x27;GRP-STILE&#x27; },
+          composite: { frame: &#x27;COMP-RAIL&#x27;, panel: &#x27;ACP-4&#x27; },
+          glass: { frame: &#x27;PATCH-SET&#x27;, panel: &#x27;CAM-TEMP&#x27; }
         };
         return map[materialId] || map.pvc;
       }
@@ -4117,7 +4242,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         add(orderRow(codes.frame, frameName, metrics.frameM * wasteFactor * qty, &#x27;m&#x27;, profileFallback));
         add(orderRow(codes.panel, `${materialTypes[materialId].label} kanat / panel profili`, metrics.panelM * wasteFactor * qty, &#x27;m&#x27;, profileFallback));
         if (metrics.specialM &gt; 0 &amp;&amp; !/shutter/.test(product.kind)) add(orderRow(codes.special || `${codes.frame}-OZEL`, &#x27;Ray / özel taşıyıcı profil&#x27;, metrics.specialM * wasteFactor * qty, &#x27;m&#x27;, profileFallback));
-        if (materialId === &#x27;pvc&#x27; || materialId === &#x27;composite&#x27;) add(orderRow(&#x27;GALV-15&#x27;, &#x27;Galvaniz destek sacı 1,5 mm&#x27;, (metrics.frameM + metrics.panelM) * wasteFactor * qty, &#x27;m&#x27;, 110));
+        if (materialId === &#x27;pvc&#x27;) add(orderRow(&#x27;GALV-15&#x27;, &#x27;Galvaniz destek sacı 1,5 mm&#x27;, (metrics.frameM + metrics.panelM) * wasteFactor * qty, &#x27;m&#x27;, 110));
+        if (materialId === &#x27;aluThermal&#x27;) add(orderRow(&#x27;POLYAMID-24&#x27;, &#x27;Poliamid ısı bariyeri&#x27;, (metrics.frameM + metrics.panelM) * 2 * wasteFactor * qty, &#x27;m&#x27;, 72));
+        if (materialId === &#x27;wood&#x27;) add(orderRow(&#x27;AHSP-BOYA&#x27;, &#x27;Ahşap koruyucu yüzey sistemi&#x27;, metrics.area * 0.35 * qty, &#x27;m²&#x27;, 420));
+        if (materialId === &#x27;woodAlu&#x27;) { add(orderRow(&#x27;WA-ALU-KAPAK&#x27;, &#x27;Dış alüminyum hava kapağı&#x27;, (metrics.frameM + metrics.panelM) * wasteFactor * qty, &#x27;m&#x27;, 260)); add(orderRow(&#x27;WA-KLIPS&#x27;, &#x27;Dış kapak klipsi&#x27;, Math.ceil((metrics.frameM + metrics.panelM) * 4 * qty), &#x27;adet&#x27;, 12)); }
+        if (materialId === &#x27;steel&#x27;) { add(orderRow(&#x27;CELIK-GALV&#x27;, &#x27;Korozyon koruması&#x27;, metrics.area * 0.4 * qty, &#x27;m²&#x27;, 210)); add(orderRow(&#x27;CELIK-ASTAR&#x27;, &#x27;Antikorozif astar ve son kat&#x27;, metrics.area * 0.4 * qty, &#x27;m²&#x27;, 260)); }
+        if (materialId === &#x27;steelThermal&#x27;) add(orderRow(&#x27;ST-TB-ISO&#x27;, &#x27;Çelik termal izolatör&#x27;, (metrics.frameM + metrics.panelM) * wasteFactor * qty, &#x27;m&#x27;, 105));
+        if (materialId === &#x27;fiberglass&#x27;) { add(orderRow(&#x27;FRP-CORNER&#x27;, &#x27;FRP köşe bağlantı seti&#x27;, Math.max(4, metrics.hardware * 4) * qty, &#x27;set&#x27;, 165)); add(orderRow(&#x27;FRP-COAT&#x27;, &#x27;FRP yüzey kaplaması&#x27;, metrics.area * 0.3 * qty, &#x27;m²&#x27;, 285)); }
+        if (materialId === &#x27;grpDoor&#x27;) { add(orderRow(&#x27;GRP-SKIN&#x27;, &#x27;GRP dış yüzey&#x27;, metrics.area * 2 * qty, &#x27;m²&#x27;, 980)); add(orderRow(&#x27;GRP-CORE&#x27;, &#x27;Yalıtımlı kapı çekirdeği&#x27;, metrics.area * qty, &#x27;m²&#x27;, 620)); add(orderRow(&#x27;GRP-THRESH&#x27;, &#x27;Isı bariyerli eşik&#x27;, width / 1000 * qty, &#x27;m&#x27;, 420)); add(orderRow(&#x27;GRP-SEAL&#x27;, &#x27;Kapı hava contası&#x27;, metrics.perimeter * qty, &#x27;m&#x27;, 28)); }
+        if (materialId === &#x27;composite&#x27;) { add(orderRow(&#x27;ACP-4&#x27;, &#x27;Kompozit panel / dolgu&#x27;, metrics.area * wasteFactor * qty, &#x27;m²&#x27;, 780)); add(orderRow(&#x27;COMP-BRACKET&#x27;, &#x27;Ayarlı cephe konsolu&#x27;, Math.ceil(metrics.area * 3 * qty), &#x27;adet&#x27;, 155)); add(orderRow(&#x27;VHB-BANT&#x27;, &#x27;Cephe montaj bandı&#x27;, metrics.perimeter * qty, &#x27;m&#x27;, 42)); }
+        if (materialId === &#x27;glass&#x27;) { add(orderRow(&#x27;CAM-TAKOZ&#x27;, &#x27;Cam taşıma ve ayar takozu&#x27;, Math.max(4, metrics.hardware * 4) * qty, &#x27;adet&#x27;, 9)); add(orderRow(/spider/.test(product.kind) ? &#x27;SPIDER-ARM&#x27; : &#x27;PATCH-SET&#x27;, /spider/.test(product.kind) ? &#x27;Spider bağlantı kolu&#x27; : &#x27;Patch bağlantı seti&#x27;, Math.max(1, metrics.hardware) * qty, /spider/.test(product.kind) ? &#x27;adet&#x27; : &#x27;set&#x27;, 1850)); }
         if (metrics.glassArea &gt; 0) add(orderRow(glassCode(glassId), glassLabels[glassId], metrics.glassArea * qty, &#x27;m²&#x27;, glassRate(glassId)));
 
         if (metrics.slatArea &gt; 0) {
@@ -4429,6 +4563,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           qty: state.qty,
           material: materialTypes[state.material].label,
           materialId: state.material,
+          projectDefaultMaterialId: project.defaultMaterialId || state.projectDefaultMaterial,
+          materialOverride: state.material !== (project.defaultMaterialId || state.projectDefaultMaterial),
           system: selectedSystem().name,
           systemId: state.systemId,
           glass: glassLabels[state.glass],
@@ -4552,7 +4688,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         return `PRJ-${String(highest + 1).padStart(4, &#x27;0&#x27;)}`;
       }
 
-      function createProject({ customerId, name, location, status = &#x27;Ölçü alındı&#x27;, estimatedTotal = 0 }) {
+      function createProject({ customerId, name, location, status = &#x27;Ölçü alındı&#x27;, estimatedTotal = 0, defaultMaterialId = &#x27;pvc&#x27; }) {
         const customer = customers.find(item =&gt; item.id === customerId);
         if (!customer) return null;
         const project = {
@@ -4562,6 +4698,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           customer: customer.name,
           name,
           location,
+          defaultMaterialId: materialTypes[defaultMaterialId] ? defaultMaterialId : &#x27;pvc&#x27;,
           status,
           estimatedTotal: Number(estimatedTotal) || 0,
           products: 0,
@@ -4753,7 +4890,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         const customer = customers.find(item =&gt; item.id === project.customerId);
         detail.hidden = false;
         root.querySelector(&#x27;#d360-project-detail-name&#x27;).textContent = `${project.no} · ${project.name}`;
-        root.querySelector(&#x27;#d360-project-detail-meta&#x27;).textContent = `${customer ? customer.name : &#x27;Müşteri bulunamadı&#x27;} · ${project.location || &#x27;Konum belirtilmedi&#x27;} · ${project.products} ürün`;
+        root.querySelector(&#x27;#d360-project-detail-meta&#x27;).textContent = `${customer ? customer.name : &#x27;Müşteri bulunamadı&#x27;} · ${project.location || &#x27;Konum belirtilmedi&#x27;} · Ana malzeme: ${(materialTypes[project.defaultMaterialId] || materialTypes.pvc).label} · ${project.products} ürün`;
         const items = project.items || [];
         root.querySelector(&#x27;#d360-project-print&#x27;).disabled = !items.length;
         root.querySelector(&#x27;#d360-project-items&#x27;).innerHTML = items.length
@@ -4803,12 +4940,14 @@ html&gt;body{padding:0}&lt;/style&gt;
         if (!validateAssignmentContext()) return;
         const customer = customers.find(item =&gt; item.id === state.measureCustomerId);
         let project = projects.find(item =&gt; item.id === state.measureProjectId &amp;&amp; item.customerId === state.measureCustomerId);
+        const chosenMaterial = root.querySelector(&#x27;#d360-project-default-material&#x27;).value || state.projectDefaultMaterial;
         if (state.measureProjectId === &#x27;new&#x27;) {
           project = createProject({
             customerId: customer.id,
             name: root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim(),
             location: root.querySelector(&#x27;#d360-measure-project-location&#x27;).value.trim(),
-            status: &#x27;Ölçü bekliyor&#x27;
+            status: &#x27;Ölçü bekliyor&#x27;,
+            defaultMaterialId: chosenMaterial
           });
           if (project) state.measureProjectId = project.id;
         }
@@ -4816,6 +4955,9 @@ html&gt;body{padding:0}&lt;/style&gt;
           root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;Proje oluşturulamadı. Bilgileri kontrol edip tekrar deneyin.&#x27;;
           return;
         }
+        project.defaultMaterialId = chosenMaterial;
+        state.projectDefaultMaterial = chosenMaterial;
+        setCurrentMaterial(chosenMaterial);
         state.selectedCustomerId = customer.id;
         state.selectedProjectId = project.id;
         state.maxStep = Math.max(state.maxStep, 2);
@@ -4823,6 +4965,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         renderProjects();
         renderCustomers();
         renderAssignmentOptions();
+        renderCategories();
+        renderProductGrid();
+        renderSelected();
         persistData();
         showWizardStep(2);
         root.querySelector(&#x27;#d360-product-search&#x27;).focus();
@@ -4831,8 +4976,10 @@ html&gt;body{padding:0}&lt;/style&gt;
       function renderAssignmentOptions() {
         const customerSelect = root.querySelector(&#x27;#d360-measure-customer&#x27;);
         const projectSelect = root.querySelector(&#x27;#d360-measure-project&#x27;);
+        const materialSelect = root.querySelector(&#x27;#d360-project-default-material&#x27;);
         const newProjectFields = root.querySelector(&#x27;#d360-new-measure-project&#x27;);
         const help = root.querySelector(&#x27;#d360-measure-assignment-help&#x27;);
+        materialSelect.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
         customerSelect.innerHTML = customers.length
           ? `&lt;option value=&quot;&quot;&gt;Müşteri seçin&lt;/option&gt;${customers.map(customer =&gt; `&lt;option value=&quot;${customer.id}&quot;&gt;${escapeHtml(customer.name)} · ${escapeHtml(customer.status || &#x27;Aktif&#x27;)} · ${escapeHtml(customer.phone)}&lt;/option&gt;`).join(&#x27;&#x27;)}`
           : &#x27;&lt;option value=&quot;&quot;&gt;Önce müşteri ekleyin&lt;/option&gt;&#x27;;
@@ -4844,6 +4991,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.measureProjectId = &#x27;&#x27;;
           projectSelect.innerHTML = &#x27;&lt;option value=&quot;&quot;&gt;Önce müşteri seçin&lt;/option&gt;&#x27;;
           projectSelect.disabled = true;
+          materialSelect.disabled = false;
+          materialSelect.value = state.projectDefaultMaterial;
           newProjectFields.hidden = true;
           help.textContent = customers.length ? &#x27;Ölçünün kimin hesabına kaydedileceğini seçin.&#x27; : &#x27;Önce Müşteriler bölümünden müşteri ekleyin; sonra bu ekrana dönün.&#x27;;
           renderProjectCustomerOptions();
@@ -4861,9 +5010,12 @@ html&gt;body{padding:0}&lt;/style&gt;
         projectSelect.value = state.measureProjectId;
         newProjectFields.hidden = state.measureProjectId !== &#x27;new&#x27;;
         const project = list.find(item =&gt; item.id === state.measureProjectId);
+        if (project &amp;&amp; materialTypes[project.defaultMaterialId]) state.projectDefaultMaterial = project.defaultMaterialId;
+        materialSelect.disabled = false;
+        materialSelect.value = state.projectDefaultMaterial;
         help.textContent = project
-          ? `Bu ölçü ${customer.name} / ${project.name} projesine eklenecek.`
-          : `${customer.name} için yeni bir proje oluşturulacak; proje adı ve konumu zorunludur.`;
+          ? `Bu ölçü ${customer.name} / ${project.name} projesine eklenecek. Ana malzeme: ${materialTypes[state.projectDefaultMaterial].label}.`
+          : `${customer.name} için yeni bir proje oluşturulacak; proje adı, konumu ve ana malzemeyi seçin.`;
         renderProjectCustomerOptions();
         renderMeasurementBatch();
         renderAssignmentSummary();
@@ -4888,7 +5040,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         }
         table.innerHTML = items.length ? items.map((item, index) =&gt; {
           if (!item.id) item.id = makeId(&#x27;itm&#x27;);
-          const technical = `${item.system} · ${item.material} · ${item.glass}`;
+          const technical = `${item.system} · ${item.material}${item.materialOverride ? &#x27; · ürüne özel&#x27; : &#x27; · proje ana malzemesi&#x27;} · ${item.glass}`;
           return `&lt;tr&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.reference || `Ürün ${index + 1}`)}&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;&lt;strong&gt;${escapeHtml(item.productName)}&lt;/strong&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(technical)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${num.format(item.width)} × ${num.format(item.height)} mm&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${num.format(item.qty)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-ghost text-destructive&quot; data-measure-remove=&quot;${item.id}&quot;&gt;Kaldır&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`;
         }).join(&#x27;&#x27;) : &#x27;&lt;tr&gt;&lt;td colspan=&quot;5&quot; class=&quot;d360-empty&quot;&gt;Bu projede henüz ölçü yok. İlk kapı veya pencereyi ekleyin.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         status.textContent = message || `${project.name} açık. “Yeni ürün ekle” ile ürün seçimine dönerek listeye devam edin.`;
@@ -4903,7 +5055,8 @@ html&gt;body{padding:0}&lt;/style&gt;
             customerId: customer.id,
             name: root.querySelector(&#x27;#d360-measure-project-name&#x27;).value.trim(),
             location: root.querySelector(&#x27;#d360-measure-project-location&#x27;).value.trim(),
-            status: &#x27;Ölçü alındı&#x27;
+            status: &#x27;Ölçü alındı&#x27;,
+            defaultMaterialId: root.querySelector(&#x27;#d360-project-default-material&#x27;).value || state.projectDefaultMaterial
           });
           if (project) state.measureProjectId = project.id;
         }
@@ -4938,6 +5091,8 @@ html&gt;body{padding:0}&lt;/style&gt;
           qty: state.qty,
           material: materialTypes[state.material].label,
           materialId: state.material,
+          projectDefaultMaterialId: project.defaultMaterialId || state.projectDefaultMaterial,
+          materialOverride: state.material !== (project.defaultMaterialId || state.projectDefaultMaterial),
           system: selectedSystem().name,
           systemId: state.systemId,
           glass: glassLabels[state.glass],
@@ -4972,6 +5127,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function startAnotherProduct() {
+        setCurrentMaterial(activeProjectMaterial());
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-product-search&#x27;).value = &#x27;&#x27;;
@@ -4990,7 +5146,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           refreshProjectTotals(project);
         });
         const rows = projects.length
-          ? projects.map(project =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(project.no)}&lt;/code&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.name)}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(project.customer || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(project.location || &#x27;—&#x27;)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${project.products}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-project-view=&quot;${project.id}&quot;&gt;Aç&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)
+          ? projects.map(project =&gt; `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(project.no)}&lt;/code&gt;&lt;div class=&quot;text-small&quot;&gt;${escapeHtml(project.name)} · ${(materialTypes[project.defaultMaterialId] || materialTypes.pvc).label}&lt;/div&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(project.customer || &#x27;—&#x27;)}&lt;/td&gt;&lt;td&gt;${escapeHtml(project.location || &#x27;—&#x27;)}&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${project.products}&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(project.status)}&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;text-end&quot;&gt;${money.format(project.total)}&lt;/td&gt;&lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn&quot; data-project-view=&quot;${project.id}&quot;&gt;Aç&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)
           : &#x27;&lt;tr&gt;&lt;td colspan=&quot;7&quot; class=&quot;d360-empty&quot;&gt;Henüz proje yok. “Yeni proje” ile müşteri ve konum bilgilerini girerek başlayın.&lt;/td&gt;&lt;/tr&gt;&#x27;;
         root.querySelector(&#x27;#d360-project-table&#x27;).innerHTML = rows;
         const recent = root.querySelector(&#x27;#d360-home-recent&#x27;);
@@ -5088,6 +5244,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-project-form-title&#x27;).textContent = `${customer.name} için proje ekle`;
         root.querySelector(&#x27;#d360-project-name&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-project-location&#x27;).value = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-project-material&#x27;).innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#d360-project-material&#x27;).value = &#x27;pvc&#x27;;
         root.querySelector(&#x27;#d360-project-status&#x27;).value = &#x27;Teklif hazırlanıyor&#x27;;
         root.querySelector(&#x27;#d360-project-total&#x27;).value = &#x27;0&#x27;;
         toggleForm(&#x27;#d360-customer-form&#x27;, false);
@@ -5100,6 +5258,8 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-standalone-project-customer&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-name&#x27;).value = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-location&#x27;).value = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-standalone-project-material&#x27;).innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        root.querySelector(&#x27;#d360-standalone-project-material&#x27;).value = state.projectDefaultMaterial;
         root.querySelector(&#x27;#d360-standalone-project-status&#x27;).value = &#x27;Ölçü bekliyor&#x27;;
         root.querySelector(&#x27;#d360-standalone-project-error&#x27;).textContent = customers.length ? &#x27;&#x27; : &#x27;Önce Müşteriler bölümünden müşteri ekleyin.&#x27;;
         toggleForm(&#x27;#d360-standalone-project-form&#x27;, true, customers.length ? &#x27;#d360-standalone-project-customer&#x27; : null);
@@ -5110,6 +5270,9 @@ html&gt;body{padding:0}&lt;/style&gt;
         const projectExists = projects.some(project =&gt; project.id === projectId &amp;&amp; project.customerId === customerId);
         state.measureCustomerId = customerId;
         state.measureProjectId = projectExists ? projectId : &#x27;new&#x27;;
+        const project = projects.find(item =&gt; item.id === projectId);
+        state.projectDefaultMaterial = project &amp;&amp; materialTypes[project.defaultMaterialId] ? project.defaultMaterialId : &#x27;pvc&#x27;;
+        setCurrentMaterial(state.projectDefaultMaterial);
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-product-search&#x27;).value = &#x27;&#x27;;
@@ -5131,6 +5294,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       function startNewMeasurement() {
         state.measureCustomerId = &#x27;&#x27;;
         state.measureProjectId = &#x27;&#x27;;
+        state.projectDefaultMaterial = &#x27;pvc&#x27;;
+        setCurrentMaterial(&#x27;pvc&#x27;);
         state.category = &#x27;all&#x27;;
         state.search = &#x27;&#x27;;
         state.step = 1;
@@ -5236,13 +5401,38 @@ html&gt;body{padding:0}&lt;/style&gt;
         toggleForm(&#x27;#d360-system-form&#x27;, true, &#x27;#d360-system-name&#x27;);
       }
 
-      const pageTitles = { dashboard: &#x27;Başlangıç&#x27;, catalog: &#x27;Yeni ölçü ve ürün&#x27;, projects: &#x27;Projeler&#x27;, materials: &#x27;Fiyat ve stok yönetimi&#x27;, customers: &#x27;Müşteriler&#x27;, team: &#x27;Ekip ve yetki yönetimi&#x27;, settings: &#x27;Profil sistemleri&#x27;, print: &#x27;Müşteri çıktısı&#x27; };
+      function renderMaterialLibrary() {
+        const select = root.querySelector(&#x27;#d360-library-material&#x27;);
+        select.innerHTML = Object.entries(materialTypes).map(([id, material]) =&gt; `&lt;option value=&quot;${id}&quot;&gt;${escapeHtml(material.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
+        if (!materialLibrary[state.libraryMaterial]) state.libraryMaterial = &#x27;pvc&#x27;;
+        select.value = state.libraryMaterial;
+        const info = materialLibrary[state.libraryMaterial];
+        const compatible = products.filter(product =&gt; product.materials.includes(state.libraryMaterial));
+        root.querySelector(&#x27;#d360-library-count&#x27;).textContent = `${Object.keys(materialLibrary).length} aile`;
+        root.querySelector(&#x27;#d360-library-title&#x27;).textContent = materialTypes[state.libraryMaterial].label;
+        root.querySelector(&#x27;#d360-library-summary&#x27;).textContent = info.summary;
+        root.querySelector(&#x27;#d360-library-region&#x27;).textContent = info.region;
+        root.querySelector(&#x27;#d360-library-structure&#x27;).textContent = info.structure;
+        root.querySelector(&#x27;#d360-library-strength&#x27;).textContent = info.strength;
+        root.querySelector(&#x27;#d360-library-caution&#x27;).textContent = info.caution;
+        root.querySelector(&#x27;#d360-library-product-count&#x27;).textContent = `${compatible.length} ürün`;
+        root.querySelector(&#x27;#d360-library-products&#x27;).innerHTML = compatible.map(product =&gt; `&lt;button type=&quot;button&quot; class=&quot;btn viz-tile d360-cat-${product.category}&quot; data-library-product=&quot;${product.id}&quot;&gt;&lt;span class=&quot;d360-cat-dot&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;${escapeHtml(product.name)}&lt;/button&gt;`).join(&#x27;&#x27;) || &#x27;&lt;div class=&quot;d360-empty&quot;&gt;Bu malzeme için ürün şablonu bulunamadı.&lt;/div&gt;&#x27;;
+        root.querySelector(&#x27;#d360-library-components&#x27;).innerHTML = info.components.map(code =&gt; {
+          const item = priceMaterials.find(material =&gt; material.code === code) || { code, name: &#x27;Tedarikçi kataloğundan tanımlanacak bileşen&#x27;, group: &#x27;profile&#x27;, unit: &#x27;—&#x27; };
+          const group = { profile: &#x27;Profil / panel&#x27;, glass: &#x27;Cam / dolgu&#x27;, hardware: &#x27;Donanım&#x27;, shading: &#x27;Gölgeleme&#x27;, consumable: &#x27;Sarf / montaj&#x27; }[item.group] || item.group;
+          return `&lt;tr&gt;&lt;td&gt;&lt;code&gt;${escapeHtml(item.code)}&lt;/code&gt;&lt;/td&gt;&lt;td&gt;${escapeHtml(item.name)}&lt;/td&gt;&lt;td&gt;${escapeHtml(group)}&lt;/td&gt;&lt;td&gt;${escapeHtml(item.unit)}&lt;/td&gt;&lt;/tr&gt;`;
+        }).join(&#x27;&#x27;);
+        ensureIcons();
+      }
+
+      const pageTitles = { dashboard: &#x27;Başlangıç&#x27;, catalog: &#x27;Yeni ölçü ve ürün&#x27;, projects: &#x27;Projeler&#x27;, materials: &#x27;Fiyat ve stok yönetimi&#x27;, library: &#x27;Malzeme kütüphanesi&#x27;, customers: &#x27;Müşteriler&#x27;, team: &#x27;Ekip ve yetki yönetimi&#x27;, settings: &#x27;Profil sistemleri&#x27;, print: &#x27;Müşteri çıktısı&#x27; };
       const pageContexts = {
         dashboard: { title: &#x27;Bugün ne yapmak istiyorsunuz?&#x27;, copy: &#x27;Tek bir iş seçin; program sonraki adımı size gösterecek.&#x27;, guide: &#x27;En kolay başlangıç&#x27;, steps: [&#x27;Müşteriyi bulun&#x27;, &#x27;Projeyi seçin&#x27;, &#x27;Ölçüyü kaydedin&#x27;], action: &#x27;Ölçü almaya başla&#x27;, icon: &#x27;ruler&#x27; },
         catalog: { title: &#x27;Ölçü ve ürün kaydı&#x27;, copy: &#x27;Önce müşteri ile projeyi seçin; ardından bütün ürünleri aynı proje listesine ekleyin.&#x27;, guide: &#x27;Doğru kayıt sırası&#x27;, steps: [&#x27;Müşteri ve projeyi belirleyin&#x27;, &#x27;Ürün, ölçü ve malzemeyi ekleyin&#x27;, &#x27;Üretim ve teklifi kontrol edin&#x27;], action: &#x27;Yeni ölçüye dön&#x27;, icon: &#x27;rotate-ccw&#x27; },
         customers: { title: &#x27;Müşteri kartı&#x27;, copy: &#x27;Önce müşteri adı veya telefonunu yazın; sonra ölçüyü doğrudan projeye ekleyin.&#x27;, guide: &#x27;Kayıt sırası&#x27;, steps: [&#x27;Müşteriyi bulun&#x27;, &#x27;Yoksa yeni kayıt açın&#x27;, &#x27;Projesine ölçü ekleyin&#x27;], action: &#x27;Yeni müşteri ekle&#x27;, icon: &#x27;user-plus&#x27; },
         projects: { title: &#x27;Proje merkezi&#x27;, copy: &#x27;Tüm ölçüler, ürünler, sipariş listesi ve müşteri çıktısı aynı projede toplanır.&#x27;, guide: &#x27;Proje ile çalışın&#x27;, steps: [&#x27;Projeyi açın&#x27;, &#x27;Ölçüleri ekleyin&#x27;, &#x27;Toplu sipariş listesini alın&#x27;], action: &#x27;Yeni proje oluştur&#x27;, icon: &#x27;folder-plus&#x27; },
         materials: { title: &#x27;Fiyat ve stok&#x27;, copy: &#x27;Kâr, KDV ve malzeme fiyatını bir kez güncelleyin; yeni teklifler otomatik hesaplansın.&#x27;, guide: &#x27;Fiyat güncelleme&#x27;, steps: [&#x27;Para birimini seçin&#x27;, &#x27;Fiyatları girin veya CSV yükleyin&#x27;, &#x27;Kaydet tuşuna basın&#x27;], action: &#x27;Hesap ayarlarını aç&#x27;, icon: &#x27;sliders-horizontal&#x27; },
+        library: { title: &#x27;Malzeme kütüphanesi&#x27;, copy: &#x27;Her malzemenin yapılabilir ürünlerini ve tipik sipariş bileşenlerini tek yerde görün.&#x27;, guide: &#x27;Doğru seçim&#x27;, steps: [&#x27;Malzeme ailesini seçin&#x27;, &#x27;Uyumlu ürünleri görün&#x27;, &#x27;Marka-seri kuralını doğrulayın&#x27;], action: &#x27;Bu malzemeyle ölçü al&#x27;, icon: &#x27;layers-3&#x27; },
         team: { title: &#x27;Ekip ve yetki&#x27;, copy: &#x27;Her çalışan yalnızca kendi işine ait ekranları görür; aynı müşteri kaydında birlikte çalışır.&#x27;, guide: &#x27;Ekip kurulumu&#x27;, steps: [&#x27;Çalışanı ekleyin&#x27;, &#x27;Rolünü seçin&#x27;, &#x27;Davet durumunu takip edin&#x27;], action: &#x27;Yeni kullanıcı ekle&#x27;, icon: &#x27;user-plus&#x27; },
         settings: { title: &#x27;Sistem kütüphanesi&#x27;, copy: &#x27;Kullandığınız profil serilerini ve üretim kurallarını tek yerde güncel tutun.&#x27;, guide: &#x27;Sistem tanımlama&#x27;, steps: [&#x27;Seriyi bulun veya ekleyin&#x27;, &#x27;Kesim ve fire kurallarını girin&#x27;, &#x27;Sistemi kaydedin&#x27;], action: &#x27;Yeni sistem ekle&#x27;, icon: &#x27;plus&#x27; },
         print: { title: &#x27;Müşteri belgesi&#x27;, copy: &#x27;Teklif, ölçü ve üretim çizimlerini müşteriye tek belgede verin.&#x27;, guide: &#x27;Belge kontrolü&#x27;, steps: [&#x27;Bilgileri kontrol edin&#x27;, &#x27;Çizimleri inceleyin&#x27;, &#x27;PDF olarak kaydedin&#x27;], action: &#x27;Ürün ekranına dön&#x27;, icon: &#x27;arrow-left&#x27; }
@@ -5334,6 +5524,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-page-title&#x27;).textContent = pageTitles[page];
         renderPageContext(page);
         if (page === &#x27;materials&#x27;) renderMaterialTable();
+        if (page === &#x27;library&#x27;) renderMaterialLibrary();
         if (page === &#x27;customers&#x27;) renderCustomers();
         if (page === &#x27;team&#x27;) renderTeam();
         if (page === &#x27;settings&#x27;) renderSystems();
@@ -5541,6 +5732,19 @@ html&gt;body{padding:0}&lt;/style&gt;
           });
           renderConfigOutput();
         }
+
+        const libraryProduct = event.target.closest(&#x27;[data-library-product]&#x27;);
+        if (libraryProduct &amp;&amp; root.contains(libraryProduct)) {
+          state.selected = libraryProduct.dataset.libraryProduct;
+          state.material = state.libraryMaterial;
+          state.projectDefaultMaterial = state.libraryMaterial;
+          startNewMeasurement();
+          state.selected = libraryProduct.dataset.libraryProduct;
+          state.material = state.libraryMaterial;
+          state.projectDefaultMaterial = state.libraryMaterial;
+          renderAssignmentOptions();
+          renderProductGrid();
+        }
       });
 
       root.querySelector(&#x27;#d360-product-search&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; {
@@ -5552,7 +5756,21 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-product-search&#x27;).value = &#x27;&#x27;;
         renderProductGrid();
       });
-      root.querySelector(&#x27;#d360-material&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.material = event.target.value; renderSystemOptions(); renderProductSvg(); renderCalculation(); });
+      root.querySelector(&#x27;#d360-material&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.material = event.target.value; renderSystemOptions(); renderMaterialOptions(); renderProductSvg(); renderCalculation(); });
+      root.querySelector(&#x27;#d360-catalog-material&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
+        setCurrentMaterial(event.target.value);
+        state.search = &#x27;&#x27;;
+        root.querySelector(&#x27;#d360-product-search&#x27;).value = &#x27;&#x27;;
+        renderCategories();
+        renderProductGrid();
+        renderSelected();
+      });
+      root.querySelector(&#x27;#d360-reset-product-material&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        const projectMaterial = activeProjectMaterial();
+        if (!selectedProduct().materials.includes(projectMaterial)) return;
+        state.material = projectMaterial;
+        renderConfigurator();
+      });
       root.querySelector(&#x27;#d360-profile-system&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.systemId = event.target.value; renderSystemFitStatus(); renderCalculation(); });
       root.querySelector(&#x27;#d360-glass&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.glass = event.target.value; renderCalculation(); });
       root.querySelector(&#x27;#d360-finish&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.finish = event.target.value; renderProductSvg(); renderCalculation(); });
@@ -5569,6 +5787,23 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.measureProjectId = event.target.value;
         root.querySelector(&#x27;#d360-measure-error&#x27;).textContent = &#x27;&#x27;;
         root.querySelector(&#x27;#d360-assignment-error&#x27;).textContent = &#x27;&#x27;;
+        renderAssignmentOptions();
+      });
+      root.querySelector(&#x27;#d360-project-default-material&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
+        state.projectDefaultMaterial = event.target.value;
+        const project = activeMeasurementProject();
+        if (project) project.defaultMaterialId = state.projectDefaultMaterial;
+        setCurrentMaterial(state.projectDefaultMaterial);
+        renderAssignmentSummary();
+        renderProductGrid();
+      });
+      root.querySelector(&#x27;#d360-library-material&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; { state.libraryMaterial = event.target.value; renderMaterialLibrary(); });
+      root.querySelector(&#x27;#d360-library-start&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        state.projectDefaultMaterial = state.libraryMaterial;
+        setCurrentMaterial(state.libraryMaterial);
+        startNewMeasurement();
+        state.projectDefaultMaterial = state.libraryMaterial;
+        setCurrentMaterial(state.libraryMaterial);
         renderAssignmentOptions();
       });
       root.querySelector(&#x27;#d360-measure-project-name&#x27;).addEventListener(&#x27;input&#x27;, renderAssignmentSummary);
@@ -5753,7 +5988,7 @@ html&gt;body{padding:0}&lt;/style&gt;
             : &#x27;Önce Müşteriler bölümünden müşteri ekleyin.&#x27;;
           return;
         }
-        const project = createProject({ customerId, name, location, status: root.querySelector(&#x27;#d360-standalone-project-status&#x27;).value });
+        const project = createProject({ customerId, name, location, status: root.querySelector(&#x27;#d360-standalone-project-status&#x27;).value, defaultMaterialId: root.querySelector(&#x27;#d360-standalone-project-material&#x27;).value });
         if (!project) return;
         state.selectedProjectId = project.id;
         state.measureCustomerId = customerId;
@@ -5862,7 +6097,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           root.querySelector(&#x27;#d360-project-error&#x27;).textContent = &#x27;Proje adı, konum ve geçerli bir tahmini tutar girin.&#x27;;
           return;
         }
-        const project = createProject({ customerId: customer.id, name, location, status: root.querySelector(&#x27;#d360-project-status&#x27;).value, estimatedTotal: total * state.exchangeRate });
+        const project = createProject({ customerId: customer.id, name, location, status: root.querySelector(&#x27;#d360-project-status&#x27;).value, estimatedTotal: total * state.exchangeRate, defaultMaterialId: root.querySelector(&#x27;#d360-project-material&#x27;).value });
         state.selectedCustomerId = customer.id;
         state.selectedProjectId = project.id;
         state.measureCustomerId = customer.id;
