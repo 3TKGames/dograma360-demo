@@ -1985,6 +1985,18 @@ html&gt;body{padding:0}&lt;/style&gt;
       backdrop-filter: blur(18px);
     }
     #d360-professional-app .d360-top-actions { align-items: center; }
+    #d360-professional-app .d360-upgrade-button {
+      min-height: 2.8rem;
+      border-color: color-mix(in srgb, var(--primary) 55%, var(--border));
+      color: var(--primary-foreground);
+      background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 72%, #7c3aed));
+      box-shadow: 0 .55rem 1.35rem color-mix(in srgb, var(--primary) 20%, transparent);
+      white-space: nowrap;
+    }
+    #d360-professional-app .d360-upgrade-button:hover {
+      border-color: var(--primary);
+      filter: brightness(1.06);
+    }
     #d360-professional-app .d360-account-menu { position: relative; }
     #d360-professional-app .d360-account-menu &gt; summary {
       display: flex;
@@ -2029,6 +2041,18 @@ html&gt;body{padding:0}&lt;/style&gt;
       flex-wrap: wrap;
       gap: .4rem;
     }
+    #d360-professional-app .d360-fixed-role {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: .65rem;
+      align-items: start;
+      padding: .8rem;
+      border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--border));
+      border-radius: .8rem;
+      background: color-mix(in srgb, var(--primary) 8%, var(--card));
+    }
+    #d360-professional-app .d360-fixed-role &gt; i { color: var(--primary); }
+    #d360-professional-app .d360-fixed-role-copy { display: grid; gap: .2rem; }
     #d360-professional-app .d360-home {
       display: grid;
       gap: 1.35rem;
@@ -2148,6 +2172,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
       #d360-professional-app .d360-topbar-title .text-small { display: none; }
       #d360-professional-app #d360-new-project { display: none; }
+      #d360-professional-app .d360-upgrade-button { padding-inline: .7rem; }
       #d360-professional-app .d360-account-menu &gt; summary &gt; span:not(.d360-avatar) { display: none; }
       #d360-professional-app .d360-page { padding-inline: .85rem; }
       #d360-professional-app .d360-home-hero { padding-top: .35rem; }
@@ -2399,13 +2424,12 @@ html&gt;body{padding:0}&lt;/style&gt;
         &lt;/div&gt;
         &lt;div class=&quot;d360-top-actions&quot;&gt;
           &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; id=&quot;d360-new-project&quot;&gt;&lt;i data-lucide=&quot;search&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Müşteri bul&lt;/button&gt;
+          &lt;button type=&quot;button&quot; class=&quot;btn d360-upgrade-button&quot; id=&quot;d360-upgrade-now&quot; title=&quot;Daha yüksek bir üyelik paketine geçin&quot;&gt;&lt;i data-lucide=&quot;crown&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Upgrade now&lt;/button&gt;
           &lt;details class=&quot;d360-account-menu&quot;&gt;
             &lt;summary&gt;&lt;span class=&quot;d360-avatar&quot; aria-hidden=&quot;true&quot;&gt;K&lt;/span&gt;&lt;span&gt;&lt;strong id=&quot;d360-user-name&quot;&gt;Kullanıcı&lt;/strong&gt;&lt;span class=&quot;text-small text-muted d360-sync-status&quot; id=&quot;d360-sync-status&quot;&gt;&lt;i data-lucide=&quot;cloud&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Hazırlanıyor&lt;/span&gt;&lt;/span&gt;&lt;i data-lucide=&quot;chevron-down&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/summary&gt;
             &lt;div class=&quot;d360-account-popover&quot;&gt;
               &lt;div class=&quot;d360-account-meta&quot;&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-active-role-badge&quot;&gt;&lt;i data-lucide=&quot;shield-check&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;Yönetim&lt;/span&gt;&lt;span class=&quot;viz-badge&quot; id=&quot;d360-project-badge&quot;&gt;Proje seçilmedi&lt;/span&gt;&lt;/div&gt;
-              &lt;label class=&quot;form-label&quot; for=&quot;d360-role-select&quot;&gt;Çalışma görünümü
-                &lt;select class=&quot;form-select&quot; id=&quot;d360-role-select&quot;&gt;&lt;/select&gt;
-              &lt;/label&gt;
+              &lt;div class=&quot;d360-fixed-role&quot;&gt;&lt;i data-lucide=&quot;lock-keyhole&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;d360-fixed-role-copy&quot;&gt;&lt;strong&gt;Sabit hesap yetkisi&lt;/strong&gt;&lt;span class=&quot;text-small text-muted&quot; id=&quot;d360-fixed-role-note&quot;&gt;Rolünüz hesap sahibi tarafından belirlenir ve buradan değiştirilemez.&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
               &lt;label class=&quot;form-label&quot; for=&quot;d360-theme&quot;&gt;Görünüm
                 &lt;select class=&quot;form-select&quot; id=&quot;d360-theme&quot;&gt;
                   &lt;option value=&quot;system&quot;&gt;Cihaz ayarı&lt;/option&gt;
@@ -3141,7 +3165,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       };
 
       const roleDefinitions = [
-        { id: &#x27;owner&#x27;, label: &#x27;Yönetim&#x27;, icon: &#x27;briefcase-business&#x27;, description: &#x27;Satış, ölçü, üretim, nakit, satın alma ve teslimatın tamamını tek ekranda izler.&#x27;, permissions: [&#x27;Tüm modüller&#x27;, &#x27;Ekip &amp; yetki&#x27;, &#x27;Kârlılık raporu&#x27;] },
+        { id: &#x27;owner&#x27;, label: &#x27;Yetkili&#x27;, icon: &#x27;shield-check&#x27;, description: &#x27;Satış, ölçü, üretim, nakit, satın alma ve teslimatın tamamını tek ekranda izler.&#x27;, permissions: [&#x27;Tüm modüller&#x27;, &#x27;Ekip &amp; yetki&#x27;, &#x27;Kârlılık raporu&#x27;] },
         { id: &#x27;employee&#x27;, label: &#x27;Çalışan&#x27;, icon: &#x27;hard-hat&#x27;, description: &#x27;Projeleri görür ve ekler; müşteri seçerek ölçü alır. İletişim bilgilerine ve silme işlemlerine erişemez.&#x27;, permissions: [&#x27;Proje gör/ekle&#x27;, &#x27;Ölçü al/ekle&#x27;, &#x27;Müşteri bilgisi gizli&#x27;, &#x27;Silme yok&#x27;] },
         { id: &#x27;crm&#x27;, label: &#x27;Müşteri kabul&#x27;, icon: &#x27;contact-round&#x27;, description: &#x27;Yeni müşteri ve proje kaydeder; talepleri ölçü ekibine hazırlar.&#x27;, permissions: [&#x27;Müşteri ekle/düzenle&#x27;, &#x27;Proje aç&#x27;, &#x27;Teklif takibi&#x27;] },
         { id: &#x27;survey&#x27;, label: &#x27;Ölçü ustası&#x27;, icon: &#x27;ruler&#x27;, description: &#x27;Müşteriyi bulur, yoksa sahada kaydeder; ölçü, poz, fotoğraf ve not ekler.&#x27;, permissions: [&#x27;Müşteri ara/ekle&#x27;, &#x27;Ölçü ekle&#x27;, &#x27;Saha notu &amp; fotoğraf&#x27;] },
@@ -3351,7 +3375,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         membershipPlan: &#x27;free&#x27;,
         theme: &#x27;system&#x27;,
         returnToProductAfterPricing: false,
-        activeRole: &#x27;survey&#x27;,
+        activeRole: &#x27;owner&#x27;,
         customerSearch: &#x27;&#x27;,
         editingCustomerId: null,
         selectedCustomerId: null,
@@ -3391,7 +3415,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         systems: cloneValue(systems.map(normalizeSystem)),
         priceMaterials: cloneValue(priceMaterials),
         pricing: { currency: &#x27;TRY&#x27;, exchangeRate: 1, rateMode: &#x27;auto&#x27;, exchangeRates: { TRY: 1 }, exchangeRateDate: &#x27;&#x27;, exchangeRateFetchedAt: &#x27;&#x27;, exchangeRateSource: &#x27;ECB&#x27;, profitRate: 25, vatRate: 20 },
-        workspace: { activeRole: &#x27;survey&#x27;, membershipPlan: &#x27;free&#x27;, simpleHomeVersion: 1 }
+        workspace: { membershipPlan: &#x27;free&#x27;, simpleHomeVersion: 1 }
       };
 
       const categoryLabels = Object.fromEntries(categories.map(item =&gt; [item.id, item.label]));
@@ -3592,7 +3616,7 @@ html&gt;body{padding:0}&lt;/style&gt;
           priceMaterials: cloneValue(priceMaterials),
           pricing: { currency: state.currency, exchangeRate: state.exchangeRate, rateMode: state.rateMode, exchangeRates: cloneValue(state.exchangeRates), exchangeRateDate: state.exchangeRateDate, exchangeRateFetchedAt: state.exchangeRateFetchedAt, exchangeRateSource: state.exchangeRateSource, profitRate: state.profitRate, vatRate: state.vatRate },
           appearance: { theme: state.theme },
-          workspace: { activeRole: state.activeRole, membershipPlan: state.membershipPlan, simpleHomeVersion: 1 },
+          workspace: { membershipPlan: state.membershipPlan, simpleHomeVersion: 1 },
           updatedAt: new Date().toISOString()
         };
       }
@@ -3612,7 +3636,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         state.exchangeRateSource = seedWorkspace.pricing.exchangeRateSource;
         state.profitRate = seedWorkspace.pricing.profitRate;
         state.vatRate = seedWorkspace.pricing.vatRate;
-        state.activeRole = seedWorkspace.workspace.activeRole;
+        state.activeRole = &#x27;owner&#x27;;
         state.membershipPlan = seedWorkspace.workspace.membershipPlan;
         state.selectedProjectId = null;
         state.selectedCustomerId = null;
@@ -3655,7 +3679,6 @@ html&gt;body{padding:0}&lt;/style&gt;
           state.vatRate = Number(stored.pricing.vatRate) || 0;
         }
         if (stored.appearance &amp;&amp; [&#x27;system&#x27;, &#x27;light&#x27;, &#x27;dark&#x27;].includes(stored.appearance.theme)) applyThemePreference(stored.appearance.theme);
-        if (stored.workspace &amp;&amp; stored.workspace.simpleHomeVersion === 1 &amp;&amp; roleDefinitions.some(role =&gt; role.id === stored.workspace.activeRole)) state.activeRole = stored.workspace.activeRole;
         if (stored.workspace &amp;&amp; membershipPlans[stored.workspace.membershipPlan]) state.membershipPlan = stored.workspace.membershipPlan;
         else if (Number(stored.version) &gt; 0) state.membershipPlan = &#x27;company&#x27;;
         customers.forEach(customer =&gt; { if (!customer.status) customer.status = &#x27;Aktif&#x27;; });
@@ -3823,6 +3846,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-user-name&#x27;).textContent = metadata.full_name || user.email || &#x27;Kullanıcı&#x27;;
         root.querySelector(&#x27;#d360-company-name&#x27;).textContent = metadata.company_name || &#x27;Doğrama360 hesabı&#x27;;
         await restoreWorkspaceForUser(user.id);
+        state.activeRole = fixedRoleForUser(user);
         refreshWorkspaceViews();
         void fetchLatestExchangeRates(false);
         authState.loadingUserId = null;
@@ -3846,6 +3870,7 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-company-name&#x27;).textContent = &#x27;Yerel tanıtım hesabı&#x27;;
         const cached = readLocalWorkspace(null);
         if (cached.data) applyWorkspace(cached.data);
+        state.activeRole = &#x27;owner&#x27;;
         refreshWorkspaceViews();
         void fetchLatestExchangeRates(false);
         setSyncStatus(&#x27;Yalnızca bu tarayıcıya kaydediliyor&#x27;);
@@ -4956,6 +4981,17 @@ html&gt;body{padding:0}&lt;/style&gt;
         return membershipPlans[state.membershipPlan] || membershipPlans.free;
       }
 
+      function fixedRoleForUser(user) {
+        const appMetadata = (user &amp;&amp; user.app_metadata) || {};
+        const userMetadata = (user &amp;&amp; user.user_metadata) || {};
+        const claimedRole = appMetadata.dograma360_role || appMetadata.role || userMetadata.dograma360_role || userMetadata.role;
+        return roleDefinitions.some(role =&gt; role.id === claimedRole) ? claimedRole : &#x27;owner&#x27;;
+      }
+
+      function canManageSubscription() {
+        return state.activeRole === &#x27;owner&#x27;;
+      }
+
       function limitLabel(value) {
         return Number.isFinite(value) ? num.format(value) : &#x27;Sınırsız&#x27;;
       }
@@ -5122,11 +5158,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function renderRoleWorkspace() {
-        const role = roleDefinitions.find(item =&gt; item.id === state.activeRole) || roleDefinitions.find(item =&gt; item.id === &#x27;survey&#x27;);
+        const role = roleDefinitions.find(item =&gt; item.id === state.activeRole) || roleDefinitions.find(item =&gt; item.id === &#x27;owner&#x27;);
         state.activeRole = role.id;
-        const roleSelect = root.querySelector(&#x27;#d360-role-select&#x27;);
-        roleSelect.innerHTML = roleDefinitions.map(item =&gt; `&lt;option value=&quot;${item.id}&quot;&gt;${escapeHtml(item.label)}&lt;/option&gt;`).join(&#x27;&#x27;);
-        roleSelect.value = role.id;
         const quickStart = roleQuickStarts[role.id];
         root.querySelector(&#x27;#d360-quick-badge&#x27;).innerHTML = `&lt;i data-lucide=&quot;${role.icon}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;${escapeHtml(quickStart.badge)}`;
         root.querySelector(&#x27;#d360-quick-title&#x27;).textContent = quickStart.title;
@@ -5139,6 +5172,10 @@ html&gt;body{padding:0}&lt;/style&gt;
         root.querySelector(&#x27;#d360-role-description&#x27;).textContent = role.description;
         root.querySelector(&#x27;#d360-role-permissions&#x27;).innerHTML = role.permissions.map(permission =&gt; `&lt;span class=&quot;viz-badge&quot;&gt;${escapeHtml(permission)}&lt;/span&gt;`).join(&#x27;&#x27;);
         root.querySelector(&#x27;#d360-active-role-badge&#x27;).innerHTML = `&lt;i data-lucide=&quot;${role.icon}&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;${role.label}`;
+        root.querySelector(&#x27;#d360-fixed-role-note&#x27;).textContent = role.id === &#x27;owner&#x27;
+          ? &#x27;Yetkili hesap bütün bölümleri görür ve çalışanların görevlerini belirler.&#x27;
+          : `${role.label} yetkisi hesap sahibi tarafından atanmıştır ve bu hesaptan değiştirilemez.`;
+        root.querySelector(&#x27;#d360-upgrade-now&#x27;).hidden = !canManageSubscription();
 
         const content = root.querySelector(&#x27;#d360-role-content&#x27;);
         const actions = root.querySelector(&#x27;#d360-role-actions&#x27;);
@@ -6026,6 +6063,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       }
 
       function showPage(page) {
+        const allowedPages = rolePages[state.activeRole] || rolePages.owner;
+        if (page !== &#x27;print&#x27; &amp;&amp; !allowedPages.includes(page)) page = &#x27;dashboard&#x27;;
         state.page = page;
         root.querySelectorAll(&#x27;[data-page-view]&#x27;).forEach(section =&gt; { section.hidden = section.dataset.pageView !== page; });
         root.querySelectorAll(&#x27;[data-page]&#x27;).forEach(button =&gt; {
@@ -6079,13 +6118,6 @@ html&gt;body{padding:0}&lt;/style&gt;
           if (state.page === &#x27;print&#x27;) showPage(&#x27;catalog&#x27;);
           return;
         }
-        const roleTabButton = event.target.closest(&#x27;[data-role-tab]&#x27;);
-        if (roleTabButton &amp;&amp; root.contains(roleTabButton)) {
-          state.activeRole = roleTabButton.dataset.roleTab;
-          renderRoleWorkspace();
-          persistData();
-        }
-
         const roleActionButton = event.target.closest(&#x27;[data-role-action]&#x27;);
         if (roleActionButton &amp;&amp; root.contains(roleActionButton)) {
           const action = roleActionButton.dataset.roleAction;
@@ -6642,13 +6674,16 @@ html&gt;body{padding:0}&lt;/style&gt;
         renderProjects();
         persistData();
       });
-      root.querySelector(&#x27;#d360-role-select&#x27;).addEventListener(&#x27;change&#x27;, event =&gt; {
-        state.activeRole = event.target.value;
-        showPage(&#x27;dashboard&#x27;);
-        renderCustomers();
-        renderProjects();
-        renderTeam();
-        persistData();
+      root.querySelector(&#x27;#d360-upgrade-now&#x27;).addEventListener(&#x27;click&#x27;, () =&gt; {
+        if (!canManageSubscription()) return;
+        const accountMenu = root.querySelector(&#x27;.d360-account-menu&#x27;);
+        if (accountMenu) accountMenu.open = false;
+        showPage(&#x27;team&#x27;);
+        const membershipPanel = root.querySelector(&#x27;#d360-membership-panel&#x27;);
+        if (membershipPanel) membershipPanel.scrollIntoView({ behavior: &#x27;smooth&#x27;, block: &#x27;start&#x27; });
+        const planSelect = root.querySelector(&#x27;#d360-membership-plan&#x27;);
+        if (planSelect) planSelect.focus({ preventScroll: true });
+        root.querySelector(&#x27;#d360-action-status&#x27;).textContent = &#x27;Paket seçenekleri açıldı. İhtiyacınıza uygun planı seçebilirsiniz.&#x27;;
       });
       root.querySelector(&#x27;#d360-customer-search&#x27;).addEventListener(&#x27;input&#x27;, event =&gt; {
         state.customerSearch = event.target.value;
